@@ -1,3 +1,5 @@
 [user]
 	name = Freddie Ridell
 	email = freddie@codogo.io
+[push]
+	default = simple
