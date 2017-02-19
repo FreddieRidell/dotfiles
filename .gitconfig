@@ -1,5 +1,14 @@
 [user]
 	name = Freddie Ridell
 	email = freddie@codogo.io
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+[diff]
+	tool = vimdiff
+[core]
+	editor = vim
 [push]
 	default = simple
+
