@@ -1,0 +1,201 @@
+#  _ _____
+# (_)___ /
+# | | |_ \
+# | |___) |
+# |_|____/
+#
+# my conf. based on i3-config-generator
+set $mod Mod1
+
+# Gaps!
+#gaps outer 8
+#gaps inner 4
+#smart_borders on
+
+font pango:Fira Mono 12
+
+floating_modifier $mod
+
+# i3 startup things:
+
+#exec --no-startup-id /usr/bin/feh --bg-fill ~/Wallpapers/AAAKiwi.jpg
+exec --no-startup-id mpd .config/mpd/mpd.conf
+exec --no-startup-id /usr/bin/compton -c -m 0.90
+exec --no-startup-id /usr/bin/gnome-settings-daemon
+exec --no-startup-id /usr/bin/clipit
+exec --no-startup-id /usr/bin/dropbox start
+exec --no-startup-id /bin/bash ~/.screenlayout/default.sh
+exec --no-startup-id nm-applet
+exec --no-startup-id blueberry-tray
+exec --no-startup-id blueman-applet 
+
+# My startup things:
+exec gnome-terminal
+
+# lock
+bindsym Control+$mod+l exec lock
+
+# start a terminal
+bindsym $mod+Return exec gnome-terminal
+
+# kill focused window
+bindsym $mod+q kill
+
+# start rofi:
+bindsym $mod+w exec rofi -show window -font "Ubuntu Mono Bold 12px" -bg "#6e6e6e" -fg "#c6c6c6"
+bindsym $mod+d exec rofi -show run -font "Ubuntu Mono Bold 12px"
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split
+bindsym $mod+c split h
+bindsym $mod+v split v
+
+# fullscreen mode
+bindsym $mod+f fullscreen
+
+# container layout
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# Jump to urgent windows
+bindsym $mod+x [urgent=latest] focus
+
+# customize workspace names
+set $WS1 1
+set $WS2 2
+set $WS3 3
+set $WS4 4
+set $WS5 5
+set $WS6 6
+set $WS7 7
+set $WS8 8
+set $WS9 9
+set $WS0 0
+
+assign [class="Clementine"] $WS2
+assign [class="Steam"] $WS5
+assign [class="transmition-gtk"] $WS6
+assign [class="Transmition-gtk"] $WS6
+
+# switch to workspace
+bindsym Mod4+1 workspace $WS1
+bindsym Mod4+2 workspace $WS2
+bindsym Mod4+3 workspace $WS3
+bindsym Mod4+4 workspace $WS4
+bindsym Mod4+5 workspace $WS5
+bindsym Mod4+6 workspace $WS6
+bindsym Mod4+7 workspace $WS7
+bindsym Mod4+8 workspace $WS8
+bindsym Mod4+9 workspace $WS9
+bindsym Mod4+0 workspace $WS0
+
+# move focused container to workspace
+bindsym Mod4+Shift+1 move container to workspace $WS1
+bindsym Mod4+Shift+2 move container to workspace $WS2
+bindsym Mod4+Shift+3 move container to workspace $WS3
+bindsym Mod4+Shift+4 move container to workspace $WS4
+bindsym Mod4+Shift+5 move container to workspace $WS5
+bindsym Mod4+Shift+6 move container to workspace $WS6
+bindsym Mod4+Shift+7 move container to workspace $WS7
+bindsym Mod4+Shift+8 move container to workspace $WS8
+bindsym Mod4+Shift+9 move container to workspace $WS9
+bindsym Mod4+Shift+0 move container to workspace $WS0
+
+# border / titlebar
+new_window normal 1 px
+bindsym Control+Shift+x [class="^.*"] border toggle
+for_window [class="^.*"] border pixel 2
+#for_window [class="Pavucontrol"] floating enable
+#for_window [class="Nautilus"] border pixel 0
+#for_window [class="Nautilus"] floating enable
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+Ctrl+e exec i3-msg exit
+
+# resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+	bindsym h resize shrink width 5 px or 5 ppt
+	bindsym k resize grow height 5 px or 5 ppt
+	bindsym j resize shrink height 5 px or 5 ppt
+	bindsym l resize grow width 5 px or 5 ppt
+	bindsym Right resize shrink width 5 px or 5 ppt
+	bindsym Down resize grow height 5 px or 5 ppt
+	bindsym Up resize shrink height 5 px or 5 ppt
+	bindsym Left resize grow width 5 px or 5 ppt
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+# class                 border          backgr.         text            indicator
+
+bar {
+  status_command   ~/.i3/myI3Status.sh 
+	position top
+	font pango:Tamzen Regular 12px
+  colors {
+    separator #272822
+    background #272822
+    statusline #FFFFFF
+    focused_workspace #F92672 #F92672 #ffffff
+    active_workspace #FD971F #FD971F #FFFFFF
+    inactive_workspace #272822 #A6E22E #FFFFFF
+    urgent_workspace #A6E22E #A6E22E #ffffff
+  }
+}
+
+# switching between workspace
+bindsym $mod+period workspace next
+bindsym $mod+comma workspace prev
+
+# Media Keys:
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 set Master 5%-
+
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next  
+bindsym XF86AudioPrev exec mpc prev
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+client.focused #F92672 #F92672 #ffffff #FD971F
+client.focused_inactive #66D9EF #66D9EF #FFFFFF #66D9EF
+client.unfocused #272822 #272822 #FFFFFF #66D9EF
+client.urgent #A6E22E #A6E22E #ffffff #efb73e
