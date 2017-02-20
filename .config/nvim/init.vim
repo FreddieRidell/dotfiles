@@ -202,7 +202,6 @@ nmap <Leader>lo :diffg LO <CR>
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'PProvost/vim-markdown-jekyll'
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest'
 Plug 'blueyed/vim-diminactive'
@@ -213,9 +212,11 @@ Plug 'fleischie/vim-styled-components'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'lluchs/vim-wren'
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
+Plug 'PProvost/vim-markdown-jekyll'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplete.vim'
