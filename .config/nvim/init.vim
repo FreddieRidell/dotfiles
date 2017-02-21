@@ -18,6 +18,7 @@ set foldmethod=syntax
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+let g:xml_syntax_folding = 0
 
 " Syntax Colors:
 set t_Co=256
@@ -209,13 +210,12 @@ Plug 'blueyed/vim-diminactive'
 Plug 'ciaranm/googletest-syntax'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
-Plug 'fleischie/vim-styled-components'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
-Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplete.vim'
