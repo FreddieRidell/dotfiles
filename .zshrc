@@ -1,11 +1,10 @@
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
 ZSH_THEME="theunraveler"
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
-
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -24,3 +23,4 @@ source $ZSH/oh-my-zsh.sh
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 plugins=( git npm aws node )
+

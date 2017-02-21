@@ -167,7 +167,7 @@ mode "resize" {
 bar {
   status_command   ~/.i3/myI3Status.sh 
 	position top
-	font pango:Tamzen Regular 12px
+	font pango:Tamzen Regular 10px
   colors {
     separator #272822
     background #272822
