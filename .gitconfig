@@ -6,11 +6,11 @@
 [alias]
 	d = difftool
 [diff]
-	tool = vimdiff
+	tool = nvim -d
 [core]
-	editor = vim
+	editor = nvim -d 
 [push]
 	default = simple
 [merge]
-	tool = vimdiff
+	tool = nvim -d
 	conflictstyle = diff3
