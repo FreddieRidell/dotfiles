@@ -24,3 +24,12 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 plugins=( git npm aws node )
 
+export PATH="$HOME/.yarn/bin:$PATH"
+
+#custom functions
+function vimovergrep {
+	for f in $( grep "$1" $2 ) ;
+	do
+		nvim $f
+	done
+}
