@@ -1,6 +1,4 @@
-RED='\e[38;5;198m'
-
-PROMPT="> "
+PROMPT="%F{red}%m %F{green}%2~ %f> "
 
 #RPROMPT='%{$fg[magenta]%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
 
