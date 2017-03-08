@@ -1,3 +1,4 @@
+#Left Prompt
 function get_current_hostname(){
 	echo "%F{red}%m"
 }
@@ -10,44 +11,74 @@ function get_current_repo(){
 	if git rev-parse --git-dir > /dev/null 2>&1; then
 		echo "%F{white}(%F{magenta}$(basename `git rev-parse --show-toplevel`)%F{white})"
 	else
-		echo "()"
+		echo ""
 	fi
 }
 
 function get_left_prompt(){
-	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) %f> "
+	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) %f$ "
 }
 
+PROMPT=$'$(get_left_prompt)'
 
-setopt prompt_subst
-autoload -Uz vcs_info
+#Right Prompt
+function get_git_branch(){
+	echo "%F{magenta}$(git rev-parse --abbrev-ref HEAD)"
+}
 
-zstyle ':vcs_info:*' enable git cvs svn
+function get_git_untracked_num() {
+	NUM_OF_UNTRACKED="$(git status --porcelain 2>/dev/null| grep "^??" | wc -l)"
 
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
-
-zstyle ':vcs_info:*' formats       \
-    "%r %b %u %c"
-
-zstyle ':vcs_info:*' actionformats \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-
-C=0
-# or use pre_cmd, see man zshcontrib
-function vcs_info_wrapper() {
-	vcs_info
-	if [ -n "$vcs_info_msg_0_" ]; then
-		echo "yes"
+	if [ $NUM_OF_UNTRACKED = "0" ] ; then
+		echo ""
 	else
-		echo "no"
-		#echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
+		echo "%F{red}$NUM_OF_UNTRACKED %f| " 
 	fi
 }
 
-echo "$(get_left_prompt )"
+function get_git_modified_num(){
+	NUM_OF_MODIFIED="$(git status --porcelain 2>/dev/null| grep "^M" | wc -l)"
 
-PROMPT=$'$(get_left_prompt)'
-RPROMPT=$'$(vcs_info_wrapper)'
+	if [ $NUM_OF_MODIFIED = "0" ] ; then
+		echo ""
+	else
+		echo "%F{yellow}$NUM_OF_MODIFIED %f| " 
+	fi
+}
+
+function get_git_added_num(){
+	NUM_OF_ADDED="$(git status --porcelain 2>/dev/null| grep "^A" | wc -l)"
+
+	if [ $NUM_OF_ADDED = "0" ] ; then
+		echo ""
+	else
+		echo "%F{green}$NUM_OF_ADDED %f| " 
+	fi
+}
+
+function get_git_diff_origin_num(){
+	BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+	REGEX_AHEAD="s/\\s\\+\\S\\+//"
+	REGEX_BEHIND="s/\\S\\+\\s\\+//"
+	NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH | sed -e $REGEX_AHEAD)"
+	NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH | sed -e $REGEX_BEHIND)"
+
+	if [ $NUM_AHEAD != "0" ] || [ $NUM_BEHIND != "0" ] ; then
+		echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
+	else
+		echo ""
+	fi
+}
+
+function get_right_prompt(){
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		echo "%f[ $(get_git_added_num)$(get_git_modified_num)$(get_git_untracked_num)$(get_git_diff_origin_num)$(get_git_branch)%f ]"
+	else
+		echo "[]"
+	fi
+}
+
+RPROMPT=$'$(get_right_prompt)'
 
 #RPROMPT='%{$fg[magenta]%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
 
