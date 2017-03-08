@@ -1,18 +1,53 @@
-GIT_BRANCH=$(git symbolic-ref --short HEAD)
-
-function git_prompt_info() {
-  local ref
-  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
-    ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
-    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
-  fi
+function get_current_hostname(){
+	echo "%F{red}%m"
 }
 
-echo git_prompt_info
+function get_current_dir(){
+	echo "%F{green}%2~"
+}
 
-PROMPT="%F{red}%m %F{green}%2~ %f> "
-RPROMPT="[$(git_prompt_info)]"
+function get_current_repo(){
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		echo "%F{white}(%F{magenta}$(basename `git rev-parse --show-toplevel`)%F{white})"
+	else
+		echo "()"
+	fi
+}
+
+function get_left_prompt(){
+	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) %f> "
+}
+
+
+setopt prompt_subst
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable git cvs svn
+
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+
+zstyle ':vcs_info:*' formats       \
+    "%r %b %u %c"
+
+zstyle ':vcs_info:*' actionformats \
+    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+
+C=0
+# or use pre_cmd, see man zshcontrib
+function vcs_info_wrapper() {
+	vcs_info
+	if [ -n "$vcs_info_msg_0_" ]; then
+		echo "yes"
+	else
+		echo "no"
+		#echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
+	fi
+}
+
+echo "$(get_left_prompt )"
+
+PROMPT=$'$(get_left_prompt)'
+RPROMPT=$'$(vcs_info_wrapper)'
 
 #RPROMPT='%{$fg[magenta]%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
 
