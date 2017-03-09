@@ -1,3 +1,6 @@
+#Colors:
+GIT_UNTRACKED=%"%F{red}"
+
 #Left Prompt
 function get_current_hostname(){
 	echo "%F{red}%m"
@@ -37,7 +40,7 @@ function get_git_untracked_num() {
 }
 
 function get_git_modified_num(){
-	NUM_OF_MODIFIED="$(git status --porcelain 2>/dev/null| grep "^M" | wc -l)"
+	NUM_OF_MODIFIED="$(git status --porcelain 2>/dev/null| grep "^ *M" | wc -l)"
 
 	if [ $NUM_OF_MODIFIED = "0" ] ; then
 		echo ""
@@ -47,7 +50,7 @@ function get_git_modified_num(){
 }
 
 function get_git_added_num(){
-	NUM_OF_ADDED="$(git status --porcelain 2>/dev/null| grep "^A" | wc -l)"
+	NUM_OF_ADDED="$(git status --porcelain 2>/dev/null| grep "^ *A" | wc -l)"
 
 	if [ $NUM_OF_ADDED = "0" ] ; then
 		echo ""
@@ -60,8 +63,8 @@ function get_git_diff_origin_num(){
 	BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 	REGEX_AHEAD="s/\\s\\+\\S\\+//"
 	REGEX_BEHIND="s/\\S\\+\\s\\+//"
-	NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH | sed -e $REGEX_AHEAD)"
-	NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH | sed -e $REGEX_BEHIND)"
+	NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REGEX_AHEAD)"
+	NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REGEX_BEHIND)"
 
 	if [ $NUM_AHEAD != "0" ] || [ $NUM_BEHIND != "0" ] ; then
 		echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
