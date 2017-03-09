@@ -8,7 +8,7 @@ HIST_STAMPS="dd/mm/yyyy"
 
 export ZSH=$HOME/.oh-my-zsh
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -25,7 +25,9 @@ alias cats='highlight -O ansi'
 
 plugins=( git npm aws node )
 
+#Various Yarn global install paths
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 #custom functions
 function vimovergrep {
