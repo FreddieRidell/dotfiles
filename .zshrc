@@ -21,6 +21,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 source $ZSH/oh-my-zsh.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias cats='highlight -O ansi'
 
 plugins=( git npm aws node )
 
@@ -28,8 +29,11 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 #custom functions
 function vimovergrep {
-	for f in $( grep "$1" $2 ) ;
+	for f in $( grep $1 $2 ) ;
 	do
+		echo "opening $f"
 		nvim $f
 	done
 }
+
+# pretty cat
