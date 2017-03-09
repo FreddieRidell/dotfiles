@@ -4,7 +4,7 @@ function get_current_hostname(){
 }
 
 function get_current_dir(){
-	echo "%F{green}%2~"
+	echo "%F{green}%3~"
 }
 
 function get_current_repo(){
@@ -16,7 +16,7 @@ function get_current_repo(){
 }
 
 function get_left_prompt(){
-	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) %f$ "
+	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) \n%f$ "
 }
 
 PROMPT=$'$(get_left_prompt)'
