@@ -6,3 +6,7 @@ Based on [this](https://developer.atlassian.com/blog/2016/02/best-way-to-store-d
 ```shell
 sh -c "$(wget https://raw.githubusercontent.com/CodogoFreddie/dotfiles/master/.setupDotfiles.sh -O -)"
 ```
+
+## Issues:
+- [x] version 0.1 of custom prompt
+- [ ] branch displaying in detached head state
