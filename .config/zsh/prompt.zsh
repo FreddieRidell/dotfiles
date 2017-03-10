@@ -1,5 +1,6 @@
-#Colors:
-GIT_UNTRACKED=%"%F{red}"
+setopt promptsubst
+autoload -Uz promptinit
+promptinit
 
 #Left Prompt
 function get_current_hostname(){
@@ -22,7 +23,6 @@ function get_left_prompt(){
 	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) \n%f$ "
 }
 
-PROMPT=$'$(get_left_prompt)'
 
 #Right Prompt
 function get_git_branch(){
@@ -81,17 +81,8 @@ function get_right_prompt(){
 	fi
 }
 
-RPROMPT=$'$(get_right_prompt)'
+PROMPT='$(get_left_prompt)'
+RPROMPT='$(get_right_prompt)'
 
-#RPROMPT='%{$fg[magenta]%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
+setopt promptsubst
 
-#ZSH_THEME_GIT_PROMPT_PREFIX=""
-#ZSH_THEME_GIT_PROMPT_SUFFIX=""
-#ZSH_THEME_GIT_PROMPT_DIRTY=""
-#ZSH_THEME_GIT_PROMPT_CLEAN=""
-#ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%} ✈"
-#ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} ✭"
-#ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✗"
-#ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ➦"
-#ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ✂"
-#ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
