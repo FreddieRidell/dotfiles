@@ -197,6 +197,8 @@ autocmd BufRead,BufNewFile *.mdown setlocal spell wrap linebreak
 nmap <silent> <C-l> :noh<CR>:set nopaste<CR>:redraw!<CR>
 " reset ctrl-p
 nmap <Leader>pp :CtrlPClearAllCaches <CR> :CtrlP <CR>
+" JSON PrettyPrint
+nmap <Leader>j :'<,'>!python -m json.tool <CR>
 
 " mergetool
 nmap <Leader>re :diffg RE <CR>

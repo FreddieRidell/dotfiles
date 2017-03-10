@@ -29,33 +29,14 @@ function get_git_branch(){
 	echo "%F{magenta}$(git rev-parse --abbrev-ref HEAD)"
 }
 
-function get_git_untracked_num() {
-	NUM_OF_UNTRACKED="$(git status --porcelain 2>/dev/null| grep "^??" | wc -l)"
+function get_git_count(){
+	CHECKED="$(git status --porcelain 2>/dev/null| grep "^$1" | wc -l)"
+	UNCHECKED="$(git status --porcelain 2>/dev/null| grep "^$2" | wc -l)"
 
-	if [ $NUM_OF_UNTRACKED = "0" ] ; then
+	if [ $CHECKED = "0" ] && [ $UNCHECKED = "0" ] ; then
 		echo ""
 	else
-		echo "%F{red}$NUM_OF_UNTRACKED %f| " 
-	fi
-}
-
-function get_git_modified_num(){
-	NUM_OF_MODIFIED="$(git status --porcelain 2>/dev/null| grep "^ *M" | wc -l)"
-
-	if [ $NUM_OF_MODIFIED = "0" ] ; then
-		echo ""
-	else
-		echo "%F{yellow}$NUM_OF_MODIFIED %f| " 
-	fi
-}
-
-function get_git_added_num(){
-	NUM_OF_ADDED="$(git status --porcelain 2>/dev/null| grep "^ *A" | wc -l)"
-
-	if [ $NUM_OF_ADDED = "0" ] ; then
-		echo ""
-	else
-		echo "%F{green}$NUM_OF_ADDED %f| " 
+		echo "%F{$3}$UNCHECKED%f/%F{$3}$CHECKED %f| " 
 	fi
 }
 
@@ -80,7 +61,7 @@ function get_git_diff_origin_num(){
 
 function get_right_prompt(){
 	if git rev-parse --git-dir > /dev/null 2>&1; then
-		echo "%f[ $(get_git_added_num)$(get_git_modified_num)$(get_git_untracked_num)$(get_git_diff_origin_num)$(get_git_branch)%f ]"
+		echo "%f[$(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_diff_origin_num)$(get_git_branch)%f ]"
 	else
 		echo "[]"
 	fi
