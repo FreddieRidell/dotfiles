@@ -16,3 +16,4 @@ sh -c "$(wget https://raw.githubusercontent.com/CodogoFreddie/dotfiles/master/.s
   - [ ] deleted (un)committed
   - [ ] behind/infront of origin for this branch
   - [ ] behind/infront of master for this branch
+- [ ] `RPROMPT` sodded up on OSX iTerm
