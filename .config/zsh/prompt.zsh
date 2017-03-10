@@ -61,13 +61,18 @@ function get_git_added_num(){
 
 function get_git_diff_origin_num(){
 	BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-	REGEX_AHEAD="s/\\s\\+\\S\\+//"
-	REGEX_BEHIND="s/\\S\\+\\s\\+//"
-	NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REGEX_AHEAD)"
-	NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REGEX_BEHIND)"
 
-	if [ $NUM_AHEAD != "0" ] || [ $NUM_BEHIND != "0" ] ; then
-		echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
+	if [ $BRANCH != "HEAD" ]; then
+		REGEX_AHEAD="s/\\s\\+\\S\\+//"
+		REGEX_BEHIND="s/\\S\\+\\s\\+//"
+		NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REGEX_AHEAD)"
+		NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REGEX_BEHIND)"
+
+		if [ $NUM_AHEAD != "0" ] || [ $NUM_BEHIND != "0" ] ; then
+			echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
+		else
+			echo ""
+		fi
 	else
 		echo ""
 	fi
