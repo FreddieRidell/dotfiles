@@ -8,7 +8,7 @@ function get_current_hostname(){
 }
 
 function get_current_dir(){
-	echo "%F{green}%3~"
+	echo "%F{green}%~"
 }
 
 function get_current_repo(){
@@ -61,7 +61,7 @@ function get_git_diff_origin_num(){
 
 function get_right_prompt(){
 	if git rev-parse --git-dir > /dev/null 2>&1; then
-		echo "%f[$(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_diff_origin_num)$(get_git_branch)%f ]"
+		echo "%f[ $(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_diff_origin_num)$(get_git_branch)%f ]"
 	else
 		echo "[]"
 	fi
