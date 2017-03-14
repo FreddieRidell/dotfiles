@@ -45,8 +45,8 @@ function get_git_diff_origin_num(){
 	BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 
 	if [ $BRANCH != "HEAD" ]; then
-		NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REMOVE_WHITESPACE )"
-		NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | sed -e $REMOVE_WHITESPACE )"
+		NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | grep -Eo '^[0-9]+' )"
+		NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | grep -Eo '^[0-9]+$' )"
 
 		if [ $NUM_AHEAD != "0" ] || [ $NUM_BEHIND != "0" ] ; then
 			echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
@@ -60,7 +60,7 @@ function get_git_diff_origin_num(){
 
 function get_right_prompt(){
 	if git rev-parse --git-dir > /dev/null 2>&1; then
-		echo "%f[ $(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_branch)%f ]"
+		echo "%f[ $(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_diff_origin_num)$(get_git_branch)%f ]"
 	else
 		echo "[]"
 	fi
