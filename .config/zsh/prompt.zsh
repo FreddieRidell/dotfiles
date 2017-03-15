@@ -48,11 +48,8 @@ function get_git_diff_origin_num(){
 		NUM_AHEAD="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | grep -Eo '^[0-9]+' )"
 		NUM_BEHIND="$(git rev-list --left-right --count $BRANCH...origin/$BRANCH 2> /dev/null | grep -Eo '^[0-9]+$' )"
 
-		if [ $NUM_AHEAD != "0" ] || [ $NUM_BEHIND != "0" ] ; then
-			echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
-		else
-			echo ""
-		fi
+		echo "%F{cyan}$NUM_AHEAD%f/%F{cyan}$NUM_BEHIND %f| " 
+
 	else
 		echo ""
 	fi
