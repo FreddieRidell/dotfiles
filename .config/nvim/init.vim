@@ -167,6 +167,7 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
 
 :highlight NeomakeErrorMsg ctermfg=9 ctermbg=0
 let g:neomake_error_sign={'text': 'X', 'texthl': 'NeomakeErrorMsg'}
@@ -205,19 +206,22 @@ nmap <Leader>re :diffg RE <CR>
 nmap <Leader>ba :diffg BA <CR>
 nmap <Leader>lo :diffg LO <CR>
 
+let g:plug_window = "vertical botright new"
+
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'PProvost/vim-markdown-jekyll'
+Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'airblade/vim-gitgutter'
-Plug 'alepez/vim-gtest'
+Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
-Plug 'ciaranm/googletest-syntax'
+Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'jparise/vim-graphql'
+Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
-Plug 'lluchs/vim-wren'
+Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
