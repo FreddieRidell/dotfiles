@@ -167,6 +167,7 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
 
 :highlight NeomakeErrorMsg ctermfg=9 ctermbg=0
 let g:neomake_error_sign={'text': 'X', 'texthl': 'NeomakeErrorMsg'}
@@ -221,7 +222,7 @@ Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
-Plug 'mxw/vim-jsx', { 'for': 'javscript.jsx' }
+Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
