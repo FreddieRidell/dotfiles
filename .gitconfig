@@ -14,6 +14,7 @@
 	editor = nvim -d 
 [push]
 	default = simple
+	followTags = true
 [merge]
 	tool = nvim -d
 	conflictstyle = diff3
