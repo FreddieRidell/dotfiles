@@ -161,7 +161,8 @@ nmap <Leader><Space>, :ll<CR>         " go to current error/warning
 nmap <Leader><Space>n :lnext<CR>      " next error/warning
 nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
-autocmd! BufWritePost * Neomake
+autocmd BufWritePost * Neomake
+autocmd BufWinEnter * Neomake
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
