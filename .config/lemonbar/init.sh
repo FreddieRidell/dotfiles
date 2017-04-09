@@ -11,12 +11,13 @@ PURPLE="#ae81ff"
 
 I="0"
 
-VOLUME_REFRESH="3"
+VOLUME_REFRESH="1"
 DROPBOX_REFRESH="5"
-BATTERY_REFRESH="7"
-MEMORY_REFRESH="13"
-NETWORK_REFRESH="17"
-PARTITION_REFRESH="37"
+LOAD_REFRESH="7"
+BATTERY_REFRESH="13"
+MEMORY_REFRESH="17"
+NETWORK_REFRESH="23"
+PARTITION_REFRESH="29"
 
 function getDropboxStatus(){
 	if [ "$(( $I % $DROPBOX_REFRESH ))" = "0" ] ; then
@@ -50,15 +51,16 @@ function getMemory(){
 
 function getVolume(){
 	if [ "$(( $I % $VOLUME_REFRESH ))" = "0" ] ; then
-		LOUDEST_VOLUME="$( awk -F"[][]" '/Playback/ { print $2 }' <(amixer sget Master) | sort | uniq | head -2 | tail -1 )"
-		MUTED="$( awk -F"[][]" '/Playback/ { print $4 }' <(amixer sget Master) | sort | uniq | head -2 | tail -1 )"
+		DATA="$(amixer sget Master)"
+		LOUDEST_VOLUME="$( echo "$DATA" | awk -F"[][]" '/Playback/ { print $2 }' | sort | uniq | head -2 | tail -1 )"
+		MUTED="$( echo "$DATA" | awk -F"[][]" '/Playback/ { print $4 }' | sort | uniq | head -2 | tail -1 )"
 		NUMBER="$( echo "$LOUDEST_VOLUME" | sed -e "s/\([0-9]*\).*/\1/g" )"
 
 		COLOR=""
 		if [ "$NUMBER" -lt "70" ] ; then
-			COLOR="F$GREEN"
+			COLOR="$GREEN"
 		elif [ "$NUMBER" -lt "80" ] ; then
-			COLOR="F$YELLOW"
+			COLOR="$YELLOW"
 		elif [ "$NUMBER" -lt "90" ] ; then
 			COLOR="$ORANGE"
 		else
@@ -83,7 +85,7 @@ function getNetwork(){
 		SSID="$( iwconfig wlo1 | grep "ESSID:\".*\"" -oh | sed 's/ESSID:"\(.*\)"/\1/' )"
 		WIFI_IP="$( ifconfig wlo1 | head -2 | tail -1 | sed "s/.*inet \(\S\+\).*/\1/g" )"
 		WIFI_STRENGTH="$( iwconfig wlo1 | head -6 | tail -1 | sed -e "s/.*=\([0-9]\+\/[0-9]\+\).*/\1*100/g" | bc -l | sed -e "s/\.[0-9]*//g" )"
-		WIFI_SPEED="$( iwconfig wlo1 | head -3 | tail -1 | sed -e "s/\s\+Bit Rate=\([0-9]\+\s\S\+\).*/\1/g" )"
+		WIFI_SPEED="$( iwconfig wlo1 | head -3 | tail -1 | sed -e "s/\s*Bit Rate=\([0-9\.]\+\s\S\+\).*/\1/g" )"
 
 		color="%{F-}"
 		if [ "$WIFI_STRENGTH" -gt "50" ] ; then
@@ -145,15 +147,41 @@ function getBattery(){
 	fi
 }
 
+PROCESSORS_N="$(grep processor /proc/cpuinfo | wc -l)"
+function getLoad(){
+	if [ "$(( $I % $LOAD_REFRESH ))" = "0" ] ; then
+		AVERAGE_LOAD="$( uptime | sed -e "s/.*load average: \([0-9\.]\+\).*/\1/" )"
+		PERCENTAGE_LOAD="$( echo "($AVERAGE_LOAD/$PROCESSORS_N)*100" | bc -l | sed -e "s/\([0-9]\+\).*/\1/" )"
+
+		COLOR=""
+		if [ "$PERCENTAGE_LOAD" -lt "30" ] ; then
+			COLOR="%{F$GREEN}"
+		elif [ "$PERCENTAGE_LOAD" -lt "50" ] ; then
+			COLOR="%{F$YELLOW}"
+		elif [ "$PERCENTAGE_LOAD" -lt "70" ] ; then
+			COLOR="%{F$ORANGE}"
+		else
+			COLOR="%{F$RED}"
+		fi
+
+
+		OUTPUT="Load: $COLOR$PERCENTAGE_LOAD%%{F-}"
+		echo $OUTPUT > /tmp/getLoad.lemon
+		echo $OUTPUT
+	else
+		cat /tmp/getLoad.lemon
+	fi
+}
+
 function getFullBar(){
 	LEFT="$(getDropboxStatus) $(getNetwork) $(getVolume)"
 	CENTER="$(getDate)"
-	RIGHT="$(getBattery) $(getMemory) $(getPartitionUsage)"
+	RIGHT="$(getBattery) $(getMemory) $(getPartitionUsage) $(getLoad)"
 	echo " $LEFT%{c}$CENTER%{r}$RIGHT "
 }
 
 while true ; do
 	time getFullBar 
 	I=$(( $I + 1 ))
-	sleep 1
+	sleep 2
 done | lemonbar -p -n "wew" -B $BACKGROUND -F $WHITE -f "Tamzen-7" | /bin/bash
