@@ -11,8 +11,15 @@ PURPLE="#ae81ff"
 
 I="0"
 
+VOLUME_REFRESH="3"
+DROPBOX_REFRESH="5"
+BATTERY_REFRESH="7"
+MEMORY_REFRESH="13"
+NETWORK_REFRESH="17"
+PARTITION_REFRESH="37"
+
 function getDropboxStatus(){
-	if [ "$(( $I % 5 ))" = "0" ] ; then
+	if [ "$(( $I % $DROPBOX_REFRESH ))" = "0" ] ; then
 		STATUS="$( dropbox status | head -1 )"
 
 		if [ "$STATUS" = "Dropbox isn't running!" ] ; then
@@ -29,13 +36,20 @@ function getDropboxStatus(){
 }
 
 function getMemory(){
-	MEM="$( free -h | head -2 | tail -1 | sed -e "s/\(\S\+\)\s\+\(\S\+\)\s\+\(\S\+\).*/\3\/\2/g")"
-	SWAP="$( free -h | head -3 | tail -1 | sed -e "s/\(\S\+\)\s\+\(\S\+\)\s\+\(\S\+\).*/\3\/\2/g")"
-	echo "%{F$BLUE}$MEM %{F$PURPLE}$SWAP%{F-}"
+	if [ "$(( $I % $MEMORY_REFRESH ))" = "0" ] ; then
+		MEM="$( free -h | head -2 | tail -1 | sed -e "s/\(\S\+\)\s\+\(\S\+\)\s\+\(\S\+\).*/\3\/\2/g")"
+		SWAP="$( free -h | head -3 | tail -1 | sed -e "s/\(\S\+\)\s\+\(\S\+\)\s\+\(\S\+\).*/\3\/\2/g")"
+
+		OUTPUT="%{F$BLUE}$MEM %{F$PURPLE}$SWAP%{F-}"
+		echo $OUTPUT > /tmp/getMemory.lemon
+		echo $OUTPUT
+	else
+		cat /tmp/getMemory.lemon
+	fi
 }
 
 function getVolume(){
-	if [ "$(( $I % 3 ))" = "0" ] ; then
+	if [ "$(( $I % $VOLUME_REFRESH ))" = "0" ] ; then
 		LOUDEST_VOLUME="$( awk -F"[][]" '/Playback/ { print $2 }' <(amixer sget Master) | sort | uniq | head -2 | tail -1 )"
 		MUTED="$( awk -F"[][]" '/Playback/ { print $4 }' <(amixer sget Master) | sort | uniq | head -2 | tail -1 )"
 		NUMBER="$( echo "$LOUDEST_VOLUME" | sed -e "s/\([0-9]*\).*/\1/g" )"
@@ -65,7 +79,7 @@ function getVolume(){
 }
 
 function getNetwork(){
-	if [ "$(( $I % 7 ))" = "0" ] ; then
+	if [ "$(( $I % $NETWORK_REFRESH ))" = "0" ] ; then
 		SSID="$( iwconfig wlo1 | grep "ESSID:\".*\"" -oh | sed 's/ESSID:"\(.*\)"/\1/' )"
 		WIFI_IP="$( ifconfig wlo1 | head -2 | tail -1 | sed "s/.*inet \(\S\+\).*/\1/g" )"
 		WIFI_STRENGTH="$( iwconfig wlo1 | head -6 | tail -1 | sed -e "s/.*=\([0-9]\+\/[0-9]\+\).*/\1*100/g" | bc -l | sed -e "s/\.[0-9]*//g" )"
@@ -91,9 +105,15 @@ function getNetwork(){
 }
 
 function getPartitionUsage(){
-	PERCENTAGE_USAGE="$( df | tail --lines=+2 | sed -e "s/\(\S\+\s\+\)\{4\}//" | grep -e "[0-9]\{2\}%" | sed "s/\([0-9]\+%\) \(\S\+\)/%{F$ORANGE}\2:%{F-} %{F$RED}\1%{F-}/g" | tr '\n' ' ' )"
+	if [ "$(( $I % $PARTITION_REFRESH ))" = "0" ] ; then
+		PERCENTAGE_USAGE="$( df | tail --lines=+2 | sed -e "s/\(\S\+\s\+\)\{4\}//" | grep -e "[0-9]\{2\}%" | sed "s/\([0-9]\+%\) \(\S\+\)/%{F$ORANGE}\2:%{F-} %{F$RED}\1%{F-}/g" | tr '\n' ' ' )"
 
-	echo "$PERCENTAGE_USAGE"
+		OUTPUT="$PERCENTAGE_USAGE"
+		echo $OUTPUT > /tmp/getPartitionUsage.lemon
+		echo $OUTPUT
+	else
+		cat /tmp/getPartitionUsage.lemon
+	fi
 }
 
 function getDate(){
@@ -101,33 +121,39 @@ function getDate(){
 }
 
 function getBattery(){
-	STATE="$( upower -d | grep "state" | head -1 | sed -e "s/\s\+state:\s\+\(\w\+\)/\1/g" )"
-	TIME_TO="$( upower -d | grep "time to" | head -1 | sed -e "s/\s\+time to \S\+\s\+\(\w\+\)/\1/g" )"
-	PERCENTAGE="$( upower -d | grep "percentage" | head -1 | sed -e "s/\s\+percentage:\s\+\([0-9]\+\).*/\1/g" )"
+	if [ "$(( $I % $BATTERY_REFRESH))" = "0" ] ; then
+		STATE="$( upower -d | grep "state" | head -1 | sed -e "s/\s\+state:\s\+\(\w\+\)/\1/g" )"
+		TIME_TO="$( upower -d | grep "time to" | head -1 | sed -e "s/\s\+time to \S\+\s\+\(\w\+\)/\1/g" )"
+		PERCENTAGE="$( upower -d | grep "percentage" | head -1 | sed -e "s/\s\+percentage:\s\+\([0-9]\+\).*/\1/g" )"
 
-	color="%{F-}"
-	if [ "$PERCENTAGE" -gt "50" ] ; then
-		COLOR="%{F$GREEN}"
-	elif [ "$PERCENTAGE" -gt "30" ] ; then
-		COLOR="%{F$YELLOW}"
-	elif [ "$PERCENTAGE" -gt "20" ] ; then
-		COLOR="%{F$ORANGE}"
+		color="%{F-}"
+		if [ "$PERCENTAGE" -gt "50" ] ; then
+			COLOR="%{F$GREEN}"
+		elif [ "$PERCENTAGE" -gt "30" ] ; then
+			COLOR="%{F$YELLOW}"
+		elif [ "$PERCENTAGE" -gt "20" ] ; then
+			COLOR="%{F$ORANGE}"
+		else
+			COLOR="%{F$RED}"
+		fi
+
+		OUTPUT="$COLOR$STATE $PERCENTAGE% $TIME_TO%{F-}"
+		echo $OUTPUT > /tmp/getBattery.lemon
+		echo $OUTPUT
 	else
-		COLOR="%{F$RED}"
+		cat /tmp/getBattery.lemon
 	fi
-
-	echo "$COLOR$STATE $PERCENTAGE% $TIME_TO%{F-}"
 }
 
 function getFullBar(){
-	time LEFT="$(getDropboxStatus) $(getNetwork) $(getVolume)"
+	LEFT="$(getDropboxStatus) $(getNetwork) $(getVolume)"
 	CENTER="$(getDate)"
-	RIGHT="$(getBattery) $(getPartitionUsage) $(getMemory)"
+	RIGHT="$(getBattery) $(getMemory) $(getPartitionUsage)"
 	echo " $LEFT%{c}$CENTER%{r}$RIGHT "
 }
 
 while true ; do
-	getFullBar 
+	time getFullBar 
 	I=$(( $I + 1 ))
 	sleep 1
 done | lemonbar -p -n "wew" -B $BACKGROUND -F $WHITE -f "Tamzen-7" | /bin/bash
