@@ -173,6 +173,8 @@ let g:neomake_jsx_enabled_makers = ['eslint']
 :highlight NeomakeErrorMsg ctermfg=9 ctermbg=0
 let g:neomake_error_sign={'text': 'X', 'texthl': 'NeomakeErrorMsg'}
 
+"end neomake
+
 nmap <Leader>rp :RainbowParentheses<CR>      " turn on rainbow brackets
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'] ]
@@ -211,7 +213,6 @@ let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
@@ -226,6 +227,7 @@ Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
+Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplete.vim'
@@ -233,6 +235,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
+Plug 'vim-scripts/vim-coffee-script'
 Plug 'xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
