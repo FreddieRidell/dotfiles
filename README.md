@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles, moved here after dropbox fucked the whole thing up -_-
+My dotfiles, moved here after dropbox fucked the whole thing up 
 
 Based on [this](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/) nifty little blog post
 
@@ -19,3 +19,7 @@ sh -c "$(wget https://raw.githubusercontent.com/CodogoFreddie/dotfiles/master/.s
 - [x] `RPROMPT` sodded up on OSX iTerm
 - [ ] move keybindings into their own file
 - [ ] fix auto completion
+- [ ] status bar
+   - [ ] auto launch
+   - [ ] brightness info
+   - [ ] mpd info
