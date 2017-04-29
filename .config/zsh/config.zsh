@@ -1,6 +1,3 @@
-export EDITOR=nvim
-export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # history config:
 ## Command history configuration
 HISTFILE=$HOME/.zsh_history
