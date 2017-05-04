@@ -45,3 +45,4 @@ taskd.credentials=inthe_am/freddieridell/8033bce0-b00a-471d-818e-cb136584bb69
 taskd.trust=ignore hostname
 
 urgency.uda.priority.L.coefficient=-3.0
+urgency.user.tag.codogo.coefficient=3.0

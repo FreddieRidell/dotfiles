@@ -18,3 +18,5 @@
 [merge]
 	tool = nvim -d
 	conflictstyle = diff3
+[status]
+	showUntrackedFiles = all
