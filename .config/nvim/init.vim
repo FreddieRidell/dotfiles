@@ -225,6 +225,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
+Plug 'mzlogin/vim-markdown-toc'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
