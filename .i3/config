@@ -12,7 +12,7 @@ set $mod Mod1
 #gaps inner 4
 #smart_borders on
 
-font pango:Fira Mono 12
+font pango:Tamzen Regular 10
 
 floating_modifier $mod
 
@@ -20,14 +20,11 @@ floating_modifier $mod
 
 #exec --no-startup-id /usr/bin/feh --bg-fill ~/Wallpapers/AAAKiwi.jpg
 exec --no-startup-id mpd .config/mpd/mpd.conf
-exec --no-startup-id /usr/bin/compton -c -m 0.90
 exec --no-startup-id /usr/bin/gnome-settings-daemon
-exec --no-startup-id /usr/bin/clipit
 exec --no-startup-id /usr/bin/dropbox start
-exec --no-startup-id /bin/bash ~/.screenlayout/default.sh
-exec --no-startup-id nm-applet
-exec --no-startup-id blueberry-tray
-exec --no-startup-id blueman-applet 
+
+exec thunderbird
+exec slack
 
 # My startup things:
 exec gnome-terminal
@@ -42,8 +39,11 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+q kill
 
 # start rofi:
-bindsym $mod+w exec rofi -show window -font "Ubuntu Mono Bold 12px" -bg "#6e6e6e" -fg "#c6c6c6"
-bindsym $mod+d exec rofi -show run -font "Ubuntu Mono Bold 12px"
+bindsym $mod+w exec rofi -show window -font "pango:Tamzen Regular 10px"
+bindsym $mod+d exec rofi -show run -font "pango:Tamzen Regular 10px" 
+
+# screenshots:
+bindsym $mod+s exec gnome-screenshot -a 
 
 # change focus
 bindsym $mod+h focus left
@@ -100,10 +100,8 @@ set $WS8 8
 set $WS9 9
 set $WS0 0
 
-assign [class="Clementine"] $WS2
-assign [class="Steam"] $WS5
-assign [class="transmition-gtk"] $WS6
-assign [class="Transmition-gtk"] $WS6
+assign [class="Slack"] $WS6
+assign [class="Thunderbird"] $WS6
 
 # switch to workspace
 bindsym Mod4+1 workspace $WS1

@@ -24,3 +24,5 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 setopt COMPLETE_ALIASES
+
+setxkbmap -layout us

@@ -15,27 +15,7 @@
 data.location=~/.task
 
 # Color theme (uncomment one to use)
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/light-16.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/light-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-16.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-red-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-green-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-blue-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-violets-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-yellow-green.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-gray-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-gray-blue-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-dark-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-light-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/no-color.theme
-include ~/.task/monokai.theme
-
-#taskd.certificate=~\/.task\/freecinc_6886bd8a.cert.pem
-#taskd.key=~\/.task\/freecinc_6886bd8a.key.pem
-#taskd.ca=~\/.task\/freecinc_6886bd8a.ca.pem
-#taskd.server=freecinc.com:53589
-#taskd.credentials=FreeCinc\/freecinc_6886bd8a\/2114ba67-d16c-487c-b287-a03aad25559a
+#include ~/.task/monokai.theme
 
 taskd.certificate=~\/.task\/private.certificate.pem
 taskd.key=~\/.task\/private.key.pem
