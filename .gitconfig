@@ -4,6 +4,7 @@
 [alias]
 	d = difftool
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	rebase-from = !git checkout $1 && git pull && git checkout $2 && git rebase $1 && :
 [difftool]
     prompt = false
 [diff]
@@ -18,3 +19,5 @@
 [merge]
 	tool = nvim -d
 	conflictstyle = diff3
+[status]
+	showUntrackedFiles = all
