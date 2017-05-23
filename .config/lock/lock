@@ -1,0 +1,20 @@
+#!/bin/bash
+ 
+# Dependencies:
+# imagemagick
+# i3lock-color-git
+# scrot
+
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+IMAGE="/tmp/i3lock.png"
+LOCK="$SCRIPTPATH/lock.png"
+TEXT="/tmp/locktext.png"
+
+sleep 0.1
+scrot $IMAGE
+
+convert $IMAGE -scale 50% -sample 20% - |
+convert - -sample 1000% -antialias $IMAGE
+
+i3lock -i $IMAGE
