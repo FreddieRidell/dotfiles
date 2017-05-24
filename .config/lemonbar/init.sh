@@ -19,6 +19,9 @@ MEMORY_REFRESH="17"
 NETWORK_REFRESH="23"
 PARTITION_REFRESH="29"
 
+# not incorporating this yet, 'cause I need to re-write the bar in wren, but usefull:
+# curl https://api.cryptonator.com/api/ticker/btc-eth
+
 function getDropboxStatus(){
 	if [ "$(( $I % $DROPBOX_REFRESH ))" = "0" ] ; then
 		STATUS="$( dropbox status | head -1 )"
