@@ -163,8 +163,6 @@ nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
 autocmd BufWritePost * Neomake
 autocmd BufWinEnter * Neomake
-
-autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 let g:neomake_javascript_enabled_makers = ['eslint']
@@ -195,6 +193,9 @@ autocmd BufRead,BufNewFile *.txt setlocal spell wrap linebreak
 autocmd BufRead,BufNewFile *.markdown setlocal spell wrap linebreak
 autocmd BufRead,BufNewFile *.mdown setlocal spell wrap linebreak
 
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 "custom macros
 "
 "reset a bit
@@ -221,6 +222,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
+Plug 'junegunn/limelight.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
@@ -230,13 +232,11 @@ Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplete.vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/vim-coffee-script'
-Plug 'xuyuanp/nerdtree-git-plugin'
 
 call plug#end()

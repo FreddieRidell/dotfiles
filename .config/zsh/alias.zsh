@@ -7,3 +7,5 @@ alias '..'='cd ..'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+
+alias treee="tree --dirsfirst -C"

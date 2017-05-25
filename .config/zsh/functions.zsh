@@ -7,3 +7,11 @@ function vimovergrep {
 function title {
 	echo -ne "\033]0;${1}\007"
 }
+
+function sleepo {
+	systemctl suspend
+}
+
+function lesss {
+	cats $1 | less -r
+}
