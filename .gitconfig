@@ -4,7 +4,8 @@
 [alias]
 	d = difftool
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	rebase-from = !git checkout $1 && git pull && git checkout $2 && git rebase $1 && :
+	whoops = !git add --all && git commit --amend
+	
 [difftool]
     prompt = false
 [diff]
@@ -21,3 +22,8 @@
 	conflictstyle = diff3
 [status]
 	showUntrackedFiles = all
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

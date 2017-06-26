@@ -15,3 +15,11 @@ function sleepo {
 function lesss {
 	cats $1 | less -r
 }
+
+function gitrid {
+    git fetch -p && for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; do git branch -D $branch; done
+}
+
+function largestFile {
+	wc -l "$@" | sort -nr -t":" -k1 | head -2 | tail -1 | sed -e 's/[0-9]\+//'
+}
