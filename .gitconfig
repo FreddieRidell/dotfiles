@@ -7,19 +7,28 @@
 	whoops = !git add --all && git commit --amend
 	
 [difftool]
-    prompt = false
+	prompt = false
+	
 [diff]
-    tool = nvimdiff
+	tool = nvimdiff
+
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = true
+[mergetool "vimdiff"]
+	cmd = nvim -d $REMOTE $BASE $LOCAL $MERGED -c '$wincmd w' -c 'wincmd J'
+
 [core]
 	editor = nvim -d 
+
 [push]
 	default = simple
 	followTags = true
-[merge]
-	tool = nvim -d
-	conflictstyle = diff3
+
 [status]
 	showUntrackedFiles = all
 [filter "lfs"]
