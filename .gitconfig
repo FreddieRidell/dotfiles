@@ -5,6 +5,7 @@
 	d = difftool
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	whoops = !git add --all && git commit --amend
+	clean-branches = !git remote prune origin && git branch --merged >/tmp/merged-branches && $EDITOR /tmp/merged-branches && xargs git branch -d </tmp/merged-branches
 	
 [difftool]
     prompt = false
