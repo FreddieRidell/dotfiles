@@ -31,3 +31,7 @@ function freddieFixLint {
 function freddieFixFormat {
 	yarn run format && for f in $( yarn run format | grep \"/src\" ) ; do nvim $f ; done
 }
+
+function openXinY {
+	for x in $( grep "$1" -lr "$2" ) ; do vim $x ; done
+}
