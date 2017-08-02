@@ -215,6 +215,7 @@ let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'adimit/prolog.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
