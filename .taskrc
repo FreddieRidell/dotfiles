@@ -36,5 +36,8 @@ report._reviewed.columns=uuid,id,description
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
 
-context.codogo=+codogo or +tooling or +maintainance or +research
+context.codogo=+tooling or +maintainance or +research or project:codogo
 context.home=+cleaning or +drewer or +money or +personal or +research and -codogo
+report.bar.columns=project,description
+report.bar.filter=+ACTIVE
+report.bar.sort=urgency-

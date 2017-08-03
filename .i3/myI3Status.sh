@@ -5,5 +5,6 @@ do
     read line
 	music=$(mpc -f "%title% - %artist% - %album% (%time%)" | head -n 1)
 	dropbox="dropbox: $(dropbox status | tr '\n' ' ')"
-    echo "$dropbox | $music| $line" || exit 1
+	task="$(task bar | head -4 | tail -1 | sed -e "s/ \+/ - /")"
+    echo "$task | $dropbox | $music| $line" || exit 1
 done
