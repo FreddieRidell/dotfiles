@@ -35,3 +35,7 @@ function freddieFixFormat {
 function openXinY {
 	for x in $( grep "$1" -lr "$2" ) ; do vim $x ; done
 }
+
+function s3rmb {
+	aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1"
+}
