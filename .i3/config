@@ -22,7 +22,7 @@ floating_modifier $mod
 exec --no-startup-id mpd .config/mpd/mpd.conf
 exec --no-startup-id /usr/bin/gnome-settings-daemon
 exec --no-startup-id /usr/bin/dropbox start
-exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.png
+exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.jpg
 
 exec thunderbird
 exec slack

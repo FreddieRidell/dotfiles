@@ -24,12 +24,8 @@ function largestFile {
 	wc -l "$@" | sort -nr -t":" -k1 | head -2 | tail -1 | sed -e 's/[0-9]\+//'
 }
 
-function freddieFixLint {
-	yarn run format && for f in $( yarn run lint-fix | grep \"/src\" ) ; do nvim $f ; done
-}
-
 function freddieFixFormat {
-	yarn run format && for f in $( yarn run format | grep \"/src\" ) ; do nvim $f ; done
+	for f in $( yarn run format | grep \"/home/freddie\" ) ; do vim $f ; done
 }
 
 function openXinY {
