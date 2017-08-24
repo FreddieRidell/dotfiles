@@ -7,6 +7,7 @@ source $HOME/.config/zsh/functions.zsh
 source $HOME/.config/zsh/prompt.zsh
 source $HOME/.config/zsh/keybinding.zsh
 source $HOME/.config/zsh/fzf.zsh
+source $HOME/.config/zsh/env.zsh
 
 export PATH="$HOME/.yarn/bin:$PATH"
 

@@ -35,3 +35,12 @@ function openXinY {
 function s3rmb {
 	aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1"
 }
+
+function pushMessage {
+	curl \
+		--data-binary "{\"type\": \"note\", \"title\": \"$1\", \"body\":\"$2\"}" \
+		--header "Access-Token: $PUSH_BULLET_TOKEN" \
+		--header "Content-Type: application/json" \
+		--request POST \
+		https://api.pushbullet.com/v2/pushes | python -m json.tool
+}
