@@ -8,6 +8,7 @@ sh -c "$(wget https://raw.githubusercontent.com/CodogoFreddie/dotfiles/master/.s
 ```
 
 ## Issues:
+- [ ] make script work on fresh installs: get needed packages etc
 - [x] version 0.1 of custom prompt
 - [ ] branch displaying in detached head state
 - [ ] git prompt status with ascii markers:
