@@ -12,19 +12,19 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/.task
+data.location=~/Sync/Files/Tasks
 
 # Color theme (uncomment one to use)
 #include ~/.task/monokai.theme
 
-taskd.certificate=~\/.task\/private.certificate.pem
-taskd.key=~\/.task\/private.key.pem
-taskd.ca=~\/.task\/ca.cert.pem
-taskd.server=taskwarrior.inthe.am:53589
-taskd.credentials=inthe_am/freddieridell/8033bce0-b00a-471d-818e-cb136584bb69
-taskd.trust=ignore hostname
+#taskd.certificate=~\/.task\/private.certificate.pem
+#taskd.key=~\/.task\/private.key.pem
+#taskd.ca=~\/.task\/ca.cert.pem
+#taskd.server=taskwarrior.inthe.am:53589
+#taskd.credentials=inthe_am/freddieridell/8033bce0-b00a-471d-818e-cb136584bb69
+#taskd.trust=ignore hostname
 
-urgency.age.coefficient=100.0
+urgency.age.coefficient=10.0
 urgency.uda.priority.L.coefficient=-3.0
 urgency.user.tag.codogo.coefficient=3.0
 
@@ -36,8 +36,6 @@ report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
 
-context.codogo=+tooling or +maintainance or +research or project:codogo
-context.home=+cleaning or +drewer or +money or +personal or +research and -codogo
 report.bar.columns=project,description
 report.bar.filter=+ACTIVE
 report.bar.sort=urgency-

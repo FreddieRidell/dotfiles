@@ -18,7 +18,8 @@ floating_modifier $mod
 
 # i3 startup things:
 
-#exec --no-startup-id /usr/bin/feh --bg-fill ~/Wallpapers/AAAKiwi.jpg
+exec xrandr --output DVI-D-0 --auto --pos 0x0 --output DVI-I-0 --auto --pos 1920x400
+
 exec --no-startup-id mpd .config/mpd/mpd.conf
 exec --no-startup-id /usr/bin/gnome-settings-daemon
 exec --no-startup-id /usr/bin/dropbox start
