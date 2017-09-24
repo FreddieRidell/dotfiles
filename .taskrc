@@ -14,16 +14,6 @@
 # Files
 data.location=~/Sync/Files/Tasks
 
-# Color theme (uncomment one to use)
-#include ~/.task/monokai.theme
-
-#taskd.certificate=~\/.task\/private.certificate.pem
-#taskd.key=~\/.task\/private.key.pem
-#taskd.ca=~\/.task\/ca.cert.pem
-#taskd.server=taskwarrior.inthe.am:53589
-#taskd.credentials=inthe_am/freddieridell/8033bce0-b00a-471d-818e-cb136584bb69
-#taskd.trust=ignore hostname
-
 urgency.age.coefficient=10.0
 urgency.uda.priority.L.coefficient=-3.0
 urgency.user.tag.codogo.coefficient=3.0
@@ -39,3 +29,11 @@ report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +P
 report.bar.columns=project,description
 report.bar.filter=+ACTIVE
 report.bar.sort=urgency-
+
+taskd.credentials=public/Freddie Ridell/d37e89d2-2d74-44d7-b5a0-7e91e515c40a
+
+taskd.certificate=/home/freddie/Sync/Files/Tasks/client.cert.pem
+taskd.key=/home/freddie/Sync/Files/Tasks/client.key.pem
+taskd.ca=/home/freddie/Sync/Files/Tasks/ca.cert.pem
+
+taskd.server=46.101.73.224:53589
