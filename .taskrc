@@ -30,10 +30,13 @@ report.bar.columns=project,description
 report.bar.filter=+ACTIVE
 report.bar.sort=urgency-
 
-taskd.credentials=public/Freddie Ridell/d37e89d2-2d74-44d7-b5a0-7e91e515c40a
+taskd.credentials=Public/FreddieRidell/9eb53db0-46e2-41dc-a5b2-f1af5739c96c
 
-taskd.certificate=/home/freddie/Sync/Files/Tasks/client.cert.pem
-taskd.key=/home/freddie/Sync/Files/Tasks/client.key.pem
-taskd.ca=/home/freddie/Sync/Files/Tasks/ca.cert.pem
+taskd.certificate=~/Sync/Files/Tasks/freddieRidell.cert.pem
+taskd.key=~/Sync/Files/Tasks/freddieRidell.key.pem
+#taskd.ca=~/Sync/Files/Tasks/ca.cert.pem
 
 taskd.server=46.101.73.224:53589
+
+taskd.trust=allow all
+
