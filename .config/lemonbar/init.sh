@@ -122,8 +122,10 @@ function getPartitionUsage(){
 }
 
 function getDate(){
-	echo "$( date "+%l:%m:%S%p %d/%m/%y (%a %b)" )"
+	echo "$( date -u +"%Y-%m-%dT%H:%M:%SZ" )"
 }
+
+#echo "$( date "+%l:%m:%S%p %d/%m/%y (%a %b)" )"
 
 function getBattery(){
 	if [ "$(( $I % $BATTERY_REFRESH))" = "0" ] ; then

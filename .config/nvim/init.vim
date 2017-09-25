@@ -122,6 +122,9 @@ set nobackup
 set nowb
 set noswapfile
 
+" yank uses the system clipboard
+set clipboard+=unnamedplus
+
 let g:jsx_ext_required = 0
 
 " Useful mappings for managing tabs

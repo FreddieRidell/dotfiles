@@ -29,7 +29,7 @@ function freddieFixFormat {
 }
 
 function openXinY {
-	for x in $( grep "$1" -lr "$2" ) ; do vim $x ; done
+	for x in $( grep -E "$1" -lr "$2" ) ; do vim $x ; done
 }
 
 function s3rmb {
@@ -43,4 +43,9 @@ function pushMessage {
 		--header "Content-Type: application/json" \
 		--request POST \
 		https://api.pushbullet.com/v2/pushes | python -m json.tool
+}
+
+function loadIAMCredentials {
+	export AWS_ACCESS_KEY_ID="$( echo "$1" | sed -e "s/.\+\///" )"
+	export AWS_SECRET_ACCESS_KEY="$(pass $1)"
 }
