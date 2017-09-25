@@ -49,3 +49,26 @@ function loadIAMCredentials {
 	export AWS_ACCESS_KEY_ID="$( echo "$1" | sed -e "s/.\+\///" )"
 	export AWS_SECRET_ACCESS_KEY="$(pass $1)"
 }
+
+function taskSaga {
+	echo -n "Enter any metadata: "
+	read meta
+	ARGS=( ${(z)meta} )
+
+	echo "Please enter the first task"
+
+	prevTaskId=""
+	resp=""
+
+	while read -r line; do
+		if [ -n "$prevTaskId" ]; then
+			resp="$(task add depends:$prevTaskId $ARGS \"$line\" )"
+		else
+			resp="$(task add $ARGS \"$line\" )"
+		fi
+
+		prevTaskId="$( echo "$resp" | sed -e "s/\w\+ \w\+ \([0-9]\+\)\./\1/" )"
+
+		echo -n "After $line, then: "
+	done
+}
