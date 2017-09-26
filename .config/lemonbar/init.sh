@@ -122,7 +122,7 @@ function getPartitionUsage(){
 }
 
 function getDate(){
-	echo "$( date -u +"%Y-%m-%dT%H:%M:%SZ" )"
+	echo "$( date -u "+%Y-%m-%dT%H:%M:%SZ" )"
 }
 
 #echo "$( date "+%l:%m:%S%p %d/%m/%y (%a %b)" )"

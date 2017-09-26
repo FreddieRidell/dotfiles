@@ -27,7 +27,11 @@ report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
 
 report.bar.columns=project,description
-report.bar.filter=+ACTIVE
+report.bar.filter=+ACTIVE or +OVERDUE
+report.bar.sort=urgency-
+
+report.shopping.filter=project:shopping
+report.shopping.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
 report.bar.sort=urgency-
 
 
@@ -44,3 +48,4 @@ taskd.key=~/Sync/Files/Tasks/freecinc_fc215dc2.key.pem
 taskd.certificate=~/Sync/Files/Tasks/freecinc_fc215dc2.cert.pem
 taskd.ca=~/Sync/Files/Tasks/freecinc_fc215dc2.ca.pem
 taskd.credentials=FreeCinc/freecinc_fc215dc2/5029e6b9-a29e-4397-8f03-2416c7167a66
+
