@@ -30,13 +30,17 @@ report.bar.columns=project,description
 report.bar.filter=+ACTIVE
 report.bar.sort=urgency-
 
-taskd.credentials=Public/FreddieRidell/9eb53db0-46e2-41dc-a5b2-f1af5739c96c
 
-taskd.certificate=~/Sync/Files/Tasks/freddieRidell.cert.pem
-taskd.key=~/Sync/Files/Tasks/freddieRidell.key.pem
+#taskd.certificate=~/Sync/Files/Tasks/freddieRidell.cert.pem
+#taskd.key=~/Sync/Files/Tasks/freddieRidell.key.pem
 #taskd.ca=~/Sync/Files/Tasks/ca.cert.pem
 
-taskd.server=46.101.73.224:53589
+#taskd.credentials=Public/FreddieRidell/9eb53db0-46e2-41dc-a5b2-f1af5739c96c
+#taskd.server=ridell-server.freddiedrewer.com:53589
 
-taskd.trust=allow all
-
+#taskd.trust=ignore hostname
+taskd.server=freecinc.com:53589
+taskd.key=~/Sync/Files/Tasks/freecinc_fc215dc2.key.pem
+taskd.certificate=~/Sync/Files/Tasks/freecinc_fc215dc2.cert.pem
+taskd.ca=~/Sync/Files/Tasks/freecinc_fc215dc2.ca.pem
+taskd.credentials=FreeCinc/freecinc_fc215dc2/5029e6b9-a29e-4397-8f03-2416c7167a66
