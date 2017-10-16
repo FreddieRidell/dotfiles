@@ -26,13 +26,17 @@ report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
 
-report.bar.columns=project,description
+report.bar.columns=id,project,description
 report.bar.filter=+ACTIVE or +OVERDUE
 report.bar.sort=urgency-
 
+report.pressing.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.pressing.filter=+ACTIVE or +OVERDUE or +DUE
+report.pressing.sort=urgency-
+
 report.shopping.filter=project:shopping
 report.shopping.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
-report.bar.sort=urgency-
+report.shopping.sort=urgency-
 
 
 #taskd.certificate=~/Sync/Files/Tasks/freddieRidell.cert.pem

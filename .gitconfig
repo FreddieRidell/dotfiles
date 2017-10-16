@@ -8,6 +8,11 @@
 	clean-branches = !git remote prune origin && git branch --merged >/tmp/merged-branches && $EDITOR /tmp/merged-branches && xargs git branch -d </tmp/merged-branches
 	difff = diff -w
 	diffff = diff --word-diff
+	fix = "!f() { git commit -am \"fix($1): $2\"; }; f"
+	feat = "!f() { git commit -am \"feat($1): $2\"; }; f"
+	chore = "!f() { git commit -am \"chore($1): $2\"; }; f"
+	perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
+	style = "!f() { git commit -am \"style($1): $2\"; }; f"
 	
 [difftool]
 	prompt = false

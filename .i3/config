@@ -26,7 +26,6 @@ exec --no-startup-id /usr/bin/dropbox start
 exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.jpg
 
 exec thunderbird
-exec slack
 
 # My startup things:
 exec gnome-terminal

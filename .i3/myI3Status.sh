@@ -13,7 +13,8 @@ do
 	taskDescription="$( echo "$taskExport" | jq ".[$taskI].description" | sed -e 's/^"//' -e 's/"$//')"
 	taskProject="$( echo "$taskExport" | jq ".[$taskI].project" | sed -e 's/^"//' -e 's/"$//')"
 	taskUrgency="$( echo "$taskExport" | jq ".[$taskI].urgency" | sed -e 's/^"//' -e 's/"$//')"
+	taskId="$( echo "$taskExport" | jq ".[$taskI].id" | sed -e 's/^"//' -e 's/"$//')"
 
-	task="$taskProject: $taskDescription ($taskUrgency)"
+	task="($taskId) $taskProject: $taskDescription ($taskUrgency)"
     echo "$task | $dropbox | $music| $line" || exit 1
 done
