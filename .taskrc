@@ -30,13 +30,17 @@ report.bar.columns=id,project,description
 report.bar.filter=+ACTIVE or +OVERDUE
 report.bar.sort=urgency-
 
-report.pressing.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.pressing.columns=urgency,id,description,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining
 report.pressing.filter=+ACTIVE or +OVERDUE or +DUE
 report.pressing.sort=urgency-
 
 report.shopping.filter=project:shopping
-report.shopping.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.shopping.columns=urgency,id,description,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining
+report.pressing.filter=+ACTIVE or +OVERDUE or +DUE
 report.shopping.sort=urgency-
+
+report.next.columns=urgency,id,description,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining
+report.next.labels=Urg,ID,Description,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until
 
 
 #taskd.certificate=~/Sync/Files/Tasks/freddieRidell.cert.pem
