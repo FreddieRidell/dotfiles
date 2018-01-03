@@ -246,3 +246,4 @@ Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/vim-coffee-script'
 
 call plug#end()
+Plug 'leafgarland/typescript-vim'

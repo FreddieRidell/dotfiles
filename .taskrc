@@ -30,7 +30,7 @@ report.bar.columns=id,project,description
 report.bar.filter=+ACTIVE or +OVERDUE
 report.bar.sort=urgency-
 
-report.pressing.columns=urgency,id,description,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining
+report.pressing.columns=urgency,id,description,start.age,due.relative,entry.age,depends,priority,project,tags,recur,scheduled.countdown,until.remaining
 report.pressing.filter=+ACTIVE or +OVERDUE or +DUE
 report.pressing.sort=urgency-
 
@@ -39,8 +39,10 @@ report.shopping.columns=urgency,id,description,start.age,entry.age,depends,prior
 report.pressing.filter=+ACTIVE or +OVERDUE or +DUE
 report.shopping.sort=urgency-
 
-report.next.columns=urgency,id,description,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining
-report.next.labels=Urg,ID,Description,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until
+report.next.columns=urgency,id,description,start.age,due.relative,entry.age,depends,priority,project,tags,recur,scheduled.countdown,until.remaining
+report.next.labels=
+#report.next.labels=Urg,ID,Description,Active,Age,Due,Deps,P,Project,Tag,Recur,S,Until
+report.next.filter=-BLOCKED status:pending limit:page
 
 
 #taskd.certificate=~/Sync/Files/Tasks/freddieRidell.cert.pem
@@ -56,4 +58,3 @@ taskd.key=~/Sync/Files/Tasks/freecinc_fc215dc2.key.pem
 taskd.certificate=~/Sync/Files/Tasks/freecinc_fc215dc2.cert.pem
 taskd.ca=~/Sync/Files/Tasks/freecinc_fc215dc2.ca.pem
 taskd.credentials=FreeCinc/freecinc_fc215dc2/5029e6b9-a29e-4397-8f03-2416c7167a66
-

@@ -1,0 +1,171 @@
+// <!-- <mdb:mork:z v="1.4"/> -->
+< <(a=c)> // (f=iso-8859-1)
+  (B8=LastModifiedDate)(B9=RecordKey)(BA=AddrCharSet)(BB=LastRecordKey)
+  (BC=ns:addrbk:db:table:kind:pab)(BD=ListName)(BE=ListNickName)
+  (BF=ListDescription)(C0=ListTotalAddresses)(C1=LowercaseListName)
+  (C2=ns:addrbk:db:table:kind:deleted)(C3=DbRowID)(C4=PreferDisplayName)
+  (C5=_GoogleTalk)(80=ns:addrbk:db:row:scope:card:all)
+  (81=ns:addrbk:db:row:scope:list:all)
+  (82=ns:addrbk:db:row:scope:data:all)(83=FirstName)(84=LastName)
+  (85=PhoneticFirstName)(86=PhoneticLastName)(87=DisplayName)
+  (88=NickName)(89=PrimaryEmail)(8A=LowercasePrimaryEmail)
+  (8B=SecondEmail)(8C=LowercaseSecondEmail)(8D=PreferMailFormat)
+  (8E=PopularityIndex)(8F=WorkPhone)(90=HomePhone)(91=FaxNumber)
+  (92=PagerNumber)(93=CellularNumber)(94=WorkPhoneType)(95=HomePhoneType)
+  (96=FaxNumberType)(97=PagerNumberType)(98=CellularNumberType)
+  (99=HomeAddress)(9A=HomeAddress2)(9B=HomeCity)(9C=HomeState)
+  (9D=HomeZipCode)(9E=HomeCountry)(9F=WorkAddress)(A0=WorkAddress2)
+  (A1=WorkCity)(A2=WorkState)(A3=WorkZipCode)(A4=WorkCountry)
+  (A5=JobTitle)(A6=Department)(A7=Company)(A8=_AimScreenName)
+  (A9=AnniversaryYear)(AA=AnniversaryMonth)(AB=AnniversaryDay)
+  (AC=SpouseName)(AD=FamilyName)(AE=WebPage1)(AF=WebPage2)(B0=BirthYear)
+  (B1=BirthMonth)(B2=BirthDay)(B3=Custom1)(B4=Custom2)(B5=Custom3)
+  (B6=Custom4)(B7=Notes)>
+
+<(2D2=1b)(81=)(80=0)(82=1)(EF=14)(83=freddie@codogo.io)(2DD=1512730349)
+  (85=Karolina Karczewska)(86=2)(C5=10)(87=Karolina)(88=Karczewska)
+  (89=Karolina@thepropertycompany.co.uk)(CE=1500981206)(8A
+    =karolina@thepropertycompany.co.uk)(BA=Max Clayton Clowes)(8C=3)
+  (2FA=164)(8D=maxi@codogo.io)(2FB=1513681874)(BB=Max Clayton)(BC=Clowes)
+  (8F=4)(EA=13)(90=freddie.ridell@gmail.com)(91=freddie.ridell)(1BA
+    =1510582249)(92=Web Editor)(93=5)(94=Web)(95=Editor)(96
+    =webmaster@thebubble.org.uk)(CD=1500981062)(9A=npm)(9B=6)(9C
+    =support+id17573@npmhelp.zendesk.com)(9F=1496934080)(A3
+    =Steve Chrysanthou)(A4=7)(A5=Steve)(A6=Chrysanthou)(A7
+    =SNC@thepropertycompany.co.uk)(A8=snc@thepropertycompany.co.uk)
+  (BE=Bubble Treasurer)(B0=8)(B1=treasurer@thebubble.org.uk)(BF=Bubble)
+  (C0=Treasurer)(B2=Niki Kourris)(B3=9)(B4=Niki)(B5=Kourris)(B6
+    =nk@thepropertycompany.co.uk)(DD=1502547056)(C6=consulting@codogo.io)
+  (C7=a)(D3=11)(D4=support@npmjs.com)(DA=1502125730)(D9=23)(E5=12)(E6
+    =maxcc@me.com)(12A=1505912121)(12B=24)(E9=Stefan Cordery)(EB=Stefan)
+  (EC=Cordery)(ED=stefanc@akkroo.com)(EE=d)(139=John Jameson)(2EE=78)
+  (F0=john@gloocomms.com)(2EF=1513680522)(2ED=1620322182)(13B=John)
+  (13C=Jameson)(F3=15)(F4=cowenjones@gloocomms.com)(F5=f)(F6=16)(F7
+    =alan@ridell.co.uk)(25B=Josh Dronsfield)(FF=17)(100=josh@codogo.io)
+  (2B4=1512389187)(2B3=1907)(25D=Josh)(25E=Dronsfield)(108=Huel | Olivia)
+  (101=18)(102=team@huel.com)(2AD=1512389129)(2AC=1908)(10A=Huel |)
+  (10B=Olivia)(12C=19)(12D=codes@codogo.io)(130=Melina Georgiou)(131=20)
+  (132=Melina)(133=Georgiou)(134=mg@thepropertycompany.co.uk)(14B=21)
+  (17D=dalton@ycombinator.com)(1FA=22)(1FB=rupert@rupertvandervell.co.uk)
+  (22E=1511514831)(22D=2269513545)(257=Sarah Beal)(258=Sarah)(259=Beal)
+  (25A=sarah@sarahbeal.co.uk)(260=Kate Beal)(261=Kate)(262
+    =kate@muswell-press.co.uk)(28D=Joseph Mason)(28E=25)(28F=Joseph)
+  (290=Mason)(291=joe@studiothirty.io)(2AB=1512385119)(2AA=1410700582)
+  (2AE=26)(2AF=team@codogo.io)(2B0=1a)(2CD=Tony Brighton)(2CE=27)(2CF=Tony)
+  (2D0=Brighton)(2D1=tony.brighton@virgin.net)(302=1513700711)(301=309)>
+{1:^80 {(k^BC:c)(s=9)} 
+  [1:^82(^BB=1b)]
+  [1(^87=)(^8D=0)(^C3=1)(^8E=14)(^C4=0)(^89^83)(^B8^2DD)(^8A^83)(^B9=1)]
+  [2(^87^85)(^8D=0)(^C3=2)(^8E=10)(^83^87)(^84^88)(^89^89)(^C4=0)(^B8^CE)
+    (^8A^8A)(^B9=2)]
+  [3(^87^BA)(^8D=0)(^C3=3)(^8E=164)(^C4=0)(^89^8D)(^B8^2FB)(^8A^8D)
+    (^B9=3)(^83^BB)(^84^BC)]
+  [4(^87=)(^8D=0)(^C3=4)(^8E=13)(^89^90)(^C4=0)(^C5^91)(^B8^1BA)(^8A^90)
+    (^B9=4)]
+  [5(^87^92)(^8D=0)(^C3=5)(^8E=10)(^83^94)(^84^95)(^89^96)(^C4=0)(^B8^CD)
+    (^8A^96)(^B9=5)]
+  [6(^87^9A)(^8D=0)(^C3=6)(^8E=2)(^C4=0)(^89^9C)(^B8^9F)(^8A^9C)(^B9=6)]
+  [7(^87^A3)(^8D=0)(^C3=7)(^8E=0)(^83^A5)(^84^A6)(^89^A7)(^C4=0)(^B8=0)
+    (^8A^A8)(^B9=7)]
+  [8(^87^BE)(^8D=0)(^C3=8)(^8E=7)(^C4=0)(^89^B1)(^B8^CD)(^8A^B1)(^B9=8)
+    (^83^BF)(^84^C0)]
+  [9(^87^B2)(^8D=0)(^C3=9)(^8E=5)(^83^B4)(^84^B5)(^89^B6)(^C4=0)(^B8^DD)
+    (^8A^B6)(^B9=9)]
+  [A(^87=)(^8D=0)(^C3=10)(^8E=0)(^C4=0)(^89^C6)(^B8=0)(^8A^C6)(^B9=a)]
+  [B(^87^9A)(^8D=0)(^C3=11)(^8E=2)(^C4=0)(^89^D4)(^B8^DA)(^8A^D4)(^B9=23)]
+  [C(^87^BA)(^8D=0)(^C3=12)(^8E=2)(^C4=0)(^89^E6)(^B8^12A)(^8A^E6)(^B9=24)
+    (^83^BB)(^84^BC)]
+  [D(^87^E9)(^8D=0)(^C3=13)(^8E=0)(^83^EB)(^84^EC)(^89^ED)(^C4=0)(^B8=0)
+    (^8A^ED)(^B9=d)]
+  [E(^87^139)(^8D=0)(^C3=14)(^8E=78)(^C4=0)(^89^F0)(^B8^2EF)(^8A^F0)
+    (^B9^2ED)(^83^13B)(^84^13C)]
+  [F(^87=)(^8D=0)(^C3=15)(^8E=0)(^C4=0)(^89^F4)(^B8=0)(^8A^F4)(^B9=f)]
+  [10(^87=)(^8D=0)(^C3=16)(^8E=0)(^C4=0)(^89^F7)(^B8=0)(^8A^F7)(^B9=10)]
+  [11(^87^25B)(^8D=0)(^C3=17)(^8E=8)(^C4=0)(^89^100)(^B8^2B4)(^8A^100)
+    (^B9^2B3)(^83^25D)(^84^25E)]
+  [12(^87^108)(^8D=0)(^C3=18)(^8E=8)(^C4=0)(^89^102)(^B8^2AD)(^8A^102)
+    (^B9^2AC)(^83^10A)(^84^10B)]
+  [13(^87=)(^8D=0)(^C3=19)(^8E=0)(^C4=0)(^89^12D)(^B8=0)(^8A^12D)(^B9=13)]
+  [14(^87^130)(^8D=0)(^C3=20)(^8E=0)(^83^132)(^84^133)(^89^134)(^C4=0)
+    (^B8=0)(^8A^134)(^B9=14)]
+  [15(^87=)(^8D=0)(^C3=21)(^8E=0)(^C4=0)(^89^17D)(^B8=0)(^8A^17D)(^B9=15)]
+  [16(^87=)(^8D=0)(^C3=22)(^8E=23)(^C4=0)(^89^1FB)(^B8^22E)(^8A^1FB)
+    (^B9^22D)]
+  [17(^87^257)(^8D=0)(^C3=23)(^8E=0)(^83^258)(^84^259)(^89^25A)(^C4=0)
+    (^B8=0)(^8A^25A)(^B9=17)]
+  [18(^87^260)(^8D=0)(^C3=24)(^8E=0)(^83^261)(^84^259)(^89^262)(^C4=0)
+    (^B8=0)(^8A^262)(^B9=18)]
+  [19(^87^28D)(^8D=0)(^C3=25)(^8E=15)(^83^28F)(^84^290)(^89^291)(^C4=0)
+    (^B8^2AB)(^8A^291)(^B9^2AA)]
+  [1A(^87=)(^8D=0)(^C3=26)(^8E=0)(^C4=0)(^89^2AF)(^B8=0)(^8A^2AF)(^B9=1a)]
+  [1B(^87^2CD)(^8D=0)(^C3=27)(^8E=6)(^83^2CF)(^84^2D0)(^89^2D1)(^C4=0)
+    (^B8^302)(^8A^2D1)(^B9=309)]}
+
+@$${144{@
+<(303=777)>[-1B:^80(^87^2CD)(^8D=0)(^C3=27)(^8E=7)(^83^2CF)(^84^2D0)
+    (^89^2D1)(^C4=0)(^B8^302)(^8A^2D1)(^B9=777)]
+@$$}144}@
+
+@$${145{@
+<(304=165)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=165)(^C4=0)(^89^8D)(^B8^302)
+    (^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}145}@
+
+@$${146{@
+<(305=1911)>[-1B:^80(^87^2CD)(^8D=0)(^C3=27)(^8E=8)(^83^2CF)(^84^2D0)
+    (^89^2D1)(^C4=0)(^B8^302)(^8A^2D1)(^B9^305)]
+@$$}146}@
+
+@$${147{@
+<(306=166)>[3:^80(^8E=166)]
+@$$}147}@
+
+@$${148{@
+<(308=1513700714)(307=6417)>[-1B:^80(^87^2CD)(^8D=0)(^C3=27)(^8E=9)
+    (^83^2CF)(^84^2D0)(^89^2D1)(^C4=0)(^B8^308)(^8A^2D1)(^B9^307)]
+@$$}148}@
+
+@$${149{@
+<(309=167)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=167)(^C4=0)(^89^8D)(^B8^308)
+    (^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}149}@
+
+@$${14A{@
+<(30B=1513700717)(30A=25623)>[-1B:^80(^87^2CD)(^8D=0)(^C3=27)(^8E=10)
+    (^83^2CF)(^84^2D0)(^89^2D1)(^C4=0)(^B8^30B)(^8A^2D1)(^B9^30A)]
+@$$}14A}@
+
+@$${14B{@
+<(30C=168)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=168)(^C4=0)(^89^8D)(^B8^30B)
+    (^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}14B}@
+
+@$${14C{@
+<(30E=1513700725)(30D=153123)>[-1B:^80(^87^2CD)(^8D=0)(^C3=27)(^8E=11)
+    (^83^2CF)(^84^2D0)(^89^2D1)(^C4=0)(^B8^30E)(^8A^2D1)(^B9^30D)]
+@$$}14C}@
+
+@$${14D{@
+<(30F=169)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=169)(^C4=0)(^89^8D)(^B8^30E)
+    (^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}14D}@
+
+@$${14E{@
+<(311=1513701092)(310=1388835)>[-1B:^80(^87^2CD)(^8D=0)(^C3=27)(^8E=12)
+    (^83^2CF)(^84^2D0)(^89^2D1)(^C4=0)(^B8^311)(^8A^2D1)(^B9^310)]
+@$$}14E}@
+
+@$${14F{@
+<(312=170)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=170)(^C4=0)(^89^8D)(^B8^311)
+    (^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}14F}@
+
+@$${151{@
+<(313=171)(314=1514973586)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=171)(^C4=0)
+    (^89^8D)(^B8^314)(^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}151}@
+
+@$${152{@
+<(315=172)(316=1514974451)>[-3:^80(^87^BA)(^8D=0)(^C3=3)(^8E=172)(^C4=0)
+    (^89^8D)(^B8^316)(^8A^8D)(^B9=3)(^83^BB)(^84^BC)]
+@$$}152}@
