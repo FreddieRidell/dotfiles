@@ -1,8 +1,9 @@
 module.exports = {
 	dataFolder: `/home/freddie/Sync/Files/JaskActions`,
 	server: {
+		address: "46.101.73.224",
 		port: 9000,
-		key: "KErLEU1XJO3H9RUjGvLWmrSTGC5KGQVq9wguoOTP7B9U9bqYOJ72PbexKMdgLgjBOKgyjmFU0PYaus8qeDMrl55VL8xg0HS1QP08fV0IUzjbEtrOouDmP91iJaGoli4C",
+		key: "Dzg8nsjMLUlLA6XzsBD6SWC397azHgvxwkB60QYaC8uTL9d4UqMALF1HuuVgpqqEHUAOmYH6Z5HXSFrG4cMznIXLD0i74MJpFstUn9CpdB5nF7Ik6cU7OIHElh4Iy1Xw",
 	},
 	client: {
 		userHTTPServer: false,
