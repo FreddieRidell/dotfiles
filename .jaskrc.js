@@ -10,8 +10,10 @@ module.exports = {
 		rendering: {
 			//these will eventually be depricated, in favour of storing such things in the action store.
 			//this will allow for universal cross clien config
-			giveScore: ({ now, }) => ({ uuid, due, created, updated, done, tags, project, priority, }) => (
+			giveScore: ({ now, }) => ({ uuid, due, start, stop, created, updated, done, tags, project, priority, }) => (
 				( due ? Math.pow(10, ( ( now - due ) / 4320000000 ) + 1) : 0 )
+				+
+				( start > ( stop || 0 ) ? 50 : 0 )
 				+
 				( Math.pow(10, ( now - created ) / 22896000000 ) )
 				+
@@ -20,12 +22,23 @@ module.exports = {
 				( priority ? ( ({ H: 10, M: 5, L: -2 })[priority] || 0 ) : 0 )
 			),
 			filterTask: ({ done, }) => !done,
-			giveColor: ({ now, }) => ({ due, priority, }) => ([
+			giveColor: ({ now, }) => ({ start, stop, due, priority, }) => ([
 				//use any color keywork from the chalk styling library:
 				// [chalk](https://github.com/chalk/chalk)
 				//any expressions that evaluate to false are ignored,
 				//styled are applied in presidence from this order.
 				(
+					//overdue
+					( start > ( stop || 0 ) ? 30 : 0 )
+					? {
+						fn: "bgHex",
+						val: "#0b0",
+					}
+					: false
+				),
+
+				(
+					//overdue
 					(now > due) 
 					? {
 						fn: "hex",
