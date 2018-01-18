@@ -9,7 +9,7 @@ export ANDROID_HOME="/data/Android"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
-export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64"
+export JAVA_HOME="/usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.151-1.b12.fc25.x86_64"
 
 #Various Yarn global install paths
 export PATH="$HOME/.yarn/bin:$PATH"
