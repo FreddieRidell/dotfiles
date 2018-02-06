@@ -17,3 +17,5 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/mcclowes/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mcclowes/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
