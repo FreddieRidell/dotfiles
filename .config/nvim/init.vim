@@ -37,6 +37,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/neocomplete.vim'
 Plug 'tikhomirov/vim-glsl'
