@@ -10,3 +10,4 @@ alias -g .....='../../../..'
 
 alias treee="tree --dirsfirst -C"
 
+alias node="nodejs"
