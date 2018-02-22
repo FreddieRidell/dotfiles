@@ -112,3 +112,16 @@ function unixTime {
 function findAndReplaceInFolder {
 	ag $1 --files-with-matches | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}
 }
+
+function yarnClearLink {
+	yarn unlink $1 && rm -rf node_modules && yarn install
+}
+
+
+function gitJira {
+	if [ $1 ]; then
+		git commit -am "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/' -e 's/ .\+//' ) $*";
+	else 
+		git commit -am "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
+	fi
+}

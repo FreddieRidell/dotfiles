@@ -10,6 +10,7 @@
 	feat = "!f() { git commit -am \"feat($1): $2\"; }; f"
 	fix = "!f() { git commit -am \"fix($1): $2\"; }; f"
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	jira = "!zsh-git-alias-jira"
 	perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
 	refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
 	style = "!f() { git commit -am \"style($1): $2\"; }; f"
