@@ -125,3 +125,31 @@ function gitJira {
 		git commit -am "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
 	fi
 }
+
+function gitCurrentBranch {
+	git symbolic-ref -q --short HEAD
+}
+
+function gitRebaseFromMaster {
+	CURRENT_BRANCH="$( gitCurrentBranch )"
+	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
+}
+
+function createAlpacaService {
+	mkdir "$1"
+
+	cd $1
+
+	touch "$1Service.js"
+	touch "$1Repository.js"
+	touch "$1Transformer.js"
+
+	mkdir __tests__
+
+	echo "describe(\"$1Service\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Service.spec.js"
+	echo "describe(\"$1Repository\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Repository.spec.js"
+	echo "describe(\"$1Transformer\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Transformer.spec.js"
+
+	touch "__tests__/$1Fixture.json"
+	touch "__tests__/$1FixtureTransformed.json"
+}
