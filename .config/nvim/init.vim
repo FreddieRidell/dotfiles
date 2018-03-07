@@ -35,7 +35,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'neomake/neomake'
+Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'scrooloose/nerdcommenter'
@@ -48,4 +48,3 @@ Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/vim-coffee-script'
 
 call plug#end()
-Plug 'leafgarland/typescript-vim'

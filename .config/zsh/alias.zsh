@@ -11,3 +11,7 @@ alias -g .....='../../../..'
 alias treee="tree --dirsfirst -C"
 
 alias node="nodejs"
+
+alias gnome-control-center="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+alias gnome-gnome-contacts="env XDG_CURRENT_DESKTOP=GNOME gnome-gnome-contacts"
+alias gnome-settings-daemon="env XDG_CURRENT_DESKTOP=GNOME gnome-settings-daemon"
