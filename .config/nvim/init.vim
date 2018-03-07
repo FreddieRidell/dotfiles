@@ -23,6 +23,7 @@ Plug 'adimit/prolog.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
+Plug 'bogado/file-line'
 Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }

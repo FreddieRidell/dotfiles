@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/usr/bin/zsh
 
 " convenient leader key
 let mapleader = ","
@@ -91,4 +91,3 @@ func! DeleteTrailingWS()
     exe "normal `z"
 endfunc
 autocmd BufWrite :call DeleteTrailingWS()
-
