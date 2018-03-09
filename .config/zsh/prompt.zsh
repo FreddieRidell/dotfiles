@@ -19,8 +19,18 @@ function get_current_repo(){
 	fi
 }
 
+function get_git_stashes(){
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		STASHCOUNT="$(git stash list | wc -l )"
+
+		if [ "$STASHCOUNT" != "0" ]; then
+			echo " %F{red}$STASHCOUNT stashes"
+		fi
+	fi
+}
+
 function get_left_prompt(){
-	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir)\n%f$ "
+	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir)$(get_git_stashes)\n%f$ "
 }
 
 
@@ -58,14 +68,9 @@ function get_git_diff_origin_num(){
 	fi
 }
 
-function get_git_stashes(){
-	STASHCOUNT="$(git stash list | ag "$( gitCurrentBranch )" -c)"
-
-	echo "%F{red}$STASHCOUNT"
-}
 function get_right_prompt(){
 	if git rev-parse --git-dir > /dev/null 2>&1; then
-		echo "%f[ $(get_git_stashes) $(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_diff_origin_num)$(get_git_branch)%f ]"
+		echo "%f[ $(get_git_count 'A' '??' 'green')$(get_git_count 'M' ' M' 'yellow')$(get_git_count 'D' ' D' 'red')$(get_git_diff_origin_num)$(get_git_branch)%f ]"
 	else
 		echo "[]"
 	fi

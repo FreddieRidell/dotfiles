@@ -12,13 +12,14 @@
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	jira = "! gitJira"
 	perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
+	rc = "rebase --continue"
 	refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
 	style = "!f() { git commit -am \"style($1): $2\"; }; f"
 	whoops = !git add --all && git commit --amend
-	
+
 [difftool]
 	prompt = false
-	
+
 [diff]
 	tool = nvimdiff
 

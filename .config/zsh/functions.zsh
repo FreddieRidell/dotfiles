@@ -117,17 +117,21 @@ function yarnClearLink {
 	yarn unlink $1 && rm -rf node_modules && yarn install
 }
 
+function gitCurrentBranch {
+	git symbolic-ref -q --short HEAD
+}
 
 function gitJira {
 	if [ $1 ]; then
-		git commit -am "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/' -e 's/ .\+//' ) $*";
+		git commit -am "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/' -e 's/ .\+//' ) $*";
 	else 
-		git commit -am "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
+		git commit -am "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
 	fi
 }
 
-function gitCurrentBranch {
-	git symbolic-ref -q --short HEAD
+function gitBranchJira {
+	NEW_BRANCH_NAME="$( echo "$*" | tr "[:upper:]" "[:lower:]" | sed -e "s/-/ /g" -e "s/ /-/g" -e 's/\(\w\+\)/\U\1/' )"
+	git checkout master && git pull && git checkout -b "$NEW_BRANCH_NAME" && git push -u origin "$NEW_BRANCH_NAME"
 }
 
 function gitRebaseFromMaster {
@@ -153,3 +157,4 @@ function createAlpacaService {
 	touch "__tests__/$1Fixture.json"
 	touch "__tests__/$1FixtureTransformed.json"
 }
+
