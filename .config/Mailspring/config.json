@@ -24,8 +24,17 @@
       "keymapTemplate": "Gmail",
       "tutorial": {
         "seen": [
-          "ActivityListButton"
+          "ActivityListButton",
+          "ModeToggle",
+          "ToolbarSnooze"
         ]
+      },
+      "theme": "ui-darkside",
+      "reading": {
+        "markAsReadDelay": 0
+      },
+      "sending": {
+        "undoSend": 60000
       }
     },
     "askedAboutAppMove": true,
@@ -44,7 +53,7 @@
         "snooze": {
           "quota": 15,
           "period": "weekly",
-          "usedInPeriod": 1,
+          "usedInPeriod": 3,
           "featureLimitName": "basic-limit"
         },
         "send-later": {
@@ -87,17 +96,17 @@
         "provider": "gmail",
         "emailAddress": "freddieridell@gmail.com",
         "settings": {
+          "imap_allow_insecure_ssl": false,
           "imap_host": "imap.gmail.com",
           "imap_port": 993,
-          "imap_username": "freddieridell@gmail.com",
           "imap_security": "SSL / TLS",
-          "imap_allow_insecure_ssl": false,
+          "imap_username": "freddieridell@gmail.com",
+          "refresh_client_id": "662287800555-0a5h4ii0e9hsbpq0mqtul7fja0jhf9uf.apps.googleusercontent.com",
+          "smtp_allow_insecure_ssl": false,
           "smtp_host": "smtp.gmail.com",
           "smtp_port": 587,
-          "smtp_username": "freddieridell@gmail.com",
           "smtp_security": "STARTTLS",
-          "smtp_allow_insecure_ssl": false,
-          "refresh_client_id": "662287800555-0a5h4ii0e9hsbpq0mqtul7fja0jhf9uf.apps.googleusercontent.com"
+          "smtp_username": "freddieridell@gmail.com"
         },
         "label": "freddieridell@gmail.com",
         "autoaddress": {
@@ -107,11 +116,87 @@
         "aliases": [],
         "syncState": "ok",
         "__cls": "Account"
+      },
+      {
+        "id": "733de7c7",
+        "metadata": [],
+        "name": "Freddie Ridell",
+        "provider": "imap",
+        "emailAddress": "freddie@codogo.io",
+        "settings": {
+          "imap_allow_insecure_ssl": false,
+          "imap_host": "imap.zoho.com",
+          "imap_port": 993,
+          "imap_security": "SSL / TLS",
+          "imap_username": "freddie@codogo.io",
+          "smtp_allow_insecure_ssl": false,
+          "smtp_host": "smtp.zoho.com",
+          "smtp_port": 465,
+          "smtp_security": "SSL / TLS",
+          "smtp_username": "freddie@codogo.io"
+        },
+        "label": "freddie@codogo.io",
+        "autoaddress": {
+          "type": "bcc",
+          "value": ""
+        },
+        "aliases": [],
+        "syncState": "ok",
+        "__cls": "Account"
+      },
+      {
+        "id": "50eb9f40",
+        "metadata": [],
+        "name": "freddie ridell",
+        "provider": "gmail",
+        "emailAddress": "drvontrap@gmail.com",
+        "settings": {
+          "imap_allow_insecure_ssl": false,
+          "imap_host": "imap.gmail.com",
+          "imap_port": 993,
+          "imap_security": "SSL / TLS",
+          "imap_username": "drvontrap@gmail.com",
+          "refresh_client_id": "662287800555-0a5h4ii0e9hsbpq0mqtul7fja0jhf9uf.apps.googleusercontent.com",
+          "smtp_allow_insecure_ssl": false,
+          "smtp_host": "smtp.gmail.com",
+          "smtp_port": 587,
+          "smtp_security": "STARTTLS",
+          "smtp_username": "drvontrap@gmail.com"
+        },
+        "label": "drvontrap@gmail.com",
+        "autoaddress": {
+          "type": "bcc",
+          "value": ""
+        },
+        "aliases": [],
+        "syncState": "ok",
+        "__cls": "Account"
       }
     ],
-    "accountsVersion": 1,
+    "accountsVersion": 4,
     "mailto": {
       "prompted-about-default": true
+    },
+    "signatures": {
+      "initial": {
+        "id": "initial",
+        "title": "Default",
+        "body": "<div><table cellPadding=\"0\" cellSpacing=\"0\"><tbody><tr><td colSpan=\"2\"><div style=\"padding-bottom:15px\"><div><strong>Freddie Ridell</strong></div><div>Expert React Contractor</div></div></td></tr><tr><td style=\"vertical-align:top\"><img alt=\"\" src=\"https://twitter.com/FreddieRidell/profile_image?size=original\" style=\"max-width:200px;max-height:60px\"/></td><td><div style=\"font-size:0.9em;white-space:nowrap;border-left:2px solid gray;margin-left:20px;padding-left:20px\"><div><div><span>E: </span><a href=\"mailto:freddie.ridell@gmail.com\">freddie.ridell@gmail.com</a></div><div></div><div><span>W: </span><a href=\"https://freddieridell.com\">https://freddieridell.com</a></div><div><a href=\"https://twitter.com/FreddieRidell\" title=\"Twitter\" style=\"margin-right:8px\"><img src=\"data:image/gif;base64,R0lGODlhGgAaALMAAACr7oDS8iK17cHp+FXC7ZbZ89vy+hKu7Tm77vD5/K3h9YjV8l3H8Mzs+bjl9v///yH5BAEHAA8ALAAAAAAaABoAAASl8MlJq7046/0aQURDJZLBBQKgCstjLIp7OBqj3isgPImixhcHbngoBAY+FYNUIQyfsQauyJQgnrfDYJKaMhSNxBULQFAM3eeBrDJLFAQnm02YSOfzAGWMx24nBmt9QzsVBgyCgwB6FQ4MaX0HVRMJiYMtFw2Wc24YCQEIm4STGAWiNwImGQ0LkE8IqhatkQUbA6CiAgQKpBk9DAgCuguxHMbHyBkRADs=\" width=\"13\" height=\"13\" alt=\"Twitter\"/></a></div></div></div></td></tr></tbody></table></div>",
+        "data": {
+          "title": "Expert React Contractor",
+          "templateName": "SignatureB",
+          "name": "Freddie Ridell",
+          "email": "freddie.ridell@gmail.com",
+          "websiteURL": "https://freddieridell.com",
+          "twitterHandle": "FreddieRidell",
+          "photoURL": "twitter"
+        }
+      }
+    },
+    "defaultSignatures": {
+      "freddieridell@gmail.com": "initial",
+      "freddie@codogo.io": "initial",
+      "drvontrap@gmail.com": "initial"
     }
   }
 }
