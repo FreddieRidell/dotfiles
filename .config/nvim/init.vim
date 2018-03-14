@@ -23,6 +23,7 @@ Plug 'adimit/prolog.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
+Plug 'bogado/file-line'
 Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
@@ -34,7 +35,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'neomake/neomake'
+Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'rust-lang/rust.vim'
@@ -48,4 +49,3 @@ Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/vim-coffee-script'
 
 call plug#end()
-Plug 'leafgarland/typescript-vim'

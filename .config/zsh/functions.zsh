@@ -116,3 +116,49 @@ function isoTime {
 function findAndReplaceInFolder {
 	ag $1 --files-with-matches | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}
 }
+
+function yarnClearLink {
+	yarn unlink $1 && rm -rf node_modules && yarn install
+}
+
+function gitCurrentBranch {
+	git symbolic-ref -q --short HEAD
+}
+
+function gitJira {
+	if [ $1 ]; then
+		git commit -am "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/' -e 's/ .\+//' ) $*";
+	else 
+		git commit -am "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
+	fi
+}
+
+function gitBranchJira {
+	NEW_BRANCH_NAME="$( echo "$*" | tr "[:upper:]" "[:lower:]" | sed -e "s/-/ /g" -e "s/ /-/g" -e 's/\(\w\+\)/\U\1/' )"
+	git checkout master && git pull && git checkout -b "$NEW_BRANCH_NAME" && git push -u origin "$NEW_BRANCH_NAME"
+}
+
+function gitRebaseFromMaster {
+	CURRENT_BRANCH="$( gitCurrentBranch )"
+	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
+}
+
+function createAlpacaService {
+	mkdir "$1"
+
+	cd $1
+
+	touch "$1Service.js"
+	touch "$1Repository.js"
+	touch "$1Transformer.js"
+
+	mkdir __tests__
+
+	echo "describe(\"$1Service\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Service.spec.js"
+	echo "describe(\"$1Repository\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Repository.spec.js"
+	echo "describe(\"$1Transformer\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Transformer.spec.js"
+
+	touch "__tests__/$1Fixture.json"
+	touch "__tests__/$1FixtureTransformed.json"
+}
+

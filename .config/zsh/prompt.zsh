@@ -19,8 +19,18 @@ function get_current_repo(){
 	fi
 }
 
+function get_git_stashes(){
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		STASHCOUNT="$(git stash list | wc -l )"
+
+		if [ "$STASHCOUNT" != "0" ]; then
+			echo " %F{red}$STASHCOUNT stashes"
+		fi
+	fi
+}
+
 function get_left_prompt(){
-	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir)\n%f$ "
+	echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir)$(get_git_stashes)\n%f$ "
 }
 
 
