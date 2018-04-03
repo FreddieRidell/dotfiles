@@ -11,6 +11,7 @@ set exrc
 
 " Enable better CMDLine completion
 set wildmenu
+set wildignorecase
 
 " Show partial commands in the last time of the screen
 set showcmd

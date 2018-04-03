@@ -32,3 +32,4 @@ setxkbmap us
 if [ "$HOST" = "ln1-pl-2086" ]; then
 	xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output DP1 --off --output HDMI2 --off --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off
 fi
+

@@ -15,6 +15,9 @@ runtime ./config/filetype.vim
 "haven't researched what these are doing yet
 runtime ./config/unknown.vim
 
+"device specific config
+runtime ./config/env.vim
+
 let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')

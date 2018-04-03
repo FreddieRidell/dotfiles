@@ -26,7 +26,11 @@
         "seen": [
           "ActivityListButton",
           "ModeToggle",
-          "ToolbarSnooze"
+          "ToolbarSnooze",
+          "LinkTrackingButton",
+          "OpenTrackingButton",
+          "SendLaterButton",
+          "SendRemindersPopoverButton"
         ]
       },
       "theme": "ui-darkside",
@@ -53,7 +57,7 @@
         "snooze": {
           "quota": 15,
           "period": "weekly",
-          "usedInPeriod": 3,
+          "usedInPeriod": 0,
           "featureLimitName": "basic-limit"
         },
         "send-later": {
@@ -173,7 +177,7 @@
         "__cls": "Account"
       }
     ],
-    "accountsVersion": 4,
+    "accountsVersion": 5,
     "mailto": {
       "prompted-about-default": true
     },
@@ -197,6 +201,11 @@
       "freddieridell@gmail.com": "initial",
       "freddie@codogo.io": "initial",
       "drvontrap@gmail.com": "initial"
+    },
+    "plugins": {
+      "link-tracking": {
+        "defaultOn": false
+      }
     }
   }
 }

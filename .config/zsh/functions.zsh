@@ -123,9 +123,9 @@ function gitCurrentBranch {
 
 function gitJira {
 	if [ $1 ]; then
-		git commit -am "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/' -e 's/ .\+//' ) $*";
+		git commit -m "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/' -e 's/ .\+//' ) $*";
 	else 
-		git commit -am "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
+		git commit -m "$( gitCurrentBranch | sed -e 's,.*/\(.*\),\1,' | sed -e 's/-/ /g' -e 's/ /-/')";
 	fi
 }
 
@@ -136,7 +136,7 @@ function gitBranchJira {
 
 function gitRebaseFromMaster {
 	CURRENT_BRANCH="$( gitCurrentBranch )"
-	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
+	git pull && git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
 }
 
 function createAlpacaService {
@@ -158,3 +158,10 @@ function createAlpacaService {
 	touch "__tests__/$1FixtureTransformed.json"
 }
 
+function vimFileAndTest {
+  file="$1"
+  testDir="$(dirname "$1")/__tests__"
+  testFile="$(basename "$1")"
+  testPath="$testDir/$( echo $testFile| sed -e "s/\.js/\.spec\.js/" )"
+  vim -O $file $testPath
+}

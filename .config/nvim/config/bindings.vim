@@ -36,3 +36,7 @@ nmap <Leader>lo :diffg LO <CR>
 nmap <Leader>rp :RainbowParentheses<CR>
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'] ]
+
+"sort and uniq selection
+map <Leader>ss :!sort<CR>
+map <Leader>uu :!uniq<CR>
