@@ -61,19 +61,25 @@
           "featureLimitName": "basic-limit"
         },
         "send-later": {
-          "quota": 10,
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "thread-sharing": {
+          "quota": 3,
           "period": "weekly",
           "usedInPeriod": 0,
           "featureLimitName": "basic-limit"
         },
         "link-tracking": {
-          "quota": 10,
+          "quota": 5,
           "period": "weekly",
           "usedInPeriod": 0,
           "featureLimitName": "basic-limit"
         },
         "open-tracking": {
-          "quota": 10,
+          "quota": 5,
           "period": "weekly",
           "usedInPeriod": 0,
           "featureLimitName": "basic-limit"
@@ -85,7 +91,7 @@
           "featureLimitName": "basic-limit"
         },
         "send-reminders": {
-          "quota": 10,
+          "quota": 5,
           "period": "weekly",
           "usedInPeriod": 0,
           "featureLimitName": "basic-limit"
