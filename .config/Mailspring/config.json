@@ -30,7 +30,8 @@
           "LinkTrackingButton",
           "OpenTrackingButton",
           "SendLaterButton",
-          "SendRemindersPopoverButton"
+          "SendRemindersPopoverButton",
+          "SendRemindersComposerButton"
         ]
       },
       "theme": "ui-darkside",
@@ -81,7 +82,7 @@
         "open-tracking": {
           "quota": 5,
           "period": "weekly",
-          "usedInPeriod": 0,
+          "usedInPeriod": 3,
           "featureLimitName": "basic-limit"
         },
         "contact-profiles": {

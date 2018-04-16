@@ -140,7 +140,7 @@ function gitBranchJira {
 
 function gitRebaseFromMaster {
 	CURRENT_BRANCH="$( gitCurrentBranch )"
-	git pull && git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
+	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
 }
 
 function createAlpacaService {
@@ -168,4 +168,14 @@ function vimFileAndTest {
   testFile="$(basename "$1")"
   testPath="$testDir/$( echo $testFile| sed -e "s/\.js/\.spec\.js/" )"
   vim -O $file $testPath
+}
+
+function vimFilesAndTests {
+  for x in $@ ; do
+    file=$x
+    testDir="$(dirname "$x")/__tests__"
+    testFile="$(basename "$x")"
+    testPath="$testDir/$( echo $testFile| sed -e "s/\.js/\.spec\.js/" )"
+    vim -O $file $testPath
+  done
 }
