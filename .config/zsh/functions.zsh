@@ -179,3 +179,14 @@ function vimFilesAndTests {
     vim -O $file $testPath
   done
 }
+
+function jotNew {
+  FILE_NAME="$HOME/Pad/$( isoTime )-$( echo $* | sed -e "s/ /-/g" ).md"
+  echo "# $( echo $* | sed 's/.*/\L&/; s/[a-z]*/\u&/g' )" >> $FILE_NAME
+
+  $EDITOR $FILE_NAME
+}
+
+function jotFind {
+  $EDITOR $HOME/Pad/$( ls $HOME/Pad | fzf --preview="cat $HOME/Pad/{}" )
+}
