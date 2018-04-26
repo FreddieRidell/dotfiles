@@ -8,3 +8,6 @@ git reset --hard HEAD
 config status
 
 chsh -s $( which zsh ) $USER
+
+# this is needed, but not checked in
+touch ~/.config/zsh/env.zsh
