@@ -7,8 +7,12 @@ let g:neomake_jsx_enabled_makers = ['eslint']
 autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, set filetype=markdown
 autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, setlocal spell wrap linebreak
 
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
 "gql
 autocmd BufNewFile,BufRead *.graphcool set filetype=graphql
+
+"prettier
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#parser = 'babylon'
+autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync

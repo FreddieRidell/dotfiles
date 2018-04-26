@@ -53,7 +53,7 @@
       "stripePlan": "Basic",
       "stripePlanEffective": "Basic",
       "stripeCustomerId": "cus_CRymqMfEKeTCb7",
-      "stripePeriodEnd": "2018-04-07T16:09:17.000Z",
+      "stripePeriodEnd": "2018-05-07T16:09:17.000Z",
       "featureUsage": {
         "snooze": {
           "quota": 15,
@@ -82,7 +82,7 @@
         "open-tracking": {
           "quota": 5,
           "period": "weekly",
-          "usedInPeriod": 3,
+          "usedInPeriod": 0,
           "featureLimitName": "basic-limit"
         },
         "contact-profiles": {

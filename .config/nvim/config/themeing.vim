@@ -35,8 +35,3 @@ set mat=2
 
 " Clear search hilighting once we leave insert mode
 autocmd BufWrite * :noh
-
-"let g:limelight_default_coefficient = 0.1
-
-" Number of preceding/following paragraphs to include (default: 0)
-"let g:limelight_paragraph_span = 1
