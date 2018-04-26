@@ -33,7 +33,6 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
@@ -41,6 +40,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
+Plug 'prettier/vim-prettier'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/neocomplete.vim'
