@@ -190,3 +190,11 @@ function jotNew {
 function jotFind {
   $EDITOR $HOME/Pad/$( ls $HOME/Pad | fzf --preview="cat $HOME/Pad/{}" )
 }
+
+function syncRepos {
+  pass git pull &&
+  pass git push &&
+  config pull &&
+  config push &&
+  echo "done!"
+}
