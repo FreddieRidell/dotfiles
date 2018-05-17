@@ -37,7 +37,7 @@ function freddieFixFormat {
 }
 
 function openXinY {
-	for x in $( ag -l "$1" "$2" ) ; do vim $x ; done
+	ag -l "$1" "$2" | xargs -n 1 vim
 }
 
 function s3rmb {
@@ -197,4 +197,12 @@ function syncRepos {
   config pull &&
   config push &&
   echo "done!"
+}
+
+function gitOpenSomeFromStaus {
+  git status | fpp -c "vim -O"
+}
+
+function findReplaceIn {
+  ag -l $1 $3 | xargs -n 1 -I '{}'   sed --in-place '{}' -e "s/$1/$2/g" 
 }
