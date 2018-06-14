@@ -44,6 +44,9 @@ bindsym $mod+q kill
 bindsym $mod+w exec rofi -show window -font "pango:Tamzen Regular 10px"
 bindsym $mod+d exec rofi -show run -font "pango:Tamzen Regular 10px" 
 
+# lock:
+bindsym Mod4+l exec i3lock
+
 # screenshots:
 bindsym $mod+s exec gnome-screenshot -a 
 

@@ -37,6 +37,7 @@ function freddieFixFormat {
 }
 
 function openXinY {
+	ag -l "$1" "$2"
 	ag -l "$1" "$2" | xargs -n 1 vim
 }
 
@@ -181,22 +182,36 @@ function vimFilesAndTests {
 }
 
 function jotNew {
-  FILE_NAME="$HOME/Pad/$( isoTime )-$( echo $* | sed -e "s/ /-/g" ).md"
+  FOLDER_NAME="$HOME/Pad/$( isoTime | sed -e "s/-/\//" | sed -e "s/-.*//" )"
+  FILE_NAME="$HOME/Pad/$( isoTime | sed -e "s/-/\//" | sed -e "s/-/\//" )-$( echo $* | sed -e "s/ /-/g" ).md"
+  mkdir -p $FOLDER_NAME
+
   echo "# $( echo $* | sed 's/.*/\L&/; s/[a-z]*/\u&/g' )" >> $FILE_NAME
 
   $EDITOR $FILE_NAME
 }
 
 function jotFind {
-  $EDITOR $HOME/Pad/$( ls $HOME/Pad | fzf --preview="cat $HOME/Pad/{}" )
+  $EDITOR $( find -L $HOME/Pad -type f | fzf --reverse --preview="cat {}" )
 }
 
 function syncRepos {
+  echo "------------------------------"
+  echo "             pass             "
+  echo "------------------------------"
   pass git pull &&
   pass git push &&
+
+  echo "------------------------------"
+  echo "            config            "
+  echo "------------------------------"
+  config status &&
   config pull &&
   config push &&
-  echo "done!"
+
+  echo "------------------------------"
+  echo "             done            "
+  echo "------------------------------"
 }
 
 function gitOpenSomeFromStaus {
@@ -205,4 +220,8 @@ function gitOpenSomeFromStaus {
 
 function findReplaceIn {
   ag -l $1 $3 | xargs -n 1 -I '{}'   sed --in-place '{}' -e "s/$1/$2/g" 
+}
+
+function titleAndRun {
+  title $* && $*
 }
