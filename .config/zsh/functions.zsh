@@ -235,7 +235,8 @@ function jqModify {
 }
 
 function setupMyNPM { 
-	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
+	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
+
 
 	NAME="$( jq '.name' package.json )"
 
@@ -254,7 +255,7 @@ function setupMyNPM {
 	echo "node_modules" >> .gitignore
 
 	# setup files
-	mkdir src
+	mkdir -p src
 	touch src/index.js
 	touch index.js
 
