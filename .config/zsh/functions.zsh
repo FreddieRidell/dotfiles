@@ -237,11 +237,11 @@ function jqModify {
 function setupMyNPM { 
 	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
 
-
 	NAME="$( jq '.name' package.json )"
 
 	# setup package.json
 	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
+	jqModify '.scripts.watch = "babel src --out-dir lib --watch"' package.json 
 	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
 	jqModify '.prettier.useTabs = true' package.json 
@@ -259,7 +259,7 @@ function setupMyNPM {
 	touch src/index.js
 	touch index.js
 
-	echo '#!/usr/bin/env node' >> main.js
+	echo '#!/usr/bin/env node' > main.js
 	echo 'require("./lib")' >> main.js
 	chmod +x main.js
 }
