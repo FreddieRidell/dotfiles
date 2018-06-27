@@ -225,3 +225,12 @@ function findReplaceIn {
 function titleAndRun {
   title $* && $*
 }
+
+function jqModify {
+	TMP_FILE_NAME="/tmp/$RANDOM.json"
+	echo $TMP_FILE_NAME
+
+	jq $1 $2 > $TMP_FILE_NAME
+
+	mv $TMP_FILE_NAME $2
+}
