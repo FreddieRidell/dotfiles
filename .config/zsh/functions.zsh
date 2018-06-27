@@ -228,9 +228,20 @@ function titleAndRun {
 
 function jqModify {
 	TMP_FILE_NAME="/tmp/$RANDOM.json"
-	echo $TMP_FILE_NAME
 
 	jq $1 $2 > $TMP_FILE_NAME
 
 	mv $TMP_FILE_NAME $2
+}
+
+function setupMyNPM { 
+	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
+
+	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
+	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
+	jqModify '.eslintConfig.extends = "react-app"' package.json 
+	jqModify '.prettier.useTabs = true' package.json 
+	jqModify '.prettier.tabWidth= 4' package.json 
+	jqModify '.prettier.trailingComma = "all"' package.json 
+	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
 }
