@@ -200,14 +200,14 @@ function syncRepos {
   echo "             pass             "
   echo "------------------------------"
   pass git pull &&
-  pass git push &&
+  pass git push ;
 
   echo "------------------------------"
   echo "            config            "
   echo "------------------------------"
   config status &&
   config pull &&
-  config push &&
+  config push ;
 
   echo "------------------------------"
   echo "             done            "
@@ -224,4 +224,8 @@ function findReplaceIn {
 
 function titleAndRun {
   title $* && $*
+}
+
+function cabalDUCSGS { 
+  cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddie
 }
