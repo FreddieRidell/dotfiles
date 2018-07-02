@@ -229,3 +229,40 @@ function titleAndRun {
 function cabalDUCSGS { 
   cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddie
 }
+
+function jqModify {
+	TMP_FILE_NAME="/tmp/$RANDOM.json"
+
+	jq $1 $2 > $TMP_FILE_NAME
+
+	mv $TMP_FILE_NAME $2
+}
+
+function setupMyNPM { 
+	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
+
+	NAME="$( jq '.name' package.json )"
+
+	# setup package.json
+	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
+	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
+	jqModify '.eslintConfig.extends = "react-app"' package.json 
+	jqModify '.prettier.useTabs = true' package.json 
+	jqModify '.prettier.tabWidth= 4' package.json 
+	jqModify '.prettier.trailingComma = "all"' package.json 
+	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
+	jqModify ".bin.$NAME = \"./main.js\"" package.json
+
+	# setup .gitignore
+	echo "/lib" >> .gitignore
+	echo "node_modules" >> .gitignore
+
+	# setup files
+	mkdir src
+	touch src/index.js
+	touch index.js
+
+	echo '#!/usr/bin/env node' >> main.js
+	echo 'require("./lib")' >> main.js
+	chmod +x main.js
+}
