@@ -127,18 +127,22 @@ function jqModify {
 }
 
 function setupMyNPM { 
-	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
+	npm add --save-dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
 
 	NAME="$( jq '.name' package.json )"
 
 	# setup package.json
 	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
+	jqModify '.scripts.watch = "babel src --out-dir lib --watch"' package.json 
 	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
 	jqModify '.prettier.useTabs = true' package.json 
 	jqModify '.prettier.tabWidth= 4' package.json 
 	jqModify '.prettier.trailingComma = "all"' package.json 
 	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
+	jqModify '.files[0] = "/lib"' package.json 
+	jqModify '.files[0] = "/index.js"' package.json 
+	jqModify '.files[0] = "/main.js"' package.json 
 	jqModify ".bin.$NAME = \"./main.js\"" package.json
 
 	# setup .gitignore
@@ -146,11 +150,11 @@ function setupMyNPM {
 	echo "node_modules" >> .gitignore
 
 	# setup files
-	mkdir src
+	mkdir -p src
 	touch src/index.js
 	touch index.js
 
-	echo '#!/usr/bin/env node' >> main.js
+	echo '#!/usr/bin/env node' > main.js
 	echo 'require("./lib")' >> main.js
 	chmod +x main.js
 }
