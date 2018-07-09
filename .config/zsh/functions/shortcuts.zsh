@@ -118,6 +118,10 @@ function cabalDUCSGS {
   cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddie
 }
 
+function cabalCabal {
+  cabal --key dat://59813e3169b4b2a6d3741b077f80cce014d84d67b4a8f9fa4c19605b5cff637f --nick freddieridell                                                                                                                                  []
+}
+
 function jqModify {
 	TMP_FILE_NAME="/tmp/$RANDOM.json"
 
@@ -132,18 +136,18 @@ function setupMyNPM {
 	NAME="$( jq '.name' package.json )"
 
 	# setup package.json
-	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
-	jqModify '.scripts.watch = "babel src --out-dir lib --watch"' package.json 
-	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
+	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
+	jqModify ".bin.$NAME = \"./main.js\"" package.json
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
-	jqModify '.prettier.useTabs = true' package.json 
+	jqModify '.files[0] = "/index.js"' package.json 
+	jqModify '.files[0] = "/lib"' package.json 
+	jqModify '.files[0] = "/main.js"' package.json 
 	jqModify '.prettier.tabWidth= 4' package.json 
 	jqModify '.prettier.trailingComma = "all"' package.json 
-	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
-	jqModify '.files[0] = "/lib"' package.json 
-	jqModify '.files[0] = "/index.js"' package.json 
-	jqModify '.files[0] = "/main.js"' package.json 
-	jqModify ".bin.$NAME = \"./main.js\"" package.json
+	jqModify '.prettier.useTabs = true' package.json 
+	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
+	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
+	jqModify '.scripts.watch = "babel src --out-dir lib --watch"' package.json 
 
 	# setup .gitignore
 	echo "/lib" >> .gitignore
@@ -156,9 +160,27 @@ function setupMyNPM {
 
 	echo '#!/usr/bin/env node' > main.js
 	echo 'require("./lib")' >> main.js
+	echo 'require("./lib")' > index.js
+
 	chmod +x main.js
 }
 
 function gitPoke {
   git commit --amend --date="now"
+}
+
+function gitResetToOrigin {
+  git reset --hard "origin/$( gitCurrentBranch )"
+}
+
+function lock { 
+  IMG_NAME="/tmp/$RANDOM.png"
+  
+  scrot $IMG_NAME
+
+  convert -scale 12.5% -scale 800% $IMG_NAME $IMG_NAME
+
+  i3lock -i $IMG_NAME
+
+  rm $IMG_NAME
 }
