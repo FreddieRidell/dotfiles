@@ -49,3 +49,5 @@
   showUntrackedFiles = all
 [color]
 	ui = always
+[receive]
+	denyCurrentBranch = ignore

@@ -32,7 +32,7 @@ exec thunderbird
 exec gnome-terminal
 
 # lock
-bindsym Control+$mod+l exec lock
+bindsym Mod4+l exec lock
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
@@ -44,8 +44,6 @@ bindsym $mod+q kill
 bindsym $mod+w exec rofi -show window -font "pango:Tamzen Regular 10px"
 bindsym $mod+d exec rofi -show run -font "pango:Tamzen Regular 10px" 
 
-# lock:
-bindsym Mod4+l exec i3lock
 
 # screenshots:
 bindsym $mod+s exec gnome-screenshot -a 
