@@ -184,3 +184,10 @@ function lock {
 
   rm $IMG_NAME
 }
+
+function pingg {
+	while true ; do ;
+		ping 1.1.1.1 ; 
+		sleep 1 ; 
+	done
+}
