@@ -1,7 +1,7 @@
 set shell=/usr/bin/zsh
 
 " convenient leader key
-let mapleader = ","
+let mapleader = " "
 
 "reload on file change:
 set autoread

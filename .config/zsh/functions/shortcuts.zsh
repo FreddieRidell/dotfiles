@@ -174,15 +174,7 @@ function gitResetToOrigin {
 }
 
 function lock { 
-  IMG_NAME="/tmp/$RANDOM.png"
-  
-  scrot $IMG_NAME
-
-  convert -scale 12.5% -scale 800% $IMG_NAME $IMG_NAME
-
-  i3lock -i $IMG_NAME
-
-  rm $IMG_NAME
+  ~/.i3/lock.sh
 }
 
 function pingg {
