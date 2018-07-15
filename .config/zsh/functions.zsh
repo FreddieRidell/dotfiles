@@ -235,7 +235,7 @@ function jqModify {
 }
 
 function setupMyNPM { 
-	npm i --dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
+	npm install --only=dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
 
 	NAME="$( jq '.name' package.json )"
 
@@ -261,4 +261,11 @@ function setupMyNPM {
 	echo '#!/usr/bin/env node' >> main.js
 	echo 'require("./lib")' >> main.js
 	chmod +x main.js
+}
+
+function pingMeDaddy {
+	while true ; do
+		ping 1.1.1.1 ;
+		sleep 1
+	done
 }
