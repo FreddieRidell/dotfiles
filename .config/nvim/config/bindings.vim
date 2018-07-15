@@ -40,3 +40,14 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'] ]
 "sort and uniq selection
 map <Leader>ss :!sort<CR>
 map <Leader>uu :!uniq<CR>
+
+" split
+nmap <Leader>- :vsplit<CR>
+nmap <Leader>\| :split<CR>
+nmap <Leader><Leader>h <C-w>h
+nmap <Leader><Leader>j <C-w>j
+nmap <Leader><Leader>k <C-w>k
+nmap <Leader><Leader>l <C-w>l
+
+" Goyo
+nmap <Leader>gy :Goyo<CR>

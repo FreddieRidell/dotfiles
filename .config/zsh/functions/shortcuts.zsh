@@ -1,9 +1,3 @@
-function vimovergrep {
-	echo "vimovergrep is a work in progress"
-	echo "$1"
-	echo "$2"
-}
-
 function getFolder () {
     echo ${\PWD##*/}
 }
@@ -32,15 +26,6 @@ function largestFile {
 	wc -l "$@" | sort -nr -t":" -k1 | head -2 | tail -1 | sed -e 's/[0-9]\+//'
 }
 
-function freddieFixFormat {
-	for f in $( yarn run format | grep \"/home/freddie\" ) ; do vim $f ; done
-}
-
-function openXinY {
-	ag -l "$1" "$2"
-	ag -l "$1" "$2" | xargs -n 1 vim
-}
-
 function s3rmb {
 	aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1"
 }
@@ -52,50 +37,6 @@ function pushMessage {
 		--header "Content-Type: application/json" \
 		--request POST \
 		https://api.pushbullet.com/v2/pushes | python -m json.tool
-}
-
-function loadIAMCredentials {
-	export AWS_ACCESS_KEY_ID="$( echo "$1" | sed -e "s/.\+\///" )"
-
-	echo "Loading secret for $AWS_ACCESS_KEY_ID"
-	export AWS_SECRET_ACCESS_KEY="$(pass $1)"
-
-	echo "done"
-}
-
-function wifiConnectToStored {
-	SSID="$( echo "$1" | sed -e "s/.\+\///" )"
-	
-	echo "Loading password for $SSID"
-	PASS="$( pass $1 )"
-
-	echo "Connecting to $SSID"
-	nmcli d wifi connect $SSID password $PASS
-
-	echo "done"
-}
-
-function taskSaga {
-	echo -n "Enter any metadata: "
-	read meta
-	ARGS=( ${(z)meta} )
-
-	echo "Please enter the first task"
-
-	prevTaskId=""
-	resp=""
-
-	while read -r line; do
-		if [ -n "$prevTaskId" ]; then
-			resp="$(task add depends:$prevTaskId $ARGS \"$line\" )"
-		else
-			resp="$(task add $ARGS \"$line\" )"
-		fi
-
-		prevTaskId="$( echo "$resp" | sed -e "s/\w\+ \w\+ \([0-9]\+\)\./\1/" )"
-
-		echo -n "After $line, then: "
-	done
 }
 
 function createS3Website {
@@ -112,10 +53,6 @@ function unixTime {
 
 function isoTime {
 	date -I ;
-}
-
-function findAndReplaceInFolder {
-	ag $1 --files-with-matches | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}
 }
 
 function yarnClearLink {
@@ -144,43 +81,6 @@ function gitRebaseFromMaster {
 	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
 }
 
-function createAlpacaService {
-	mkdir "$1"
-
-	cd $1
-
-	touch "$1Service.js"
-	touch "$1Repository.js"
-	touch "$1Transformer.js"
-
-	mkdir __tests__
-
-	echo "describe(\"$1Service\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Service.spec.js"
-	echo "describe(\"$1Repository\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Repository.spec.js"
-	echo "describe(\"$1Transformer\", () => {\n  it(\"fails\", () => {\n    expect(true).toBe(false);\n  })\n})" > "__tests__/$1Transformer.spec.js"
-
-	touch "__tests__/$1Fixture.json"
-	touch "__tests__/$1FixtureTransformed.json"
-}
-
-function vimFileAndTest {
-  file="$1"
-  testDir="$(dirname "$1")/__tests__"
-  testFile="$(basename "$1")"
-  testPath="$testDir/$( echo $testFile| sed -e "s/\.js/\.spec\.js/" )"
-  vim -O $file $testPath
-}
-
-function vimFilesAndTests {
-  for x in $@ ; do
-    file=$x
-    testDir="$(dirname "$x")/__tests__"
-    testFile="$(basename "$x")"
-    testPath="$testDir/$( echo $testFile| sed -e "s/\.js/\.spec\.js/" )"
-    vim -O $file $testPath
-  done
-}
-
 function jotNew {
   FOLDER_NAME="$HOME/Pad/$( isoTime | sed -e "s/-/\//" | sed -e "s/-.*//" )"
   FILE_NAME="$HOME/Pad/$( isoTime | sed -e "s/-/\//" | sed -e "s/-/\//" )-$( echo $* | sed -e "s/ /-/g" ).md"
@@ -200,30 +100,26 @@ function syncRepos {
   echo "             pass             "
   echo "------------------------------"
   pass git pull &&
-  pass git push &&
+  pass git push ;
 
   echo "------------------------------"
   echo "            config            "
   echo "------------------------------"
   config status &&
   config pull &&
-  config push &&
+  config push ;
 
   echo "------------------------------"
   echo "             done            "
   echo "------------------------------"
 }
 
-function gitOpenSomeFromStaus {
-  git status | fpp -c "vim -O"
+function cabalDUCSGS { 
+  cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddie
 }
 
-function findReplaceIn {
-  ag -l $1 $3 | xargs -n 1 -I '{}'   sed --in-place '{}' -e "s/$1/$2/g" 
-}
-
-function titleAndRun {
-  title $* && $*
+function cabalCabal {
+  cabal --key dat://59813e3169b4b2a6d3741b077f80cce014d84d67b4a8f9fa4c19605b5cff637f --nick freddieridell                                                                                                                                  []
 }
 
 function jqModify {
@@ -235,34 +131,55 @@ function jqModify {
 }
 
 function setupMyNPM { 
-	npm install --only=dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app 
+	npm add --save-dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
 
 	NAME="$( jq '.name' package.json )"
 
 	# setup package.json
-	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
-	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
-	jqModify '.eslintConfig.extends = "react-app"' package.json 
-	jqModify '.prettier.useTabs = true' package.json 
-	jqModify '.prettier.tabWidth= 4' package.json 
-	jqModify '.prettier.trailingComma = "all"' package.json 
 	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
 	jqModify ".bin.$NAME = \"./main.js\"" package.json
+	jqModify '.eslintConfig.extends = "react-app"' package.json 
+	jqModify '.files[0] = "/index.js"' package.json 
+	jqModify '.files[0] = "/lib"' package.json 
+	jqModify '.files[0] = "/main.js"' package.json 
+	jqModify '.prettier.tabWidth= 4' package.json 
+	jqModify '.prettier.trailingComma = "all"' package.json 
+	jqModify '.prettier.useTabs = true' package.json 
+	jqModify '.scripts.build = "babel src --out-dir lib"' package.json 
+	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
+	jqModify '.scripts.watch = "babel src --out-dir lib --watch"' package.json 
 
 	# setup .gitignore
 	echo "/lib" >> .gitignore
 	echo "node_modules" >> .gitignore
 
 	# setup files
-	mkdir src
+	mkdir -p src
 	touch src/index.js
 	touch index.js
 
-	echo '#!/usr/bin/env node' >> main.js
+	echo '#!/usr/bin/env node' > main.js
 	echo 'require("./lib")' >> main.js
+	echo 'require("./lib")' > index.js
+
 	chmod +x main.js
 }
 
-source $HOME/.config/zsh/functions/itterators.zsh
-source $HOME/.config/zsh/functions/shortcuts.zsh
-source $HOME/.config/zsh/functions/pass.zsh
+function gitPoke {
+  git commit --amend --date="now"
+}
+
+function gitResetToOrigin {
+  git reset --hard "origin/$( gitCurrentBranch )"
+}
+
+function lock { 
+  ~/.i3/lock.sh
+}
+
+function pingMeDaddy {
+	while true ; do
+		ping 1.1.1.1 ;
+		sleep 1
+	done
+}
