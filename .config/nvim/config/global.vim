@@ -1,5 +1,4 @@
 let mapleader = " " "convenient leader key
-set autochdir " change CWD to whereever the current file is
 set autoindent " When opening a new line and no filetype-specific indenting is enabled, keep the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoread "reload on file change:
 set backspace=indent,eol,start " Allow backspacing over autoindent, line breaks and start of insert action
