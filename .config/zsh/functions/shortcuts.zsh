@@ -114,6 +114,12 @@ function syncRepos {
   echo "------------------------------"
 }
 
+function updateAll {
+  sudo apt-get update && sudo apt-get upgrade ;
+  sudo dnf upgrade ;
+  yarn global upgrade-interactive --latest;
+}
+
 function cabalDUCSGS { 
   cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddie
 }
