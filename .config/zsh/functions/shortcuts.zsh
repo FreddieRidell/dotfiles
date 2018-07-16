@@ -182,3 +182,10 @@ function gitResetToOrigin {
 function lock { 
   ~/.i3/lock.sh
 }
+
+function pingMeDaddy {
+	while true ; do
+		ping 1.1.1.1 ;
+		sleep 1
+	done
+}
