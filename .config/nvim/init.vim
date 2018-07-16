@@ -34,6 +34,7 @@ Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'kshenoy/vim-signature'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'mzlogin/vim-markdown-toc'

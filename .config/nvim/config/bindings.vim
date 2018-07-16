@@ -48,6 +48,7 @@ nmap <Leader><Leader>h <C-w>h
 nmap <Leader><Leader>j <C-w>j
 nmap <Leader><Leader>k <C-w>k
 nmap <Leader><Leader>l <C-w>l
+nmap <Leader>gf :vertical wincmd f<CR>
 
 " Goyo
 nmap <Leader>gy :Goyo<CR>
