@@ -60,8 +60,8 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split
-bindsym $mod+c split |
-bindsym $mod+v split -
+bindsym $mod+c split h
+bindsym $mod+v split v
 
 # fullscreen mode
 bindsym $mod+f fullscreen
@@ -151,15 +151,15 @@ mode "resize" {
 bar {
   status_command ~/.i3/myI3Status.sh 
 	position top
-	font pango:Tamzen Regular 10px
+	font pango:Tamzen Regular 12px
   colors {
     separator $BACKGROUND
     background $BACKGROUND
     statusline $WHITE
-    focused_workspace $RED $RED $BACKGROUND
-    active_workspace $ORANGE $ORANGE $BACKGROUND
-    inactive_workspace $BACKGROUND $GREEN $BACKGROUND
-    urgent_workspace $PURPLE $PURPLE $BACKGROUND
+    focused_workspace $GREEN $GREEN $BACKGROUND
+    active_workspace $GREEN $BACKGROUND $GREEN
+    inactive_workspace $BLUE $BACKGROUND $BLUE
+    urgent_workspace $RED $RED $BACKGROUND
   }
 }
 
@@ -176,7 +176,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 5%+
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
-client.focused $RED $RED $BACKGROUND $BACKGROUND
-client.focused_inactive $ORANGE $ORANGE $BACKGROUND $ORANGE
-client.unfocused $BACKGROUND $BACKGROUND $GREEN $GREEN
-client.urgent $PURPLE $PURPLE $BACKGROUND $PURPLE 
+# class                 border      background  text        indicator   child_border
+
+client.focused          $GREEN      $GREEN      $BACKGROUND $BACKGROUND $PURPLE
+client.focused_inactive $GREEN      $BACKGROUND $GREEN      $GREEN      $BLUE
+client.unfocused        $BACKGROUND $BACKGROUND $RED        $RED        $PURPLE
+client.urgent           $RED        $RED        $BACKGROUND $RED        $PURPLE
+client.placeholder      #000000     #0c0c0c #ffffff         #000000     #0c0c0c
+client.background       $BACKGROUND
