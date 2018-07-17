@@ -9,6 +9,14 @@ GREEN="#a9dc76"
 BLUE="#78dce8"
 PURPLE="#ab9df2"
 
+#grays
+  #background: #3e3b3f;
+  #background: #3e3b3f;
+  #background: #575558;
+  #background: #6c6a6c;
+  #background: #908e8f;
+  #background: #bcbbbb;
+
 I="0"
 
 VOLUME_REFRESH="1"
