@@ -7,6 +7,15 @@
 # my conf. based on i3-config-generator
 set $mod Mod1
 
+set $BACKGROUND #2c292d
+set $WHITE #fdf9f3
+set $RED #ff6188
+set $ORANGE #fc9867
+set $YELLOW #ffd866
+set $GREEN #a9dc76
+set $BLUE #78dce8
+set $PURPLE #ab9df2
+
 font pango:Tamzen Regular 10
 
 floating_modifier $mod
@@ -144,13 +153,13 @@ bar {
 	position top
 	font pango:Tamzen Regular 10px
   colors {
-    separator #272822
-    background #272822
-    statusline #FFFFFF
-    focused_workspace #F92672 #F92672 #ffffff
-    active_workspace #FD971F #FD971F #FFFFFF
-    inactive_workspace #272822 #A6E22E #FFFFFF
-    urgent_workspace #A6E22E #A6E22E #ffffff
+    separator $BACKGROUND
+    background $BACKGROUND
+    statusline $WHITE
+    focused_workspace $RED $RED $BACKGROUND
+    active_workspace $ORANGE $ORANGE $BACKGROUND
+    inactive_workspace $BACKGROUND $GREEN $BACKGROUND
+    urgent_workspace $PURPLE $PURPLE $BACKGROUND
   }
 }
 
@@ -167,7 +176,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 5%+
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
-client.focused #F92672 #F92672 #ffffff #FD971F
-client.focused_inactive #66D9EF #66D9EF #FFFFFF #66D9EF
-client.unfocused #272822 #272822 #FFFFFF #66D9EF
-client.urgent #A6E22E #A6E22E #ffffff #efb73e
+client.focused $RED $RED $BACKGROUND $BACKGROUND
+client.focused_inactive $ORANGE $ORANGE $BACKGROUND $ORANGE
+client.unfocused $BACKGROUND $BACKGROUND $GREEN $GREEN
+client.urgent $PURPLE $PURPLE $BACKGROUND $PURPLE 

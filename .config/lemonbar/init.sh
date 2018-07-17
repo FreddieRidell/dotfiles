@@ -1,13 +1,13 @@
 #!/bin/bash
 
-BACKGROUND="#272822"
-WHITE="#eeeeee"
-RED="#f92672"
-ORANGE="#fd971f"
-YELLOW="#e6db74"
-GREEN="#a6e22e"
-BLUE="#66d9ef"
-PURPLE="#ae81ff"
+BACKGROUND="#2c292d"
+WHITE="#fdf9f3"
+RED="#ff6188"
+ORANGE="#fc9867"
+YELLOW="#ffd866"
+GREEN="#a9dc76"
+BLUE="#78dce8"
+PURPLE="#ab9df2"
 
 I="0"
 
