@@ -189,3 +189,9 @@ function pingMeDaddy {
 		sleep 1
 	done
 }
+
+function touchh {
+  for x in $@ ; do ;
+    mkdir -p $( dirname $x ) && touch $x ;
+  done ;
+}

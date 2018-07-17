@@ -39,24 +39,20 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left move workspace to output left
+bindsym $mod+Down move workspace to output down
+bindsym $mod+Up move workspace to output up
+bindsym $mod+Right move workspace to output right
 
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split
-bindsym $mod+c split h
-bindsym $mod+v split v
+bindsym $mod+c split |
+bindsym $mod+v split -
 
 # fullscreen mode
 bindsym $mod+f fullscreen
@@ -78,12 +74,12 @@ bindsym $mod+a focus parent
 bindsym $mod+x [urgent=latest] focus
 
 # customize workspace names
-set $WS1 1
-set $WS2 2
-set $WS3 3
-set $WS4 4
+set $WS1 1 bench
+set $WS2 2 runners
+set $WS3 3 resuts
+set $WS4 4 research
 set $WS5 5
-set $WS6 6
+set $WS6 6 comms
 set $WS7 7
 set $WS8 8
 set $WS9 9
