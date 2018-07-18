@@ -37,8 +37,8 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+q kill
 
 # start rofi:
-bindsym $mod+w exec rofi -show window -font "pango:Tamzen Regular 10px"
-bindsym $mod+d exec rofi -show run -font "pango:Tamzen Regular 10px" 
+bindsym $mod+w exec ~/.i3/rofiRun.sh window
+bindsym $mod+d exec ~/.i3/rofiRun.sh run
 
 # screenshots:
 bindsym $mod+s exec gnome-screenshot -a 
