@@ -7,6 +7,11 @@
 # my conf. based on i3-config-generator
 set $mod Mod1
 
+gaps inner 16
+gaps outer 1
+smart_gaps on
+smart_borders no_gaps
+
 set $BACKGROUND #2c292d
 set $WHITE #fdf9f3
 set $RED #ff6188
@@ -24,7 +29,7 @@ floating_modifier $mod
 exec xrandr --output DVI-D-0 --auto --pos 0x0 --output DVI-I-0 --auto --pos 1920x400
 
 exec --no-startup-id /usr/bin/gnome-settings-daemon
-exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.*
 exec --no-startup-id setxkbmap us
 
 # lock
@@ -159,7 +164,7 @@ bar {
     focused_workspace $GREEN $GREEN $BACKGROUND
     active_workspace $GREEN $BACKGROUND $GREEN
     inactive_workspace $BLUE $BACKGROUND $BLUE
-    urgent_workspace $RED $RED $BACKGROUND
+    urgent_workspace $ORANGE $ORANGE $BACKGROUND
   }
 }
 
@@ -178,9 +183,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
 # class                 border      background  text        indicator   child_border
 
-client.focused          $GREEN      $GREEN      $BACKGROUND $BACKGROUND $PURPLE
+client.focused          $GREEN      $GREEN      $BACKGROUND $BACKGROUND $GREEN
 client.focused_inactive $GREEN      $BACKGROUND $GREEN      $GREEN      $BLUE
-client.unfocused        $BACKGROUND $BACKGROUND $RED        $RED        $PURPLE
+client.unfocused        $BACKGROUND $BACKGROUND $RED        $RED        $RED
 client.urgent           $RED        $RED        $BACKGROUND $RED        $PURPLE
 client.placeholder      #000000     #0c0c0c #ffffff         #000000     #0c0c0c
 client.background       $BACKGROUND
