@@ -92,7 +92,7 @@ function jotNew {
 }
 
 function jotFind {
-  $EDITOR $( find -L $HOME/Pad -type f | fzf --reverse --preview="cat {}" )
+  $EDITOR $( find -L $HOME/Pad -type f | sort | fzf --reverse --preview="cat {}" )
 }
 
 function syncRepos {

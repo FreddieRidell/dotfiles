@@ -13,7 +13,6 @@ function openXinY {
 	ag -l "$1" "$2" | xargs -n 1 vim
 }
 
-
 function findReplaceIn {
   ag -l $1 $3 | xargs -n 1 -I '{}'   sed --in-place '{}' -e "s/$1/$2/g" 
 }
