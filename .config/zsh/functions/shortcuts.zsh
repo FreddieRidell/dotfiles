@@ -198,7 +198,10 @@ function touchh {
 }
 
 function did {
-  echo "$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*" >> ~/did ;
-
-  tail -10 ~/did
+  if [ "$#" -ne 0 ] ; then
+    echo "$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*" >> ~/did ;
+    tail -10 ~/did
+  else 
+    less ~/did
+  fi
 }
