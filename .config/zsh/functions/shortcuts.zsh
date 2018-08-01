@@ -52,7 +52,7 @@ function unixTime {
 }
 
 function isoTime {
-	date -I ;
+  date --iso-8601=seconds | sed -e "s/T/ /g" -e "s/\+.*//g" ;
 }
 
 function yarnClearLink {
@@ -195,4 +195,10 @@ function touchh {
   for x in $@ ; do ;
     mkdir -p $( dirname $x ) && touch $x ;
   done ;
+}
+
+function did {
+  echo "$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*" >> ~/did ;
+
+  tail -10 ~/did
 }
