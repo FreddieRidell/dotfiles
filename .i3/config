@@ -42,11 +42,12 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+q kill
 
 # start rofi:
-bindsym $mod+w exec ~/.i3/rofiRun.sh window
-bindsym $mod+d exec ~/.i3/rofiRun.sh run
+bindsym $mod+w exec rofi -show window
+bindsym $mod+d exec rofi -show run
+bindsym $mod+s exec rofi -show ssh
 
 # screenshots:
-bindsym $mod+s exec gnome-screenshot -a 
+bindsym $mod+Shift+s exec gnome-screenshot -a 
 
 # change focus
 bindsym $mod+h focus left
