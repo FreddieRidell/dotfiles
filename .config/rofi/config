@@ -7,10 +7,11 @@
 ! BLUE="#78dce8"
 ! PURPLE="#ab9df2"
 
-rofi.font: Tamzen Regular 12px
 
 ! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
-rofi.color-window: #2c292d,  #fdf9f3
+rofi.color-window: #2c292d,  #78dce8
 rofi.color-normal: #2c292d,  #fdf9f3,  #2c292d,  #a9dc76,  #2c292d
 rofi.color-urgent: #2c292d,  #fdf9f3,  #eee8d5,  #fc9876,  #2c292d
 rofi.color-active: #2c292d,  #fdf9f3,  #eee8d5,  #a9dc76,  #2c292d
+
+rofi.font: Tamzen Regular 12px
