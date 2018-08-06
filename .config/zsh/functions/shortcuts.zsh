@@ -202,6 +202,8 @@ function did {
   if [ "$#" -ne 0 ] ; then
     echo "$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*" >> ~/did ;
     tail -10 ~/did
+    config add ~/did
+    config commit -m "did"
   else 
     less ~/did
   fi
