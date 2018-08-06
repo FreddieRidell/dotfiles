@@ -199,11 +199,23 @@ function touchh {
 }
 
 function did {
+  DID_FILE=~/did
+
   if [ "$#" -ne 0 ] ; then
-    echo "$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*" >> ~/did ;
-    tail -10 ~/did
-    config add ~/did
-    config commit -m "did"
+    ENTRY="$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*"
+
+    MOST_RECENT_DATE=$( tail -1 $DID_FILE | cut -c1,-10 - )
+    THIS_DATE=$( echo $ENTRY | cut -c1,-10 - )
+
+    if [ $MOST_RECENT_DATE != $THIS_DATE ] ; then
+      echo "" >> $DID_FILE
+    fi
+
+    echo $ENTRY >> $DID_FILE
+
+    #tail -10 $DID_FILE
+    #config add $DID_FILE
+    #config commit -m "did"
   else 
     less ~/did
   fi
