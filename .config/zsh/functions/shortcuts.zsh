@@ -117,17 +117,17 @@ function syncRepos {
 function updateAll {
   sudo ls
   syncRepos ;
-  sudo apt update && sudo apt upgrade -y ;
+  sudo apt update && sudo apt upgrade -y & sudo apt autoremove -y;
   sudo dnf upgrade -y ;
   yarn global upgrade-interactive --latest;
 }
 
 function cabalDUCSGS { 
-  cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddie
+  cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddieRidell
 }
 
 function cabalCabal {
-  cabal --key dat://59813e3169b4b2a6d3741b077f80cce014d84d67b4a8f9fa4c19605b5cff637f --nick freddieridell                                                                                                                                  []
+  cabal --key dat://59813e3169b4b2a6d3741b077f80cce014d84d67b4a8f9fa4c19605b5cff637f --nick freddieRidell
 }
 
 function jqModify {
