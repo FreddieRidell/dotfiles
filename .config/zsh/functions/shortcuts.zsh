@@ -127,7 +127,7 @@ function cabalDUCSGS {
 }
 
 function cabalCabal {
-  cabal --key dat://59813e3169b4b2a6d3741b077f80cce014d84d67b4a8f9fa4c19605b5cff637f --nick freddieRidell
+  cabal --key cabal://7d99b453506b9743bf5e71fe749f66c814d7cd9388a5d394a27eed4c5640302b --nick freddieRidell
 }
 
 function jqModify {
@@ -213,9 +213,9 @@ function did {
 
     echo $ENTRY >> $DID_FILE
 
-    #tail -10 $DID_FILE
-    #config add $DID_FILE
-    #config commit -m "did"
+    tail -10 $DID_FILE
+    config add $DID_FILE > /dev/null
+    config commit -m "did" > /dev/null
   else 
     less ~/did
   fi
