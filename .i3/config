@@ -91,9 +91,9 @@ bindsym $mod+x [urgent=latest] focus
 # customize workspace names
 set $WS1 1 bench
 set $WS2 2 runners
-set $WS3 3 resuts
+set $WS3 3 results
 set $WS4 4 research
-set $WS5 5
+set $WS5 5 testbed
 set $WS6 6 comms
 set $WS7 7
 set $WS8 8
