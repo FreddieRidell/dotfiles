@@ -117,7 +117,7 @@ function syncRepos {
 function updateAll {
   sudo ls
   syncRepos ;
-  sudo apt update && sudo apt upgrade -y & sudo apt autoremove -y;
+  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
   sudo dnf upgrade -y ;
   yarn global upgrade-interactive --latest;
 }
