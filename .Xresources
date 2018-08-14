@@ -1,0 +1,25 @@
+URxvt.font: -misc-tamzen-medium-*-*-*-15-*-*-*-*-*-*-*
+URxvt.boldFont: -misc-tamzen-bold-*-*-*-15-*-*-*-*-*-*-*
+
+URxvt.scrollBar: false
+URxvt.scrollStyle: rxvt
+URxvt.perl-ext-common: selection-to-clipboard
+
+URxvt.background: #2c292d
+URxvt.foreground: #fdf9f3
+URxvt.color0:  #2c292d
+URxvt.color1:  #ff6188
+URxvt.color2:  #fc9867
+URxvt.color3:  #ffd866
+URxvt.color4:  #a9dc76
+URxvt.color5:  #78dce8
+URxvt.color6:  #ab9df2
+URxvt.color7:  #fdf9f3
+URxvt.color8:  #2c292d
+URxvt.color9:  #ff6188
+URxvt.color10: #fc9867
+URxvt.color11: #ffd866
+URxvt.color12: #a9dc76
+URxvt.color13: #78dce8
+URxvt.color14: #ab9df2
+URxvt.color15: #fdf9f3
