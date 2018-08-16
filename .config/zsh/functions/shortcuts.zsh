@@ -220,3 +220,7 @@ function did {
     less ~/did
   fi
 }
+
+function jestDevelop {
+  npm test -- --watchAll --runInBand --bail
+}
