@@ -1,25 +1,38 @@
+#define BACKGROUND #2c292d
+#define WHITE #fdf9f3
+#define RED #ff6188
+#define ORANGE #fc9867
+#define YELLOW #ffd866
+#define GREEN #a9dc76
+#define BLUE #78dce8
+#define PURPLE #ab9df2
+
+URxvt.perl-ext-common: selection-to-clipboard
+
 URxvt.font: -misc-tamzen-medium-*-*-*-15-*-*-*-*-*-*-*
 URxvt.boldFont: -misc-tamzen-bold-*-*-*-15-*-*-*-*-*-*-*
 
 URxvt.scrollBar: false
 URxvt.scrollStyle: rxvt
-URxvt.perl-ext-common: selection-to-clipboard
 
-URxvt.background: #2c292d
-URxvt.foreground: #fdf9f3
-URxvt.color0:  #2c292d
-URxvt.color1:  #ff6188
-URxvt.color2:  #fc9867
-URxvt.color3:  #ffd866
-URxvt.color4:  #a9dc76
-URxvt.color5:  #78dce8
-URxvt.color6:  #ab9df2
-URxvt.color7:  #fdf9f3
-URxvt.color8:  #2c292d
-URxvt.color9:  #ff6188
-URxvt.color10: #fc9867
-URxvt.color11: #ffd866
-URxvt.color12: #a9dc76
-URxvt.color13: #78dce8
-URxvt.color14: #ab9df2
-URxvt.color15: #fdf9f3
+!colors
+URxvt.background: BACKGROUND
+URxvt.foreground: WHITE
+!dim
+URxvt.color0:     BACKGROUND
+URxvt.color1:     RED
+URxvt.color2:     GREEN
+URxvt.color3:     ORANGE
+URxvt.color4:     BLUE
+URxvt.color5:     PURPLE
+URxvt.color6:     YELLOW
+URxvt.color7:     WHITE
+!bright
+URxvt.color8:     BACKGROUND
+URxvt.color9:     RED
+URxvt.color10:    GREEN
+URxvt.color11:    ORANGE
+URxvt.color12:    BLUE
+URxvt.color13:    PURPLE
+URxvt.color14:    YELLOW
+URxvt.color15:    WHITE

@@ -15,6 +15,4 @@ alias node="nodejs"
 alias control-center="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 alias settings-daemon="env XDG_CURRENT_DESKTOP=GNOME gnome-settings-daemon"
 
-alias -g g="git"
-
-alias -g onlyFilenames='ag -o "/?(\w+/?)*\.(\w+)$"'
+alias ls="ls --color=auto --group-directories-first -p"

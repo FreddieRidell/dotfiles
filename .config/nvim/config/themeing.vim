@@ -4,10 +4,10 @@ syntax enable
 set background=dark
 
 " syntax colors:
-set t_Co=256
+set t_Co=16
 let g:rehash256 = 1
-colorscheme molokai
 let g:molokai_original = 1
+colorscheme molokai
 
 " Don't wrap long lines:
 set nowrap
