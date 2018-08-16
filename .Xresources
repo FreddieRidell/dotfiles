@@ -36,3 +36,11 @@ URxvt.color12:    BLUE
 URxvt.color13:    PURPLE
 URxvt.color14:    YELLOW
 URxvt.color15:    WHITE
+
+! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
+rofi.color-window: BACKGROUND,  BLUE
+rofi.color-normal: BACKGROUND,  WHITE,  BACKGROUND,  GREEN,  BACKGROUND
+rofi.color-urgent: BACKGROUND,  WHITE,  #eee8d5,  ORANGE,  BACKGROUND
+rofi.color-active: BACKGROUND,  WHITE,  #eee8d5,  GREEN,  BACKGROUND
+
+rofi.font: Tamzen Regular 12px
