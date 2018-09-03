@@ -1,41 +1,28 @@
-#define BLACK  #2c292d
-#define RED    #ff6188
-#define GREEN  #a9dc76
-#define ORANGE #fc9867
-#define BLUE   #78dce8
-#define PURPLE #ab9df2
-#define YELLOW #ffd866
-#define WHITE #fdf9f3
-!#define #121212
-!#define #ea436c
-!#define #90bc63
-!#define #e67d4a
-!#define #61c1cc
-!#define #8f80dc
-!#define #ebc147
-!#define #f0e2ce
+#define  BLACK        #2c292d
+#define  RED          #ff6188
+#define  GREEN        #a9dc76
+#define  YELLOW       #ffd866
+#define  BLUE         #78dce8
+#define  PURPLE       #ab9df2
+#define  ORANGE       #fc9867
+#define  WHITE        #fdf9f3
+#define  DARK_BLACK   #160d16
+#define  DARK_RED     #ff2e62
+#define  DARK_GREEN   #90ee31
+#define  DARK_YELLOW  #ffcb33
+#define  DARK_BLUE    #32e6fb
+#define  DARK_PURPLE  #775dff
+#define  DARK_ORANGE  #ff7531
+#define  DARK_WHITE   #fee5bf
 
-!black
-!red
-!green
-!yellow
-!blue
-!purple
-!cyan
-!white
-!bright black
-!bright red
-!bright green
-!bright yellow
-!bright blue
-!bright purple
-!bright cyan
-!bright white
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!           urxvt            !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-URxvt.perl-ext-common: selection-to-clipboard
+URxvt.perl-ext-common: selection-to-clipboard,font-size
 
-URxvt.font: -misc-tamzen-medium-*-*-*-15-*-*-*-*-*-*-*
-URxvt.boldFont: -misc-tamzen-bold-*-*-*-15-*-*-*-*-*-*-*
+URxvt.font: -misc-tamzen-medium-*-*-*-12-*-*-*-*-*-*-*
+URxvt.boldFont: -misc-tamzen-bold-*-*-*-12-*-*-*-*-*-*-*
 
 URxvt.scrollBar: false
 URxvt.scrollStyle: rxvt
@@ -45,26 +32,30 @@ URxvt.keysym.Control-Left:   \033[1;5D
 URxvt.keysym.Control-Right:  \033[1;5C
 
 !colors
-URxvt.background: BLACK
-URxvt.foreground: WHITE
+URxvt.background:  BLACK
+URxvt.foreground:  WHITE
 !dim
-URxvt.color0:     BLACK
-URxvt.color1:     RED
-URxvt.color2:     GREEN
-URxvt.color3:     ORANGE
-URxvt.color4:     BLUE
-URxvt.color5:     PURPLE
-URxvt.color6:     YELLOW
-URxvt.color7:     WHITE
+URxvt.color0:      BLACK
+URxvt.color1:      RED
+URxvt.color2:      GREEN
+URxvt.color3:      YELLOW
+URxvt.color4:      BLUE
+URxvt.color5:      PURPLE
+URxvt.color6:      ORANGE
+URxvt.color7:      WHITE
 !bright
-URxvt.color8:     BLACK
-URxvt.color9:     RED
-URxvt.color10:    GREEN
-URxvt.color11:    ORANGE
-URxvt.color12:    BLUE
-URxvt.color13:    PURPLE
-URxvt.color14:    YELLOW
-URxvt.color15:    WHITE
+URxvt.color8:      DARK_BLACK
+URxvt.color9:      DARK_RED
+URxvt.color10:     DARK_GREEN
+URxvt.color11:     DARK_YELLOW
+URxvt.color12:     DARK_BLUE
+URxvt.color13:     DARK_PURPLE
+URxvt.color14:     DARK_ORANGE
+URxvt.color15:     DARK_WHITE
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!           rofi             !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
 rofi.color-window: BLACK,  BLUE

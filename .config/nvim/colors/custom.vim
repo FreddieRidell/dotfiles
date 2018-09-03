@@ -1,85 +1,100 @@
 " Author: Freddie Ridell
 " based on: https://github.com/tomasr/molokai
-"
-hi clear
-hi Boolean         guifg=#AE81FF
-hi Character       guifg=#E6DB74
-hi ColorColumn                   guibg=#3B3A32
-hi Comment         guifg=#75715E
-hi Conditional     guifg=#F92672               gui=bold
-hi Constant        guifg=#AE81FF               gui=bold
-hi CursorColumn                  guibg=#3E3D32
-hi Cursor          guifg=#000000 guibg=#F8F8F0
-hi CursorLine                    guibg=#3E3D32
-hi CursorLineNr    guifg=#FD971F               gui=none
-hi Debug           guifg=#BCA3A3               gui=bold
-hi Define          guifg=#66D9EF
-hi Delimiter       guifg=#8F8F8F
-hi DiffAdd                       guibg=#13354A
-hi DiffChange      guifg=#89807D guibg=#4C4745
-hi DiffDelete      guifg=#960050 guibg=#1E0010
-hi DiffText                      guibg=#4C4745 gui=italic,bold
-hi Directory       guifg=#A6E22E               gui=bold
-hi Error           guifg=#E6DB74 guibg=#1E0010
-hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
-hi Exception       guifg=#A6E22E               gui=bold
-hi Float           guifg=#AE81FF
-hi FoldColumn      guifg=#465457 guibg=#000000
-hi Folded          guifg=#465457 guibg=#000000
-hi Function        guifg=#A6E22E
-hi iCursor         guifg=#000000 guibg=#F8F8F0
-hi Identifier      guifg=#FD971F
-hi Ignore          guifg=#808080 guibg=bg
-hi IncSearch       guifg=#C4BE89 guibg=#000000
-hi Keyword         guifg=#F92672               gui=bold
-hi Label           guifg=#E6DB74               gui=none
-hi LineNr          guifg=#BCBCBC guibg=#3B3A32
-hi Macro           guifg=#C4BE89               gui=italic
-hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
-hi ModeMsg         guifg=#E6DB74
-hi MoreMsg         guifg=#E6DB74
-hi NonText         guifg=#75715E
-hi Normal          guifg=#F8F8F2 guibg=#272822
-hi Number          guifg=#AE81FF
-hi Operator        guifg=#F92672
-hi Pmenu           guifg=#66D9EF guibg=#000000
-hi PmenuSbar                     guibg=#080808
-hi PmenuSel                      guibg=#808080
-hi PmenuThumb      guifg=#66D9EF
-hi PreCondit       guifg=#A6E22E               gui=bold
-hi PreProc         guifg=#A6E22E
-hi Question        guifg=#66D9EF
-hi Repeat          guifg=#F92672               gui=bold
-hi Search          guifg=#000000 guibg=#FFE792
-hi SignColumn      guifg=#A6E22E guibg=#232526
-hi SpecialChar     guifg=#F92672               gui=bold
-hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#66D9EF guibg=bg      gui=italic
-hi SpecialKey      guifg=#66D9EF               gui=italic
-hi SpecialKey      guifg=#75715E
-hi SpellBad        guisp=#FF0000               gui=undercurl
-hi SpellCap        guisp=#7070F0               gui=undercurl
-hi SpellLocal      guisp=#70F0F0               gui=undercurl
-hi SpellRare       guisp=#FFFFFF               gui=undercurl
-hi Statement       guifg=#F92672               gui=bold
-hi StatusLine      guifg=#455354 guibg=fg
-hi StatusLineNC    guifg=#808080 guibg=#080808
-hi StorageClass    guifg=#FD971F               gui=italic
-hi String          guifg=#E6DB74
-hi Structure       guifg=#66D9EF
-hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
-hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
-hi Tag             guifg=#F92672               gui=italic
-hi Title           guifg=#ef5939
-hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
-hi Typedef         guifg=#66D9EF
-hi Type            guifg=#66D9EF               gui=none
-hi Underlined      guifg=#808080               gui=underline
-hi VertSplit       guifg=#808080 guibg=#080808 gui=bold
-hi Visual                        guibg=#403D3D
-hi VisualNOS                     guibg=#403D3D
-hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
-hi WildMenu        guifg=#66D9EF guibg=#000000
+
+"0:      BLACK
+"1:      RED
+"2:      GREEN
+"3:      YELLOW
+"4:      BLUE
+"5:      PURPLE
+"6:      ORANGE
+"7:      WHITE
+"8:      DARK_BLACK
+"9:      DARK_RED
+"10:     DARK_GREEN
+"11:     DARK_YELLOW
+"12:     DARK_BLUE
+"13:     DARK_PURPLE
+"14:     DARK_ORANGE
+"15:     DARK_WHITE
+
+hi  clear
+hi  Boolean         ctermfg=2  ctermbg=0  cterm=none
+hi  Character       ctermfg=3  ctermbg=0  cterm=none
+hi  ColorColumn     ctermfg=15 ctermbg=0  cterm=none
+hi  Comment         ctermfg=3  ctermbg=0  cterm=none
+hi  Conditional     ctermfg=0  ctermbg=0  cterm=none
+hi  Constant        ctermfg=4  ctermbg=0  cterm=none
+hi  Cursor                                cterm=inverse
+hi  Cursorcolumn    ctermfg=0  ctermbg=0  cterm=none
+hi  Cursorline                            cterm=underline
+hi  Cursorlinenr    ctermfg=0  ctermbg=0  cterm=none
+hi  Debug           ctermfg=0  ctermbg=0  cterm=none
+hi  Define          ctermfg=6  ctermbg=0  cterm=none
+hi  Delimiter       ctermfg=0  ctermbg=0  cterm=none
+hi  Diffadd         ctermfg=2  ctermbg=0  cterm=none
+hi  Diffchange      ctermfg=4  ctermbg=0  cterm=none
+hi  Diffdelete      ctermfg=1  ctermbg=0  cterm=none
+hi  Difftext        ctermfg=7  ctermbg=0  cterm=none
+hi  Directory       ctermfg=4  ctermbg=0  cterm=bold
+hi  Error                      ctermbg=1  cterm=bold
+hi  Errormsg                   ctermbg=1  cterm=bold
+hi  Exception       ctermfg=1  ctermbg=0  cterm=none
+hi  Float           ctermfg=6  ctermbg=0  cterm=none
+hi  Foldcolumn      ctermfg=0  ctermbg=8  cterm=none
+hi  Folded          ctermfg=0  ctermbg=0  cterm=none
+hi  Function        ctermfg=4  ctermbg=0  cterm=none
+hi  Icursor         ctermfg=0  ctermbg=0  cterm=none
+hi  Identifier      ctermfg=2  ctermbg=0  cterm=none
+hi  Ignore          ctermfg=0  ctermbg=0  cterm=none
+hi  Incsearch                             cterm=bold cterm=reverse
+hi  Keyword         ctermfg=1  ctermbg=0  cterm=bold
+hi  Label           ctermfg=0  ctermbg=0  cterm=none
+hi  Linenr          ctermfg=0  ctermbg=0  cterm=none
+hi  Macro           ctermfg=0  ctermbg=0  cterm=none
+hi  Matchparen      ctermfg=0  ctermbg=0  cterm=none
+hi  Modemsg         ctermfg=0  ctermbg=0  cterm=none
+hi  Moremsg         ctermfg=0  ctermbg=0  cterm=none
+hi  Nontext         ctermfg=0  ctermbg=0  cterm=none
+hi  Normal          ctermfg=7  ctermbg=0  cterm=none
+hi  Number          ctermfg=7  ctermbg=0  cterm=none
+hi  Operator        ctermfg=4  ctermbg=0  cterm=none
+hi  Pmenu           ctermfg=0  ctermbg=0  cterm=none
+hi  Pmenusbar       ctermfg=0  ctermbg=0  cterm=none
+hi  Pmenusel        ctermfg=0  ctermbg=0  cterm=none
+hi  Pmenuthumb      ctermfg=0  ctermbg=0  cterm=none
+hi  Precondit       ctermfg=0  ctermbg=0  cterm=none
+hi  Preproc         ctermfg=0  ctermbg=0  cterm=none
+hi  Question        ctermfg=0  ctermbg=0  cterm=none
+hi  Repeat          ctermfg=0  ctermbg=0  cterm=none
+hi  Search          ctermfg=0  ctermbg=7  cterm=none
+hi  Signcolumn      ctermfg=0  ctermbg=0  cterm=none
+hi  Special         ctermfg=1  ctermbg=0  cterm=none
+hi  Specialchar     ctermfg=0  ctermbg=0  cterm=none
+hi  Specialcomment  ctermfg=3  ctermbg=0  cterm=none
+hi  Specialkey      ctermfg=0  ctermbg=0  cterm=none
+hi  Spellbad        ctermfg=1  ctermbg=0  cterm=none
+hi  Spellcap        ctermfg=0  ctermbg=0  cterm=none
+hi  Spelllocal      ctermfg=0  ctermbg=0  cterm=none
+hi  Spellrare       ctermfg=0  ctermbg=0  cterm=none
+hi  Statement       ctermfg=3  ctermbg=0  cterm=none
+hi  Statuslinenc                          cterm=reverse
+hi  Storageclass    ctermfg=0  ctermbg=0  cterm=none
+hi  String          ctermfg=3  ctermbg=0  cterm=none
+hi  Structure       ctermfg=0  ctermbg=0  cterm=none
+hi  Tabline         ctermfg=0  ctermbg=0  cterm=none
+hi  Tablinefill     ctermfg=0  ctermbg=0  cterm=none
+hi  Tag             ctermfg=0  ctermbg=0  cterm=none
+hi  Title           ctermfg=6  ctermbg=0  cterm=none
+hi  Todo            ctermfg=0  ctermbg=0  cterm=none
+hi  Type            ctermfg=5  ctermbg=0  cterm=none
+hi  Typedef         ctermfg=5  ctermbg=0  cterm=none
+hi  Underlined                            cterm=underline
+hi  Vertsplit                  ctermbg=8   
+hi  Visual                                cterm=reverse
+hi  Visualnos       ctermfg=0  ctermbg=0  cterm=none
+hi  Warningmsg      ctermfg=0  ctermbg=0  cterm=none
+hi  Wildmenu        ctermfg=0  ctermbg=0  cterm=none
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ

@@ -1,2 +1,2 @@
-xset +fp ~/.fonts/tamzen-font/bdf
+xset +fp ~/.fonts/tamzen/bdf
 xset fp rehash
