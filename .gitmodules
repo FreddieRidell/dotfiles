@@ -1,0 +1,3 @@
+[submodule "Packages/tamzen"]
+	path = Packages/tamzen
+	url = git@github.com:sunaku/tamzen-font.git
