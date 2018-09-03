@@ -1,3 +1,9 @@
 [submodule "Packages/tamzen"]
 	path = Packages/tamzen
 	url = git@github.com:sunaku/tamzen-font.git
+[submodule "Packages/i3-gaps"]
+	path = Packages/i3-gaps
+	url = https://www.github.com/Airblader/i3
+[submodule "Packages/bat"]
+	path = Packages/bat
+	url = https://github.com/sharkdp/bat
