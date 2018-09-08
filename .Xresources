@@ -13,7 +13,7 @@
 #define  DARK_BLUE    #32e6fb
 #define  DARK_PURPLE  #775dff
 #define  DARK_ORANGE  #ff7531
-#define  DARK_WHITE   #fee5bf
+#define  DARK_WHITE   #959190
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !           urxvt            !
