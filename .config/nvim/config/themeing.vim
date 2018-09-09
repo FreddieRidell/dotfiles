@@ -4,10 +4,8 @@ syntax enable
 set background=dark
 
 " syntax colors:
-set t_Co=256
-let g:rehash256 = 1
-let g:molokai_original = 1
-colorscheme molokai
+set t_Co=8
+colorscheme custom
 
 " Don't wrap long lines:
 set nowrap

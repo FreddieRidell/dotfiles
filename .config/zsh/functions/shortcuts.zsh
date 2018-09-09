@@ -51,6 +51,10 @@ function unixTime {
 	date +%s ;
 }
 
+function isoDate {
+  date -I
+}
+
 function isoTime {
   date --iso-8601=seconds | sed -e "s/T/ /g" -e "s/\+.*//g" ;
 }
@@ -82,8 +86,8 @@ function gitRebaseFromMaster {
 }
 
 function jotNew {
-  FOLDER_NAME="$HOME/Pad/$( isoTime | sed -e "s/-/\//" | sed -e "s/-.*//" )"
-  FILE_NAME="$HOME/Pad/$( isoTime | sed -e "s/-/\//" | sed -e "s/-/\//" )-$( echo $* | sed -e "s/ /-/g" ).md"
+  FOLDER_NAME="$HOME/Pad/$( isoDate | sed -e "s/-/\//" | sed -e "s/-.*//" )"
+  FILE_NAME="$HOME/Pad/$( isoDate | sed -e "s/-/\//" | sed -e "s/-/\//" )-$( echo $* | sed -e "s/ /-/g" ).md"
   mkdir -p $FOLDER_NAME
 
   echo "# $( echo $* | sed 's/.*/\L&/; s/[a-z]*/\u&/g' )" >> $FILE_NAME

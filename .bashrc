@@ -5,6 +5,10 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+if [[ "$TERM" == *rxvt* ]]; then
+   exec zsh
+fi
+
 alias config='/usr/bin/git --git-dir=/home/fedora/dotfiles/ --work-tree=/home/fedora'
 
 

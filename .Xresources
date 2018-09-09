@@ -24,8 +24,10 @@ URxvt.perl-ext-common: selection-to-clipboard,font-size
 URxvt.font: -misc-tamzen-medium-*-*-*-12-*-*-*-*-*-*-*
 URxvt.boldFont: -misc-tamzen-bold-*-*-*-12-*-*-*-*-*-*-*
 
+URxvt.chdir: /home/freddie 
 URxvt.scrollBar: false
-URxvt.scrollStyle: rxvt
+URxvt.urgentOnBell: true
+
 URxvt.keysym.Control-Up:     \033[1;5A
 URxvt.keysym.Control-Down:   \033[1;5B
 URxvt.keysym.Control-Left:   \033[1;5D

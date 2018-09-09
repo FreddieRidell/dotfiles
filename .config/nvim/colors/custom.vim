@@ -24,7 +24,7 @@ hi  Character       ctermfg=3        ctermbg=0      cterm=none
 hi  ColorColumn     ctermfg=15       ctermbg=0      cterm=none
 hi  Comment         ctermfg=15
 hi  Conditional     ctermfg=1        ctermbg=0      cterm=bold
-hi  Constant        ctermfg=4        ctermbg=0      cterm=none
+hi  Constant        ctermfg=5        ctermbg=0      cterm=bold
 hi  Cursorcolumn    ctermfg=0        ctermbg=0      cterm=none
 hi  Cursor          cterm=inverse
 hi  Cursorline      cterm=underline
@@ -51,7 +51,7 @@ hi  Incsearch       cterm=bold       cterm=reverse
 hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
 hi  Label           ctermfg=0        ctermbg=0      cterm=none
 hi  Linenr          ctermfg=15       ctermbg=0      cterm=bold
-hi  Macro           ctermfg=0        ctermbg=0      cterm=none
+hi  Macro           ctermfg=3        ctermbg=0      cterm=none
 hi  Matchparen            ctermfg=7 ctermbg=7 cterm=bold
 hi  Modemsg         ctermfg=0        ctermbg=0      cterm=none
 hi  Moremsg         ctermfg=0        ctermbg=0      cterm=none
