@@ -31,7 +31,7 @@ hi  Cursorline      cterm=underline
 hi  Cursorlinenr    ctermfg=6        ctermbg=0      cterm=bold
 hi  Debug           ctermfg=0        ctermbg=0      cterm=none
 hi  Define          ctermfg=6        ctermbg=0      cterm=none
-hi  Delimiter       ctermfg=0        ctermbg=0      cterm=none
+hi  Delimiter       ctermfg=7        ctermbg=0      cterm=none
 hi  Diffadd         ctermfg=2        ctermbg=0      cterm=none
 hi  Diffchange      ctermfg=4        ctermbg=0      cterm=none
 hi  Diffdelete      ctermfg=1        ctermbg=0      cterm=none
@@ -49,7 +49,7 @@ hi  Identifier      ctermfg=2        ctermbg=0      cterm=none
 hi  Ignore          ctermfg=0        ctermbg=0      cterm=none
 hi  Incsearch       cterm=bold       cterm=reverse
 hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
-hi  Label           ctermfg=0        ctermbg=0      cterm=none
+hi  Label           ctermfg=4        ctermbg=0      cterm=none
 hi  Linenr          ctermfg=15       ctermbg=0      cterm=bold
 hi  Macro           ctermfg=3        ctermbg=0      cterm=none
 hi  Matchparen            ctermfg=7 ctermbg=7 cterm=bold
