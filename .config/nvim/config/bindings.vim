@@ -38,8 +38,11 @@ let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'] ]
 
 "sort and uniq selection
-map <Leader>ss :!sort<CR>
-map <Leader>uu :!uniq<CR>
+map <Leader>so :!sort<CR>
+map <Leader>un :!uniq<CR>
+
+"turn on spelling
+map <Leader>sp :setlocal spell spelllang=en_us<CR>
 
 " split
 nmap <Leader>- :vsplit<CR>
