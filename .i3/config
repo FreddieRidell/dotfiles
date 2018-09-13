@@ -30,7 +30,7 @@ exec xrandr --output DVI-D-0 --auto --pos 0x0 --output DVI-I-0 --auto --pos 1920
 
 exec --no-startup-id /usr/bin/gnome-settings-daemon
 exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.*
-exec --no-startup-id setxkbmap us
+exec --no-startup-id zsh ~/.xinitrc
 
 # lock
 bindsym Mod4+l exec ~/.i3/lock.sh
