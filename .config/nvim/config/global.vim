@@ -3,6 +3,7 @@ set autoindent " When opening a new line and no filetype-specific indenting is e
 set autoread "reload on file change:
 set backspace=indent,eol,start " Allow backspacing over autoindent, line breaks and start of insert action
 set clipboard+=unnamedplus " yank uses the system clipboard
+set complete+=kspell "add autocomplete from the spellfile
 set exrc " Execute local .vimrc files for projects:
 set foldlevel=2 " folding
 set foldmethod=syntax " folding
