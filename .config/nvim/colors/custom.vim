@@ -45,7 +45,7 @@ hi  Foldcolumn      ctermfg=0        ctermbg=8      cterm=none
 hi  Folded          ctermfg=0        ctermbg=0      cterm=none
 hi  Function        ctermfg=2        cterm=bold
 hi  Icursor         ctermfg=0        ctermbg=0      cterm=none
-hi  Identifier      ctermfg=2        ctermbg=0      cterm=none
+hi  Identifier      ctermfg=6        ctermbg=0      cterm=bold
 hi  Ignore          ctermfg=0        ctermbg=0      cterm=none
 hi  Incsearch       cterm=bold       cterm=reverse
 hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
@@ -77,7 +77,7 @@ hi  Spellbad        ctermfg=1        ctermbg=0      cterm=none
 hi  Spellcap        ctermfg=0        ctermbg=0      cterm=none
 hi  Spelllocal      ctermfg=0        ctermbg=0      cterm=none
 hi  Spellrare       ctermfg=0        ctermbg=0      cterm=none
-hi  Statement       ctermfg=3        ctermbg=0      cterm=none
+hi  Statement       ctermfg=1        ctermbg=0      cterm=none
 hi  Statuslinenc    cterm=reverse
 hi  Storageclass    ctermfg=6
 hi  String          ctermfg=3        ctermbg=0      cterm=none
