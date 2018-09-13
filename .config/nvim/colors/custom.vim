@@ -73,10 +73,10 @@ hi  Specialchar     ctermfg=0        ctermbg=0      cterm=none
 hi  Specialcomment  ctermfg=3        ctermbg=0      cterm=none
 hi  Special         ctermfg=4
 hi  Specialkey      ctermfg=0        ctermbg=0      cterm=none
-hi  Spellbad        ctermfg=1        ctermbg=0      cterm=none
-hi  Spellcap        ctermfg=0        ctermbg=0      cterm=none
-hi  Spelllocal      ctermfg=0        ctermbg=0      cterm=none
-hi  Spellrare       ctermfg=0        ctermbg=0      cterm=none
+hi  Spellbad                ctermbg=1      cterm=none
+hi  Spellcap                ctermbg=2      cterm=none
+hi  Spelllocal              ctermbg=3      cterm=none
+hi  Spellrare               ctermbg=4      cterm=none
 hi  Statement       ctermfg=1        ctermbg=0      cterm=none
 hi  Statuslinenc    cterm=reverse
 hi  Storageclass    ctermfg=6
