@@ -52,7 +52,7 @@ hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
 hi  Label           ctermfg=4        ctermbg=0      cterm=none
 hi  Linenr          ctermfg=15       ctermbg=0      cterm=bold
 hi  Macro           ctermfg=3        ctermbg=0      cterm=none
-hi  Matchparen            ctermfg=7 ctermbg=7 cterm=bold
+hi  Matchparen      ctermfg=7        ctermbg=7      cterm=bold
 hi  Modemsg         ctermfg=0        ctermbg=0      cterm=none
 hi  Moremsg         ctermfg=0        ctermbg=0      cterm=none
 hi  Nontext         ctermfg=0        ctermbg=0      cterm=none
@@ -62,7 +62,7 @@ hi  Operator        ctermfg=1
 hi  Pmenu           ctermfg=7        ctermbg=0      cterm=none
 hi  Pmenusbar       ctermfg=1        ctermbg=0      cterm=none
 hi  Pmenusel        ctermfg=2        ctermbg=0      cterm=bold
-hi PreProc ctermfg=2
+hi  PreProc         ctermfg=2
 hi  Pmenuthumb      ctermfg=3        ctermbg=0      cterm=none
 hi  Precondit       ctermfg=0        ctermbg=0      cterm=none
 hi  Question        ctermfg=0        ctermbg=0      cterm=none
@@ -73,17 +73,17 @@ hi  Specialchar     ctermfg=0        ctermbg=0      cterm=none
 hi  Specialcomment  ctermfg=3        ctermbg=0      cterm=none
 hi  Special         ctermfg=4
 hi  Specialkey      ctermfg=0        ctermbg=0      cterm=none
-hi  Spellbad                ctermbg=1      cterm=none
-hi  Spellcap                ctermbg=2      cterm=none
-hi  Spelllocal              ctermbg=3      cterm=none
-hi  Spellrare               ctermbg=4      cterm=none
+hi  Spellbad        ctermbg=1        cterm=none
+hi  Spellcap        ctermbg=2        cterm=none
+hi  Spelllocal      ctermbg=3        cterm=none
+hi  Spellrare       ctermbg=4        cterm=none
 hi  Statement       ctermfg=1        ctermbg=0      cterm=none
 hi  Statuslinenc    cterm=reverse
 hi  Storageclass    ctermfg=6
 hi  String          ctermfg=3        ctermbg=0      cterm=none
 hi  Structure       ctermfg=0        ctermbg=0      cterm=none
-hi  Tabline         ctermfg=0        ctermbg=15      cterm=none
-hi  Tablinefill     ctermfg=0        ctermbg=15      cterm=none
+hi  Tabline         ctermfg=0        ctermbg=15     cterm=none
+hi  Tablinefill     ctermfg=0        ctermbg=15     cterm=none
 hi  Tag             ctermfg=0        ctermbg=0      cterm=none
 hi  Title           ctermfg=6        ctermbg=0      cterm=none
 hi  Todo            ctermfg=0        ctermbg=7
@@ -94,7 +94,7 @@ hi  Vertsplit       ctermbg=8
 hi  Visual          cterm=reverse
 hi  Visualnos       ctermfg=0        ctermbg=0      cterm=none
 hi  Warningmsg      ctermfg=0        ctermbg=0      cterm=none
-hi  Wildmenu                ctermfg=7 ctermbg=0      cterm=none
+hi  Wildmenu        ctermfg=7        ctermbg=0      cterm=none
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
