@@ -69,7 +69,7 @@ hi  Question        ctermfg=0        ctermbg=0      cterm=none
 hi  Repeat          ctermfg=1        cterm=bold
 hi  Search          ctermfg=0        ctermbg=7      cterm=none
 hi  Signcolumn      ctermfg=0        ctermbg=0      cterm=none
-hi  Specialchar     ctermfg=0        ctermbg=0      cterm=none
+hi  Specialchar     ctermfg=4        ctermbg=0      cterm=none
 hi  Specialcomment  ctermfg=3        ctermbg=0      cterm=none
 hi  Special         ctermfg=4
 hi  Specialkey      ctermfg=0        ctermbg=0      cterm=none

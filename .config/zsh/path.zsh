@@ -13,3 +13,5 @@ export PATH="./node_modules/.bin:$PATH"
 #rustup
 export PATH="$HOME/.cargo/bin:$PATH"
 
+#App images etc
+export PATH="$HOME/Binaries:$PATH"
