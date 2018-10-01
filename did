@@ -40,3 +40,5 @@
 2018-09-16 14:11:51 (tower)	  did a hypertask table printer that I'm finally happy with
 
 2018-09-19 17:26:34 (tower)	  reworked personal site to print to PDF better
+
+2018-10-01 10:27:21 (tower)	  got hypertask syncing properly, turns out it'll only sync if some local change has been made -_-
