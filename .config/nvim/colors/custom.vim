@@ -46,7 +46,7 @@ hi  Folded          ctermfg=0        ctermbg=0      cterm=none
 hi  Function        ctermfg=2        cterm=bold
 hi  Icursor         ctermfg=0        ctermbg=0      cterm=none
 hi  Identifier      ctermfg=6        ctermbg=0      cterm=bold
-hi  Ignore          ctermfg=0        ctermbg=0      cterm=none
+hi  Ignore          ctermfg=15       ctermbg=0      cterm=none
 hi  Incsearch       cterm=bold       cterm=reverse
 hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
 hi  Label           ctermfg=4        ctermbg=0      cterm=none
