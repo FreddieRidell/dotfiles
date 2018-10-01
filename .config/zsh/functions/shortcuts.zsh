@@ -123,7 +123,7 @@ function updateAll {
   syncRepos ;
   sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
   sudo dnf upgrade -y ;
-  yarn global upgrade-interactive --latest;
+  yarn global upgrade --latest;
 }
 
 function cabalDUCSGS { 
@@ -172,7 +172,7 @@ function setupMyNPM {
 
 	echo '#!/usr/bin/env node' > main.js
 	echo 'require("./lib")' >> main.js
-	echo 'require("./lib")' > index.js
+	echo 'module.exports = require("./lib");' > index.js
 
 	chmod +x main.js
 }
