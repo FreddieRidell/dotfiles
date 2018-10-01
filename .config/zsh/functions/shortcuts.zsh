@@ -240,3 +240,12 @@ function swatch {
 	done
 	echo ""
 }
+
+function getLocalDevices {
+	for x in `hostname -I` ; do
+		IP=`echo $x | sed "s/[0-9]*$/255/"`
+		ping $IP -b -c 2
+	done  
+
+	arp -a | column -t | sort
+}
