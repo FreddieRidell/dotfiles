@@ -7,3 +7,6 @@
 [submodule "Packages/bat"]
 	path = Packages/bat
 	url = https://github.com/sharkdp/bat
+[submodule "Packages/watchman"]
+	path = Packages/watchman
+	url = https://github.com/facebook/watchman.git

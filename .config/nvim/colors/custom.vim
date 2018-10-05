@@ -81,7 +81,7 @@ hi  Statement       ctermfg=1        ctermbg=0      cterm=none
 hi  Statuslinenc    cterm=reverse
 hi  Storageclass    ctermfg=6
 hi  String          ctermfg=3        ctermbg=0      cterm=none
-hi  Structure       ctermfg=0        ctermbg=0      cterm=none
+hi  Structure       ctermfg=5        ctermbg=0      cterm=none
 hi  Tabline         ctermfg=0        ctermbg=15     cterm=none
 hi  Tablinefill     ctermfg=0        ctermbg=15     cterm=none
 hi  Tag             ctermfg=0        ctermbg=0      cterm=none

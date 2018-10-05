@@ -66,3 +66,4 @@ rofi.color-urgent: BLACK,  WHITE,  BLACK,  ORANGE,  BLACK
 rofi.color-active: BLACK,  WHITE,  BLACK,  GREEN,   BLACK
 
 rofi.font: Tamzen Regular 12px
+rofi.terminal: urxvt

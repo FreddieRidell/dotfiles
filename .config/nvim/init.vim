@@ -42,6 +42,7 @@ Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
 Plug 'pangloss/vim-javascript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'prettier/vim-prettier'
+Plug 'reasonml-editor/vim-reason-plus'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/neocomplete.vim'

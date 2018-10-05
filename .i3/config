@@ -45,6 +45,7 @@ bindsym $mod+q kill
 bindsym $mod+w exec rofi -show window
 bindsym $mod+d exec rofi -show run
 bindsym $mod+s exec rofi -show ssh
+bindsyn $mod+o exec rofi -show hypertask -modi hypertask:~/.i3/hypertaskRofiScript.sh
 
 # screenshots:
 bindsym $mod+Shift+s exec gnome-screenshot -a 
@@ -83,7 +84,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # Jump to urgent windows
 bindsym $mod+x [urgent=latest] focus
