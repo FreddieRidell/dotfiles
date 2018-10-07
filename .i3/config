@@ -5,7 +5,7 @@
 # |_|____/
 #
 # my conf. based on i3-config-generator
-set $mod Mod1
+set $modAlt Mod1
 
 gaps inner 16
 gaps outer 1
@@ -23,7 +23,7 @@ set $PURPLE #ab9df2
 
 font pango:Tamzen Regular 10
 
-floating_modifier $mod
+floating_modifier $modAlt
 
 # i3 startup things:
 exec xrandr --output DVI-D-0 --auto --pos 0x0 --output DVI-I-0 --auto --pos 1920x400
@@ -36,58 +36,58 @@ exec --no-startup-id zsh ~/.xinitrc
 bindsym Mod4+l exec ~/.i3/lock.sh
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $modAlt+Return exec urxvt
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $modAlt+q kill
 
 # start rofi:
-bindsym $mod+w exec rofi -show window
-bindsym $mod+d exec rofi -show run
-bindsym $mod+s exec rofi -show ssh
-bindsyn $mod+o exec rofi -show hypertask -modi hypertask:~/.i3/hypertaskRofiScript.sh
+bindsym $modAlt+w exec rofi -show window
+bindsym $modAlt+d exec rofi -show run
+bindsym $modAlt+s exec rofi -show ssh
+bindsyn $modAlt+z exec rofi -show hypertask
 
 # screenshots:
-bindsym $mod+Shift+s exec gnome-screenshot -a 
+bindsym $modAlt+Shift+s exec gnome-screenshot -a 
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Left move workspace to output left
-bindsym $mod+Down move workspace to output down
-bindsym $mod+Up move workspace to output up
-bindsym $mod+Right move workspace to output right
+bindsym $modAlt+h focus left
+bindsym $modAlt+j focus down
+bindsym $modAlt+k focus up
+bindsym $modAlt+l focus right
+bindsym $modAlt+Left move workspace to output left
+bindsym $modAlt+Down move workspace to output down
+bindsym $modAlt+Up move workspace to output up
+bindsym $modAlt+Right move workspace to output right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $modAlt+Shift+h move left
+bindsym $modAlt+Shift+j move down
+bindsym $modAlt+Shift+k move up
+bindsym $modAlt+Shift+l move right
 
 # split
-bindsym $mod+c split h
-bindsym $mod+v split v
+bindsym $modAlt+c split h
+bindsym $modAlt+v split v
 
 # fullscreen mode
-bindsym $mod+f fullscreen
+bindsym $modAlt+f fullscreen
 
 # container layout
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $modAlt+t layout tabbed
+bindsym $modAlt+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $modAlt+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $modAlt+space focus mode_toggle
 
 # focus the parent container
-#bindsym $mod+a focus parent
+#bindsym $modAlt+a focus parent
 
 # Jump to urgent windows
-bindsym $mod+x [urgent=latest] focus
+bindsym $modAlt+x [urgent=latest] focus
 
 # customize workspace names
 set $WS1 1 bench
@@ -134,13 +134,13 @@ bindsym Control+Shift+x [class="^.*"] border toggle
 for_window [class="^.*"] border pixel 2
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $modAlt+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $modAlt+Shift+r restart
 
 # resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
+bindsym $modAlt+r mode "resize"
 
 mode "resize" {
 	bindsym h resize shrink width 5 px or 5 ppt
@@ -171,8 +171,8 @@ bar {
 }
 
 # switching between workspace
-bindsym $mod+period workspace next
-bindsym $mod+comma workspace prev
+bindsym $modAlt+period workspace next
+bindsym $modAlt+comma workspace prev
 
 # Media Keys:
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 set Master 5%-

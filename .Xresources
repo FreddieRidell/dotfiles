@@ -67,3 +67,4 @@ rofi.color-active: BLACK,  WHITE,  BLACK,  GREEN,   BLACK
 
 rofi.font: Tamzen Regular 12px
 rofi.terminal: urxvt
+rofi.modi: hypertask:~/.i3/hypertaskRofiScript.sh

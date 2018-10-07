@@ -7,7 +7,7 @@ fi
 
 if [ "$@" ]
 then
-	RESP=`task add $*`
+	RESP=`task $*`
 
 
 	while read -r line; do
