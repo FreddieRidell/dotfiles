@@ -45,7 +45,7 @@ bindsym $modAlt+q kill
 bindsym $modAlt+w exec rofi -show window
 bindsym $modAlt+d exec rofi -show run
 bindsym $modAlt+s exec rofi -show ssh
-bindsyn $modAlt+z exec rofi -show hypertask
+bindsym $modAlt+Shift+t exec rofi -show hypertask
 
 # screenshots:
 bindsym $modAlt+Shift+s exec gnome-screenshot -a 

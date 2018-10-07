@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
+
+source ~/.zshrc 
 
 if [ x"$@" = x"quit" ]
 then
@@ -7,16 +9,11 @@ fi
 
 if [ "$@" ]
 then
-	RESP=`task $*`
+	RESP=`zsh -c "task $* | sed -e 's/\x1b\[.\{1,5\}m//g'"`
 
-
-	while read -r line; do
-		echo -e "$line"
-	done <<< "$RESP"
+	echo $RESP
 else
-	RESP=`task`
+	RESP=$( task | sed -e "s/\x1b\[.\{1,5\}m//g" )
 
-	while read -r line; do
-		echo -e "$line"
-	done <<< "$RESP"
+	echo $RESP
 fi
