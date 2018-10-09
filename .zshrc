@@ -1,4 +1,4 @@
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+# [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 source $HOME/.config/zsh/alias.zsh
 source $HOME/.config/zsh/config.zsh
