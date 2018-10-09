@@ -25,8 +25,8 @@ hi  ColorColumn     ctermfg=15       ctermbg=0      cterm=none
 hi  Comment         ctermfg=15
 hi  Conditional     ctermfg=1        ctermbg=0      cterm=bold
 hi  Constant        ctermfg=5        ctermbg=0      cterm=bold
-hi  Cursorcolumn    ctermfg=0        ctermbg=0      cterm=none
 hi  Cursor          cterm=inverse
+hi  Cursorcolumn    ctermfg=0        ctermbg=0      cterm=none
 hi  Cursorline      cterm=underline
 hi  Cursorlinenr    ctermfg=6        ctermbg=0      cterm=bold
 hi  Debug           ctermfg=0        ctermbg=0      cterm=none
@@ -48,7 +48,6 @@ hi  Icursor         ctermfg=0        ctermbg=0      cterm=none
 hi  Identifier      ctermfg=6        ctermbg=0      cterm=bold
 hi  Ignore          ctermfg=15       ctermbg=0      cterm=none
 hi  Incsearch       cterm=bold       cterm=reverse
-hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
 hi  Label           ctermfg=4        ctermbg=0      cterm=none
 hi  Linenr          ctermfg=15       ctermbg=0      cterm=bold
 hi  Macro           ctermfg=3        ctermbg=0      cterm=none
@@ -62,16 +61,16 @@ hi  Operator        ctermfg=1
 hi  Pmenu           ctermfg=7        ctermbg=0      cterm=none
 hi  Pmenusbar       ctermfg=1        ctermbg=0      cterm=none
 hi  Pmenusel        ctermfg=2        ctermbg=0      cterm=bold
-hi  PreProc         ctermfg=2
 hi  Pmenuthumb      ctermfg=3        ctermbg=0      cterm=none
+hi  PreProc         ctermfg=2
 hi  Precondit       ctermfg=0        ctermbg=0      cterm=none
 hi  Question        ctermfg=0        ctermbg=0      cterm=none
 hi  Repeat          ctermfg=1        cterm=bold
 hi  Search          ctermfg=0        ctermbg=7      cterm=none
 hi  Signcolumn      ctermfg=0        ctermbg=0      cterm=none
+hi  Special         ctermfg=4
 hi  Specialchar     ctermfg=4        ctermbg=0      cterm=none
 hi  Specialcomment  ctermfg=3        ctermbg=0      cterm=none
-hi  Special         ctermfg=4
 hi  Specialkey      ctermfg=0        ctermbg=0      cterm=none
 hi  Spellbad        ctermbg=1        cterm=none
 hi  Spellcap        ctermbg=2        cterm=none
@@ -95,6 +94,13 @@ hi  Visual          cterm=reverse
 hi  Visualnos       ctermfg=0        ctermbg=0      cterm=none
 hi  Warningmsg      ctermfg=0        ctermbg=0      cterm=none
 hi  Wildmenu        ctermfg=7        ctermbg=0      cterm=none
+hi  keyword         ctermfg=9        ctermbg=0      cterm=bold
+hi tsxAttrib ctermfg=3
+hi tsxAttributeBraces ctermfg=7
+hi tsxCloseString ctermfg=6
+hi tsxCloseTag ctermfg=6
+hi tsxEqual ctermfg=2
+hi tsxTagName ctermfg=2
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ

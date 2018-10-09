@@ -22,6 +22,7 @@ let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'adimit/prolog.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
@@ -35,12 +36,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'leafgarland/typescript-vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
 Plug 'pangloss/vim-javascript'
-Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'prettier/vim-prettier'
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'rust-lang/rust.vim'

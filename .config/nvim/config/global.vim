@@ -17,7 +17,7 @@ set noexpandtab " Set tabs to sane things
 set nofoldenable " folding
 set noswapfile " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nowb " Turn backup off, since most stuff is in SVN, git et.c anyway...
-set shell=/usr/bin/zsh
+set shell=/usr/local/bin/zsh
 set shiftwidth=4 " Set tabs to sane things
 set showcmd " Show partial commands in the last time of the screen
 set smartcase " Use case insensitive search, except when using capital letters
