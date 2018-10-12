@@ -85,53 +85,68 @@ function gitRebaseFromMaster {
 	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
 }
 
+function gitRebaseFromRelease {
+	CURRENT_BRANCH="$( gitCurrentBranch )"
+	git checkout release && git pull && git checkout $CURRENT_BRANCH && git rebase release
+}
+
 function jotNew {
-  FOLDER_NAME="$HOME/Pad/$( isoDate | sed -e "s/-/\//" | sed -e "s/-.*//" )"
-  FILE_NAME="$HOME/Pad/$( isoDate | sed -e "s/-/\//" | sed -e "s/-/\//" )-$( echo $* | sed -e "s/ /-/g" ).md"
-  mkdir -p $FOLDER_NAME
+	FILE_NAME="$HOME/jot/$( echo $* | sed -e "s/ /-/g" ).md"
 
-  echo "# $( echo $* | sed 's/.*/\L&/; s/[a-z]*/\u&/g' )" >> $FILE_NAME
+	echo "# $( echo $* | sed 's/.*/\L&/; s/[a-z]*/\u&/g' )" > $FILE_NAME
+	echo "" >> $FILE_NAME
+	echo "## $(isoDate)" >> $FILE_NAME
 
-  $EDITOR $FILE_NAME
+	vim '+normal Go' $FILE_NAME
+
+	config add $FILE_NAME > /dev/null
+	config commit -m "jot" > /dev/null
 }
 
 function jotFind {
-  $EDITOR $( find -L $HOME/Pad -type f | sort | fzf --reverse --preview="cat {}" )
+	FILE_NAME=$( find -L $HOME/jot -type f | sort | fzf --reverse --preview="cat {}" )
+
+	echo "\n## $(isoDate)" >> $FILE_NAME
+
+	vim '+normal Go' $FILE_NAME
+
+	config add $FILE_NAME > /dev/null
+	config commit -m "jot" > /dev/null
 }
 
 function syncRepos {
-  echo "------------------------------"
-  echo "             pass             "
-  echo "------------------------------"
-  pass git pull &&
-  pass git push ;
+	echo "------------------------------"
+	echo "             pass             "
+	echo "------------------------------"
+	pass git pull &&
+		pass git push ;
 
-  echo "------------------------------"
-  echo "            config            "
-  echo "------------------------------"
-  config status &&
-  config pull &&
-  config push ;
+	echo "------------------------------"
+	echo "            config            "
+	echo "------------------------------"
+	config status &&
+		config pull &&
+		config push ;
 
-  echo "------------------------------"
-  echo "             done            "
-  echo "------------------------------"
+	echo "------------------------------"
+	echo "             done            "
+	echo "------------------------------"
 }
 
 function updateAll {
-  sudo ls
-  syncRepos ;
-  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
-  sudo dnf upgrade -y ;
-  yarn global upgrade --latest;
+	sudo ls
+	syncRepos ;
+	sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
+	sudo dnf upgrade -y ;
+	yarn global upgrade --latest;
 }
 
 function cabalDUCSGS { 
-  cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddieRidell
+	cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddieRidell
 }
 
 function cabalCabal {
-  cabal --key cabal://7d99b453506b9743bf5e71fe749f66c814d7cd9388a5d394a27eed4c5640302b --nick freddieRidell
+	cabal --key cabal://7d99b453506b9743bf5e71fe749f66c814d7cd9388a5d394a27eed4c5640302b --nick freddieRidell
 }
 
 function jqModify {
@@ -178,15 +193,15 @@ function setupMyNPM {
 }
 
 function gitPoke {
-  git commit --amend --date="now"
+	git commit --amend --date="now"
 }
 
 function gitResetToOrigin {
-  git reset --hard "origin/$( gitCurrentBranch )"
+	git reset --hard "origin/$( gitCurrentBranch )"
 }
 
 function lock { 
-  ~/.i3/lock.sh
+	~/.i3/lock.sh
 }
 
 function pingMeDaddy {
@@ -197,36 +212,36 @@ function pingMeDaddy {
 }
 
 function touchh {
-  for x in $@ ; do ;
-    mkdir -p $( dirname $x ) && touch $x ;
-  done ;
+	for x in $@ ; do ;
+		mkdir -p $( dirname $x ) && touch $x ;
+	done ;
 }
 
 function did {
-  DID_FILE=~/did
+	DID_FILE=~/did
 
-  if [ "$#" -ne 0 ] ; then
-    ENTRY="$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*"
+	if [ "$#" -ne 0 ] ; then
+		ENTRY="$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*"
 
-    MOST_RECENT_DATE=$( tail -1 $DID_FILE | cut -c1,-10 - )
-    THIS_DATE=$( echo $ENTRY | cut -c1,-10 - )
+		MOST_RECENT_DATE=$( tail -1 $DID_FILE | cut -c1,-10 - )
+		THIS_DATE=$( echo $ENTRY | cut -c1,-10 - )
 
-    if [ $MOST_RECENT_DATE != $THIS_DATE ] ; then
-      echo "" >> $DID_FILE
-    fi
+		if [ $MOST_RECENT_DATE != $THIS_DATE ] ; then
+			echo "" >> $DID_FILE
+		fi
 
-    echo $ENTRY >> $DID_FILE
+		echo $ENTRY >> $DID_FILE
 
-    tail -10 $DID_FILE
-    config add $DID_FILE > /dev/null
-    config commit -m "did" > /dev/null
-  else 
-    less ~/did
-  fi
+		tail -10 $DID_FILE
+		config add $DID_FILE > /dev/null
+		config commit -m "did" > /dev/null
+	else 
+		less ~/did
+	fi
 }
 
 function jestDevelop {
-  npm test -- --watchAll --runInBand --bail
+	npm test -- --watchAll --runInBand --bail
 }
 
 function swatch {

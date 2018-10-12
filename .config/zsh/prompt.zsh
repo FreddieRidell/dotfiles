@@ -30,7 +30,7 @@ function get_git_stashes(){
 }
 
 function getDateTime() {
-  echo "%F{white}$(date -Isecond | sed -e "s/T/ /" -e "s/+.\+//" )"
+  echo "%F{white}$(isoTime | sed -e "s/T/ /" -e "s/+.\+//" )"
 }
 
 function get_left_prompt(){
