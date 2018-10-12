@@ -97,7 +97,7 @@ function jotNew {
 	echo "" >> $FILE_NAME
 	echo "## $(isoDate)" >> $FILE_NAME
 
-	vim '+normal Go' $FILE_NAME
+	vim $FILE_NAME
 
 	config add $FILE_NAME > /dev/null
 	config commit -m "jot" > /dev/null
@@ -106,9 +106,16 @@ function jotNew {
 function jotFind {
 	FILE_NAME=$( find -L $HOME/jot -type f | sort | fzf --reverse --preview="cat {}" )
 
-	echo "\n## $(isoDate)" >> $FILE_NAME
+	TODAYS_DATE="$(isoDate)"
 
-	vim '+normal Go' $FILE_NAME
+	if grep -q $TODAYS_DATE jot/hypercortex-notes.md ;
+	then
+		echo "ye" ;
+	else ;
+		echo "\n## $(isoDate)" >> $FILE_NAME
+	fi
+
+	vim $FILE_NAME
 
 	config add $FILE_NAME > /dev/null
 	config commit -m "jot" > /dev/null
