@@ -57,3 +57,5 @@
 
 2018-10-12 10:02:36 (mobiles-M)	  setup server to update its ssh authorized_keys from sync
 2018-10-12 10:18:51 (mobiles-M)	  added a new way to jot
+
+2018-10-15 09:47:31 (mobiles-M)	  properly configured osx branch of config
