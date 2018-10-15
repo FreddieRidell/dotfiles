@@ -1,16 +1,14 @@
-# React Redux Simple REST
+# React Redux Simple Reactive
 
 ## 2018-10-15
 
-### Example API
+### Core API
 ```jsx
-<GetRest
-   path = "path/to/resource" || [ "path", "to", "resource" ] 
-   hash = "foo=bar" || { foo: "bar" }
-   query = "baz=quz" || { baz: "quz" }
->
-{ data => <div>{data}</div> }
-</GetRest>
+   <Reactive
+      selector = { mapsReduxStoreToFirstArgOfChildFunction }
+      generateKey = { takesOtherPropsAndGeneratesAKeyForShouldComponentUpdate }
+      { ...otherProps }
+   >
+      { data => <div>{data}</div> }
+   </GetRest>
 ```
-
-## 2018-10-15
