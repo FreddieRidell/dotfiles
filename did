@@ -59,3 +59,4 @@
 2018-10-12 10:18:51 (mobiles-M)	  added a new way to jot
 
 2018-10-15 09:47:31 (mobiles-M)	  properly configured osx branch of config
+2018-10-15 14:51:55 (mobiles-M)	  actually solved a problem using git bisect!
