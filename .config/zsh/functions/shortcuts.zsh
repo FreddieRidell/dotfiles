@@ -112,7 +112,7 @@ function jotFind {
 	then
 		echo "ye" ;
 	else ;
-		echo "\n## $(isoDate)" >> $FILE_NAME
+		echo "\n## $TODAYS_DATE" >> $FILE_NAME
 	fi
 
 	vim $FILE_NAME
