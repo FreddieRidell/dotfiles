@@ -21,6 +21,19 @@ needs to sort by score, so that the new cortex has them in the correct modified 
 
 make a nice hypercortex bookmark manger called hyperclip
 
+## 2018-10-16
+keep the prop-per-node architecture, but have the value be a tuple that also contains the modifiedAt and modifiedBy fields. so we can keep the lack of overwriting, but also pick a correct answer
+Try using proxies to provide an api to hypercortex objects, we need a functional wrapper to make sure we can add and remove fields from sets (e.g. tags) in a context free way.
+
+```js
+//try this api:
+
+await x.prop = newVal
+const val = await x.prop
+await x.propAdd(newVal)
+await x.propRemove(oldVal)
+```
+
 ## 2018-10-21
 
 ### hypercortex in general
