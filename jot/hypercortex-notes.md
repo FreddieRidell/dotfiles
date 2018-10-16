@@ -20,3 +20,24 @@ needs to sort by score, so that the new cortex has them in the correct modified 
 ### hyperclip
 
 make a nice hypercortex bookmark manger called hyperclip
+
+## 2018-10-21
+
+### hypercortex in general
+
+I remembered today my original plan to have one single store of untyped objects, and to have programs select them only if they had props relevant to them. eg:
+
+- `task` only selects objects with a `due` date.
+- `clip` selects objects with a `link` prop
+- `contacts` selects objects with a `phoneNumber`, `email`, or `name` prop
+
+there are two ways I can think to implement this:
+
+- order data in hyperdb first by prop (`/data/due/fdewyudoidheo`) so that our first operation can be to select objects that have a prop. this strikes me as ineficient, and abusing how hyperdb should best be used.
+- eventually move over to a more [ssb](https://github.com/noffle/multifeed-index) like system, where we construct per-app indexes based on a global stream of actions.I'd likely have to write my own code for this as it needs to satisfy several specific requirements:
+  - needs to be able to incorporate sorted data, so we don't overwrite info just based on discovery order
+  - needs to be able to incorporate a whole object into a per-app index, after it's been created (if i've just added a `due` date to an object, the whole thing should appear in `task`
+
+These problems could possibly be solved with a `hypercortex-server`, that allowed rapid querying from memory, but i'd have to do some timing tests to check.
+
+alltogether though, none of this is important enough to derail the development of these apps, the api that they use to connect to `hypercortex-core` should remain largely unchanged.
