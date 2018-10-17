@@ -3,6 +3,7 @@
 ## 2018-10-15
 
 ### Core API
+
 ```jsx
    <Reactive
       selector = { mapsReduxStoreToFirstArgOfChildFunction }
