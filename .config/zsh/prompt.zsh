@@ -34,7 +34,7 @@ function getDateTime() {
 }
 
 function get_left_prompt(){
-  echo "$(get_current_hostname) $(get_current_repo) $(get_current_dir) $(getDateTime)$(get_git_stashes)\n%f$ "
+  echo "$(get_current_hostname) $(getDateTime) $(get_current_repo) $(get_current_dir) $(get_git_stashes)\n%f$ "
 }
 
 
