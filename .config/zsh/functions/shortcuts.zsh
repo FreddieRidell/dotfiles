@@ -56,7 +56,7 @@ function isoDate {
 }
 
 function isoTime {
-  date --iso-8601=seconds | sed -e "s/T/ /g" -e "s/\+.*//g" ;
+	date +"%Y-%m-%d %H:%M:%S" 
 }
 
 function yarnClearLink {
