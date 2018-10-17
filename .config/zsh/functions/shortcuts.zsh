@@ -98,7 +98,7 @@ function jotNew {
 	echo "## $(isoDate)" >> $FILE_NAME
 
 	vim $FILE_NAME
-	npx prettier --write $FILE_NAME
+	prettier --write $FILE_NAME
 
 	config add $FILE_NAME > /dev/null
 	config commit -m "jot" > /dev/null
@@ -117,7 +117,7 @@ function jotFind {
 	fi
 
 	vim $FILE_NAME
-	npx prettier --write $FILE_NAME
+	prettier --write $FILE_NAME
 
 	config add $FILE_NAME > /dev/null
 	config commit -m "jot" > /dev/null
