@@ -90,6 +90,11 @@ function gitRebaseFromRelease {
 	git checkout release && git pull && git checkout $CURRENT_BRANCH && git rebase release
 }
 
+function gitRebaseFrom {
+	CURRENT_BRANCH="$( gitCurrentBranch )"
+	git checkout $1 && git pull && git checkout $CURRENT_BRANCH && git rebase $1
+}
+
 function jotNew {
 	FILE_NAME="$HOME/jot/$( echo $* | sed -e "s/ /-/g" ).md"
 
