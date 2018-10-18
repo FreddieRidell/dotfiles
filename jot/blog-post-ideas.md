@@ -6,4 +6,5 @@ talk about:
 
 - that phabricator moddel
 - this rusty VCS
-  and how they differ/relate to git
+
+and how they differ/relate to git
