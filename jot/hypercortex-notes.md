@@ -35,6 +35,13 @@ await x.propAdd(newVal)
 await x.propRemove(oldVal)
 ```
 
+## 2018-10-19
+
+### Hypertask rendering
+
+Instead of coming up with my own stupid algorithm for laying out a table in the CLI, why not spend an evening looking through the taskwarrior source and seeing how they do it?
+Furthermore, why not see if there's a nice rust crate that does the same thing...
+
 ## 2018-10-21
 
 ### hypercortex in general
