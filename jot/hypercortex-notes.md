@@ -22,6 +22,7 @@ needs to sort by score, so that the new cortex has them in the correct modified 
 make a nice hypercortex bookmark manger called hyperclip
 
 ## 2018-10-16
+
 keep the prop-per-node architecture, but have the value be a tuple that also contains the modifiedAt and modifiedBy fields. so we can keep the lack of overwriting, but also pick a correct answer
 Try using proxies to provide an api to hypercortex objects, we need a functional wrapper to make sure we can add and remove fields from sets (e.g. tags) in a context free way.
 
@@ -54,3 +55,5 @@ there are two ways I can think to implement this:
 These problems could possibly be solved with a `hypercortex-server`, that allowed rapid querying from memory, but i'd have to do some timing tests to check.
 
 alltogether though, none of this is important enough to derail the development of these apps, the api that they use to connect to `hypercortex-core` should remain largely unchanged.
+
+> after thinking about this for a while, i've decided it's stupid, i keep thinking of fringe cases where this is needed, but it is still an over complication: focus on the product, don't let perfect be the enimy of good. you don't need to automatically make `clip` entries into tasks, and calDAV already has supourt for tasks you don't need this sort of cross app functionality, everything is actually well suited to being sorted into types
