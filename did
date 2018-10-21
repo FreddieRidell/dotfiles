@@ -60,3 +60,5 @@
 
 2018-10-15 09:47:31 (mobiles-M)	  properly configured osx branch of config
 2018-10-15 14:51:55 (mobiles-M)	  actually solved a problem using git bisect!
+
+2018-10-21 13:07:48 (tower)	  moved hypercortex to a system that allows for better confilict resolution
