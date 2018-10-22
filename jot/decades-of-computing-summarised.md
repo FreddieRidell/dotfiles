@@ -10,5 +10,6 @@ Lisp machines were an incredebly stupid idea that imediatly backfired
 
 # 90
 
+- have you heard of the internet?
 - Netscape navigator is important
-- Entire teams of MIT graduates are assembled to do things with XML that are now done in an afternoon using JSON
+- Everyone is unbelievably horny for XML; entire teams of MIT graduates are assembled to do things with XML that are now done in an afternoon using JSON
