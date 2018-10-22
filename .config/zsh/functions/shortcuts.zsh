@@ -132,15 +132,12 @@ function syncRepos {
 	echo "------------------------------"
 	echo "             pass             "
 	echo "------------------------------"
-	pass git pull &&
-		pass git push ;
+	pass git pull && pass git push ;
 
 	echo "------------------------------"
 	echo "            config            "
 	echo "------------------------------"
-	config status &&
-		config pull &&
-		config push ;
+	config status && config pull --all && config push --all ;
 
 	echo "------------------------------"
 	echo "             done            "
@@ -152,6 +149,7 @@ function updateAll {
 	syncRepos ;
 	sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
 	sudo dnf upgrade -y ;
+	
 	yarn global upgrade --latest;
 }
 
