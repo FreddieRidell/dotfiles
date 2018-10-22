@@ -1,3 +1,13 @@
+function scriptMsg() {
+	 echo "\e[1;32;40m# $@ \e[0;37;40m"
+}
+
+function printAndEval() {
+	scriptMsg $@
+
+	 $@
+}
+
 function getFolder () {
     echo ${\PWD##*/}
 }
@@ -80,19 +90,16 @@ function gitBranchJira {
 	git checkout master && git pull && git checkout -b "$NEW_BRANCH_NAME" && git push -u origin "$NEW_BRANCH_NAME"
 }
 
-function gitRebaseFromMaster {
-	CURRENT_BRANCH="$( gitCurrentBranch )"
-	git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master
-}
-
-function gitRebaseFromRelease {
-	CURRENT_BRANCH="$( gitCurrentBranch )"
-	git checkout release && git pull && git checkout $CURRENT_BRANCH && git rebase release
-}
 
 function gitRebaseFrom {
 	CURRENT_BRANCH="$( gitCurrentBranch )"
-	git checkout $1 && git pull && git checkout $CURRENT_BRANCH && git rebase $1
+	printAndEval git checkout $1 &&
+	
+	printAndEval git pull &&
+
+	printAndEval git checkout $CURRENT_BRANCH &&
+
+	printAndEval git rebase $1
 }
 
 function jotNew {
