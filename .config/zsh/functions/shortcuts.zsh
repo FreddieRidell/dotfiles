@@ -102,6 +102,17 @@ function gitRebaseFrom {
 	printAndEval git rebase $1
 }
 
+function gitMergeFrom {
+	CURRENT_BRANCH="$( gitCurrentBranch )"
+	printAndEval git checkout $1 &&
+	
+	printAndEval git pull &&
+
+	printAndEval git checkout $CURRENT_BRANCH &&
+
+	printAndEval git merge $1
+}
+
 function jotNew {
 	FILE_NAME="$HOME/jot/$( echo $* | sed -e "s/ /-/g" ).md"
 
