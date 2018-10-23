@@ -35,3 +35,5 @@ You **MAY** have a special reducer, called `images`, that can be used to maintai
 If `ModalOnSessionExpire` has a complete list/function to determine which routes need auth, this setup provides a declarative, clean, and graceful system for booting a user who's session has expired. It doesn't couple the data store to the routing and makes a user's `loggedin` status into a derived property of the store, and makes the actual logging out action initiated by the user
 
 ### What goes where in the path?
+
+- `/the/route/itself`: A hirearchical breakdown of the features of your app, rely on this as much as possible to break up the different sections of your app into subsystems. A single route doesn't need to corespond to a whole screen view: `/user/:userID/friendship/:friendID` could show a small info screen about a friendship to a given user
