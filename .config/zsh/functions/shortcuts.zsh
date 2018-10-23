@@ -121,7 +121,7 @@ function jotFind {
 
 	TODAYS_DATE="$(isoDate)"
 
-	if grep -q $TODAYS_DATE jot/hypercortex-notes.md ;
+	if grep -q $TODAYS_DATE $FILE_NAME ;
 	then
 		echo "ye" ;
 	else ;
