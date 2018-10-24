@@ -37,3 +37,19 @@ If `ModalOnSessionExpire` has a complete list/function to determine which routes
 ### What goes where in the path?
 
 - `/the/route/itself`: A hirearchical breakdown of the features of your app, rely on this as much as possible to break up the different sections of your app into subsystems. A single route doesn't need to corespond to a whole screen view: `/user/:userID/friendship/:friendID` could show a small info screen about a friendship to a given user
+- query is non hirearchical data, like if you wanted to view the profile of 3 of your friends, put their ids in a qs
+- hash is for ephemeral data, it should be read then cleared
+
+## 2018-10-24
+
+Seperating routing and data is like curringing:
+
+```js
+R.prop("lenseToViewData", dataToOpperateOn);
+```
+
+```jsx
+<App route="/lense/to/view/data" store={dataToOpperateOn} />
+```
+
+lets you de-couple the lense from the data, and reason about them seperatly
