@@ -64,3 +64,7 @@ These problems could possibly be solved with a `hypercortex-server`, that allowe
 alltogether though, none of this is important enough to derail the development of these apps, the api that they use to connect to `hypercortex-core` should remain largely unchanged.
 
 > after thinking about this for a while, i've decided it's stupid, i keep thinking of fringe cases where this is needed, but it is still an over complication: focus on the product, don't let perfect be the enimy of good. you don't need to automatically make `clip` entries into tasks, and calDAV already has supourt for tasks you don't need this sort of cross app functionality, everything is actually well suited to being sorted into types
+
+## 2018-10-24
+
+need to make sure that objects can only contain scalar props and unordered sets, sorting is a derrived property
