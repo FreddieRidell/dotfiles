@@ -61,3 +61,19 @@ The store should act as a subset of all the global data the app cares about: you
 ### Example React Component
 
 I should make an example react component/system, instead of a redux store that stores state, have an action stream store that stores an ordered set of actions. when the component mounts it builds its index from scratch, and listens to new updates. This will probably be wildly un-performant, but it would be a nice experiment to prove a point
+
+```jsx
+<ReactKaffkaLite
+  reducer={(action, state) => ({ ...state, ...action.newUserDetails })}
+  initialState={{}}
+>
+  {(state, loading) => {
+    // the props work just like redux, reducer args are reversed to improve curry-ability
+    // loading goes true when there are new actions to be processed, and false when they're done
+    // state always reflects the most recent state
+    // the reducer is run in a getNextRenderFrame/generator loop, to maintain interactivity between updates
+
+    return <div />;
+  }}
+</ReactKaffkaLite>
+```
