@@ -57,3 +57,7 @@ lets you de-couple the lense from the data, and reason about them seperatly
 ## 2018-10-25
 
 The store should act as a subset of all the global data the app cares about: yours and partner's DBs. Data shouldn't leave the store unless it's actually been deleted
+
+### Example React Component
+
+I should make an example react component/system, instead of a redux store that stores state, have an action stream store that stores an ordered set of actions. when the component mounts it builds its index from scratch, and listens to new updates. This will probably be wildly un-performant, but it would be a nice experiment to prove a point
