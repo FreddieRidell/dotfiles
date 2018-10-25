@@ -53,3 +53,7 @@ R.prop("lenseToViewData", dataToOpperateOn);
 ```
 
 lets you de-couple the lense from the data, and reason about them seperatly
+
+## 2018-10-25
+
+The store should act as a subset of all the global data the app cares about: yours and partner's DBs. Data shouldn't leave the store unless it's actually been deleted
