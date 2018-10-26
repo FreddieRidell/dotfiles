@@ -68,3 +68,11 @@ alltogether though, none of this is important enough to derail the development o
 ## 2018-10-24
 
 need to make sure that objects can only contain scalar props and unordered sets, sorting is a derrived property
+
+## 2018-10-26
+
+### Testing Strategy
+
+**Mega integration tests**
+Grab `main` from `hypercortex-ci` and `render-table`, just push some commands into `main`, and assert on what `render-table` is called with with a snapshot
+I can write more fragmented, unity tests later when anyone else actually cares
