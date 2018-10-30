@@ -76,3 +76,9 @@ need to make sure that objects can only contain scalar props and unordered sets,
 **Mega integration tests**
 Grab `main` from `hypercortex-ci` and `render-table`, just push some commands into `main`, and assert on what `render-table` is called with with a snapshot
 I can write more fragmented, unity tests later when anyone else actually cares
+
+## 2018-10-30 due:queued
+
+add a date shortcut that resolves to the next available slot.
+provisionally add one that finds the first free day, but then try to make one that also has a controlable resolution:
+`due:queued.d` / `due:queued.h` / `wait:queued.w`
