@@ -294,3 +294,7 @@ function getLocalDevices {
 
 	arp -a | column -t | sort
 }
+
+function gitStatusSorted {
+	git status | sort | ag .\+ --no-color
+}
