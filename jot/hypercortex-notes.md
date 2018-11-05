@@ -77,8 +77,22 @@ need to make sure that objects can only contain scalar props and unordered sets,
 Grab `main` from `hypercortex-ci` and `render-table`, just push some commands into `main`, and assert on what `render-table` is called with with a snapshot
 I can write more fragmented, unity tests later when anyone else actually cares
 
-## 2018-10-30 due:queued
+## 2018-10-30 due:free
 
 add a date shortcut that resolves to the next available slot.
 provisionally add one that finds the first free day, but then try to make one that also has a controlable resolution:
-`due:queued.d` / `due:queued.h` / `wait:queued.w`
+`due:free.d` / `due:free.h` / `wait:free.w`
+
+## 2018-11-05 hyperpipe
+
+not really a hypercortex tool, but create a `hyperpipe` cli that allows you to pipe from computer to computer through hyperswarm
+
+```sh
+#pc 1
+echo "foo" | hyperpipe --key secret_key
+
+#pc 2
+hyperpipe --key secret_key >> output.txt
+```
+
+possible also convert stdin to multi-reader stream, so you can pipe to many people simultaniously
