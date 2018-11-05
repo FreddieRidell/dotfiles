@@ -83,7 +83,9 @@ add a date shortcut that resolves to the next available slot.
 provisionally add one that finds the first free day, but then try to make one that also has a controlable resolution:
 `due:free.d` / `due:free.h` / `wait:free.w`
 
-## 2018-11-05 hyperpipe
+## 2018-11-05
+
+### hyperpipe
 
 not really a hypercortex tool, but create a `hyperpipe` cli that allows you to pipe from computer to computer through hyperswarm
 
