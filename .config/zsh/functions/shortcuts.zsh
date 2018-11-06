@@ -99,7 +99,7 @@ function gitRebaseFrom {
 
 	printAndEval git checkout $CURRENT_BRANCH &&
 
-	printAndEval git rebase $1
+	printAndEval git rebase -i $1
 }
 
 function gitMergeFrom {
