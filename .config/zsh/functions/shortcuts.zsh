@@ -120,7 +120,7 @@ function jotNew {
 	echo "" >> $FILE_NAME
 	echo "## $(isoDate)" >> $FILE_NAME
 
-	vim $FILE_NAME
+	vim + -- $FILE_NAME
 	prettier --write $FILE_NAME
 
 	config add $FILE_NAME > /dev/null
@@ -139,7 +139,7 @@ function jotFind {
 		echo "\n## $TODAYS_DATE" >> $FILE_NAME
 	fi
 
-	vim $FILE_NAME
+	vim + -- $FILE_NAME
 	prettier --write $FILE_NAME
 
 	config add $FILE_NAME > /dev/null
