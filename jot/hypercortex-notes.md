@@ -98,3 +98,22 @@ hyperpipe --key secret_key >> output.txt
 ```
 
 possible also convert stdin to multi-reader stream, so you can pipe to many people simultaniously
+
+## 2018-11-12 New design
+
+Have a package per type, and a core hypercortex package to mange DB access
+`hypercortex` has generic helpers for:
+
+- settings prop
+- clearing prop
+- adding to set
+- removing from set
+- subscribe to key
+
+and a way to construct the hypercortex given a set of types that we'll be tracking, eg:
+
+```js
+const cortex = new HyperCortex([Task, Project, Contact]);
+```
+
+each of these types contains specific methods to get, set, and clear each of their (pre-defined) props, as well as subscription to the db, and `toJSON` and `fromJSON` methods
