@@ -117,3 +117,39 @@ const cortex = new HyperCortex([Task, Project, Contact]);
 ```
 
 each of these types contains specific methods to get, set, and clear each of their (pre-defined) props, as well as subscription to the db, and `toJSON` and `fromJSON` methods
+
+the handlers can be simplified like this:
+
+```js
+const Task = {
+  ...["description", "due"].reduce(
+    (acc, val) => ({
+      ...acc,
+
+      get [val]() {
+        return val;
+      },
+
+      set [val](x) {
+        return x;
+      }
+    }),
+    {}
+  ),
+
+  ...["tags"].reduce(
+    (acc, val) => ({
+      ...acc,
+
+      [`${val}Add`]: () => {
+        return val;
+      },
+
+      [`${val}remove`]: () => {
+        return val;
+      }
+    }),
+    {}
+  )
+};
+```
