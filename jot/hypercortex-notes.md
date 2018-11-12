@@ -152,4 +152,21 @@ const Task = {
     {}
   )
 };
+
+//------------------------------
+
+const Base = () =>
+  function() {
+    return {
+      y: "y"
+    };
+  };
+
+class Child extends Base() {
+  constructor() {
+    super();
+  }
+}
+
+const foo = new Child();
 ```
