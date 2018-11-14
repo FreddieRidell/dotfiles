@@ -77,3 +77,8 @@ I should make an example react component/system, instead of a redux store that s
   }}
 </ReactKaffkaLite>
 ```
+
+## 2018-11-14 Method Chaining
+
+Dont't do it, it offers no advantage over just passing in a config object.
+If done properly ( immutably returns a new object ), its much harder to test that calling many methods on the same object.
