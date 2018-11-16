@@ -4,3 +4,4 @@
 - Do Big Hacks
 - Consumate Professional
 - WuTang for the foreseeable future
+- Mr. CoolGuy
