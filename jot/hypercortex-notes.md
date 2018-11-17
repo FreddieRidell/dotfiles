@@ -122,7 +122,7 @@ the handlers can be simplified like this:
 
 ```js
 const Task = {
-  ...["description", "due"].reduce(
+  ...['description', 'due'].reduce(
     (acc, val) => ({
       ...acc,
 
@@ -132,12 +132,12 @@ const Task = {
 
       set [val](x) {
         return x;
-      }
+      },
     }),
-    {}
+    {},
   ),
 
-  ...["tags"].reduce(
+  ...['tags'].reduce(
     (acc, val) => ({
       ...acc,
 
@@ -147,10 +147,10 @@ const Task = {
 
       [`${val}remove`]: () => {
         return val;
-      }
+      },
     }),
-    {}
-  )
+    {},
+  ),
 };
 
 //------------------------------
@@ -158,7 +158,7 @@ const Task = {
 const Base = () =>
   function() {
     return {
-      y: "y"
+      y: 'y',
     };
   };
 
@@ -170,3 +170,5 @@ class Child extends Base() {
 
 const foo = new Child();
 ```
+
+## 2018-11-08
