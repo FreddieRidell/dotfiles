@@ -22,3 +22,5 @@ The algorithm still needs to work with a finite number of states though
 5. Reduce the remaining partially un-determined states using voronoi spreading or something similar
 
 This is probably best implemented in rust WASM, and would be a good chance to get to grips with this tech. I can do so here: [https://rustwasm.github.io/book/game-of-life/introduction.html](https://rustwasm.github.io/book/game-of-life/introduction.html)
+
+## 2018-11-18
