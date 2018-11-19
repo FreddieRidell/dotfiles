@@ -2,6 +2,9 @@ setopt promptsubst
 autoload -Uz promptinit
 promptinit
 
+# change the caret to an |
+echo -e "\033[6 q"
+
 #Left Prompt
 function get_current_hostname(){
 	echo "%{%F{red}%}%m"
