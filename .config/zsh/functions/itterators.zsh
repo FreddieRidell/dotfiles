@@ -10,7 +10,7 @@ function freddieFixFormat {
 
 function openXinY {
 	ag -l "$1" "$2"
-	ag -l "$1" "$2" | xargs -n 1 nvim
+	ag -l "$1" "$2" | xargs -n 1 nvim -c "silent! /$1"
 }
 
 function findReplaceIn {
