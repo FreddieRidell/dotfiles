@@ -1,3 +1,8 @@
+function openXinY {
+	ag -l "$1" "$2"
+	ag -l "$1" "$2" | xargs -n 1 nvim -c "silent! /$1"
+}
+
 function scriptMsg() {
 	 echo "\e[1;32;40m# $@ \e[0;37;40m"
 }
@@ -297,4 +302,8 @@ function getLocalDevices {
 
 function gitStatusSorted {
 	git status | sort | ag .\+ --no-color
+}
+
+function findAndReplaceInFolder {
+	ag $1 --files-with-matches | xargs -I {} sed -i -e "s/$1/$2/g" {}
 }
