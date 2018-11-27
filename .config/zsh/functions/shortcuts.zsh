@@ -43,7 +43,7 @@ function jotNew {
 }
 
 function jotFind {
-	FILE_NAME=$( find -L $HOME/jot -type f | sort | fzf --reverse --preview="bat {} --color always --style header" )
+	FILE_NAME=$( find -L $HOME/jot -type f | sort | fzf --reverse --preview="$CATTER {} --color always --style header" )
 
 	TODAYS_DATE="$(isoDate)"
 
