@@ -1,6 +1,7 @@
 export EDITOR=nvim
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 export TERMINAL=urxvt
+export SHELL=$(which zsh)
 
 #Android Studio Path
 export ANDROID_HOME="/home/freddie/Android/"
