@@ -87,17 +87,17 @@ function updateAll {
 }
 
 function setupMyNPM { 
+	npm init
 	npm add --save-dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
 
 	NAME="$( jq '.name' package.json )"
 
 	# setup package.json
 	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
-	jqModify ".bin.$NAME = \"./main.js\"" package.json
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
 	jqModify '.files[0] = "/index.js"' package.json 
-	jqModify '.files[0] = "/lib"' package.json 
-	jqModify '.files[0] = "/main.js"' package.json 
+	jqModify '.files[1] = "/lib"' package.json 
+	jqModify '.files[2] = "/main.js"' package.json 
 	jqModify '.prettier.tabWidth= 4' package.json 
 	jqModify '.prettier.trailingComma = "all"' package.json 
 	jqModify '.prettier.useTabs = true' package.json 
