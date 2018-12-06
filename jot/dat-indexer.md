@@ -13,10 +13,8 @@ It could be relativly simple to make an app that
 
 ## How to index
 
-Stop trying to parse a whole site, you'll get worse results in the short-term, and it's more open to abuse.
-
+Stop trying to parse a whole site, you'll get worse results in the short-term, and it's more open to abuse.  
 Instead, why not parse the `head`, to extract info from the `meta`, `title`, and `links` tags
-
-You could even request that people add a `topics` meta tag, that contains up to 10 topics that the site contains
-
+`<meta name="keywords" />` provides a perfect way to categorise a site into a few basic categories.
+You could even modify pagerank, so that sites with the same tags share more _juice_ with eachother
 By limiting what you parse, rather than trying to be smart, you improve performance, and limit abuse
