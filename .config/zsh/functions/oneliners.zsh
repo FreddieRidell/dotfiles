@@ -4,7 +4,7 @@ function chpwd { title "$( getFolder )" }
 function findAndReplaceInFolder { ag $1 --files-with-matches | xargs -I {} sed -i -e "s/$1/$2/g" {} }
 function getFolder () { echo ${\PWD##*/} } 
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
-function gitPoke { git commit --amend --date="now" } 
+function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
 function gitResetToOrigin { git reset --hard "origin/$( gitCurrentBranch )" } 
 function gitStatusSorted { git status | sort | ag .\+ --no-color } 
 function gitrid { git fetch -p && for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; do git branch -D $branch; done } 
