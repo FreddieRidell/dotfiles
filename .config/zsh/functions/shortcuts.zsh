@@ -28,6 +28,33 @@ function gitMergeFrom {
 	printAndEval git merge $1
 }
 
+function blogNew {
+	if [ ! -d "$HOME/Documents/freddieridell.com" ]; then
+		pushd "$HOME/Documents/"
+		git clone git@github.com:CodogoFreddie/freddieridell.com.git
+		popd
+	fi
+
+	FILE_NAME="$HOME/Documents/freddieridell.com/src/drafts/$( echo $* | sed -e "s/ /-/g" ).md"
+	vim $FILE_NAME
+
+	pushd ~/Documents/freddieridell.com
+	git add $FILE_NAME
+	git commit -m "added draft $*"
+	popd
+}
+
+function blogFind {
+	pushd "$HOME/Documents/freddieridell.com/src/drafts"
+	FILE_NAME=$( find -L . -type f | sort | fzf --reverse --preview="$CATTER {} --color always --style header" )
+
+	vim $FILE_NAME
+
+	git add $FILE_NAME
+	git commit -m "updated draft $FILE_NAME"
+	popd
+}
+
 function jotNew {
 	FILE_NAME="$HOME/jot/$( echo $* | sed -e "s/ /-/g" ).md"
 
@@ -82,7 +109,7 @@ function updateAll {
 	syncRepos ;
 	sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
 	sudo dnf upgrade -y ;
-	
+
 	yarn global upgrade --latest;
 }
 
