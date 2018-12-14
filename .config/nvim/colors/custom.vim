@@ -39,7 +39,7 @@ hi  Difftext            ctermfg=7        ctermbg=0      cterm=none
 hi  Directory           ctermfg=4        ctermbg=0      cterm=bold
 hi  Error               ctermbg=1        cterm=bold
 hi  Errormsg            ctermbg=1        cterm=bold
-hi  Exception           ctermfg=1        ctermbg=0      cterm=none
+hi  Exception           ctermfg=1        ctermbg=0      cterm=bold
 hi  Float               ctermfg=6        ctermbg=0      cterm=none
 hi  Foldcolumn          ctermfg=0        ctermbg=8      cterm=none
 hi  Folded              ctermfg=0        ctermbg=0      cterm=none
