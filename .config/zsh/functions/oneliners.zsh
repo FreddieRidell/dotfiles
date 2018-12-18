@@ -6,8 +6,8 @@ function getFolder () { echo ${\PWD##*/} }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
 function gitResetToOrigin { git reset --hard "origin/$( gitCurrentBranch )" } 
-function gitStatusSorted { git status | sort | ag .\+ --no-color } 
 function gitRid { git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done } 
+function gitStatusSorted { git status | sort | ag .\+ --no-color } 
 function isoDate { date "+%Y-%m-%d" } 
 function isoTime { date +"%Y-%m-%d %H:%M:%S" }
 function jqModify { TMP_FILE_NAME="/tmp/$RANDOM.json" && jq $1 $2 > $TMP_FILE_NAME && mv $TMP_FILE_NAME $2 } 
@@ -16,10 +16,11 @@ function lesss { cats $1 | less -r }
 function lock { ~/.i3/lock.sh } 
 function openXinY { ag -l "$1" "$2" ; ag -l "$1" "$2" | xargs -n 1 nvim -c "silent! /$1" } 
 function printAndEval() { scriptMsg $@ ; $@ } 
+function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
 function s3rmb { aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1" }
 function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" } 
 function sleepo { systemctl suspend } 
 function title { echo -ne "\033]0;${1}\007" } 
+function tmuxCheatSheet { curl https://gist.githubusercontent.com/MohamedAlaa/2961058/raw/ddf157a0d7b1674a2190a80e126f2e6aec54f369/tmux-cheatsheet.markdown | $CATTER --language markdown }
 function unixTime { date +%s ; } 
 function yarnClearLink { yarn unlink $1 && rm -rf node_modules && yarn install }
-function tmuxCheatSheet { curl https://gist.githubusercontent.com/MohamedAlaa/2961058/raw/ddf157a0d7b1674a2190a80e126f2e6aec54f369/tmux-cheatsheet.markdown | $CATTER --language markdown }

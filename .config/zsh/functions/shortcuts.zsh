@@ -204,3 +204,4 @@ function getLocalDevices {
 
 	arp -a | column -t | sort
 }
+
