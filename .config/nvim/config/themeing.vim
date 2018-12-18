@@ -33,3 +33,7 @@ set mat=2
 
 " Clear search hilighting once we leave insert mode
 autocmd BufWrite * :noh
+
+" moves the viewport so you can see characters near the cursor
+set scrolloff=8
+set sidescrolloff=16

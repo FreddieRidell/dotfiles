@@ -1,6 +1,5 @@
 set mouse=v
 
-set scrolloff=7
 
 "create folder on save if none exists 
 "function s:MkNonExDir(file, buf)
