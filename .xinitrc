@@ -1,3 +1,5 @@
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 setxkbmap us
 xset +fp ~/.fonts/tamzen/bdf
 xset fp rehash

@@ -21,7 +21,7 @@ set $GREEN #a9dc76
 set $BLUE #78dce8
 set $PURPLE #ab9df2
 
-font pango:Tamzen Regular 10
+font -*-tamzen-medium-*-*-*-12-*-*-*-*-*-*-* 
 
 floating_modifier $modAlt
 
@@ -31,6 +31,7 @@ exec xrandr --output DVI-D-0 --auto --pos 0x0 --output DVI-I-0 --auto --pos 1920
 exec --no-startup-id /usr/bin/gnome-settings-daemon
 exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.*
 exec --no-startup-id zsh ~/.xinitrc
+exec --no-startup-id ~/.i3/statusBar.sh
 
 # lock
 bindsym Mod4+l exec ~/.i3/lock.sh
@@ -156,18 +157,7 @@ mode "resize" {
 }
 
 bar {
-  status_command ~/.i3/myI3Status.sh 
-	position top
-	font pango:Tamzen Regular 12px
-  colors {
-    separator $BACKGROUND
-    background $BACKGROUND
-    statusline $WHITE
-    focused_workspace $GREEN $GREEN $BACKGROUND
-    active_workspace $GREEN $BACKGROUND $GREEN
-    inactive_workspace $BLUE $BACKGROUND $BLUE
-    urgent_workspace $ORANGE $ORANGE $BACKGROUND
-  }
+	i3bar_command ~/.i3/statusBar.sh
 }
 
 # switching between workspace
