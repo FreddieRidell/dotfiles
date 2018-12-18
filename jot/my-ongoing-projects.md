@@ -9,4 +9,3 @@
 - knitting haku gaku hat
 - my own website
 - datverse site indexer
-- patchux ( a pijul-like patch-based redux-replacer )
