@@ -5,6 +5,7 @@ git clone --recurse-submodules --bare git@github.com:CodogoFreddie/dotfiles.git 
 config config --local status.showUntrackedFiles no
 config reset --hard master
 config reset --hard HEAD
+config submodule update --recursive --remote
 config status
 
 chsh -s $( which zsh ) $USER
