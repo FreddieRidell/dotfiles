@@ -12,3 +12,4 @@
 ## 2018-12-26
 
 - Look through all the top NPM packages, see if
+- I should ammend babel-preset-freddie-ridell to use the minify plugin when `NODE_ENV === production`
