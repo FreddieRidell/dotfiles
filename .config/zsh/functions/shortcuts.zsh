@@ -115,7 +115,7 @@ function updateAll {
 
 function setupMyNPM { 
 	npm init
-	npm add --save-dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
+	npm add --save-dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
 
 	NAME="$( jq '.name' package.json )"
 
