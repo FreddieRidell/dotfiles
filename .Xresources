@@ -19,7 +19,9 @@
 !           urxvt            !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-URxvt.perl-ext-common: selection-to-clipboard,font-size
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,font-size
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
 
 URxvt.font: -misc-tamzen-medium-*-*-*-12-*-*-*-*-*-*-*
 URxvt.boldFont: -misc-tamzen-bold-*-*-*-12-*-*-*-*-*-*-*
