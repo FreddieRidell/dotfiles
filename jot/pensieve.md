@@ -12,4 +12,8 @@
 ## 2018-12-26
 
 - Look through all the top NPM packages, see if
-- I should ammend babel-preset-freddie-ridell to use the minify plugin when `NODE_ENV === production`
+- I should amend babel-preset-freddie-ridell to use the minify plugin when `NODE_ENV === production`
+
+## 2019-01-07
+
+- I should find out about what happens when you access a rust enum without passing it any parameters, it seems to resolve to a function?
