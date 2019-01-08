@@ -17,4 +17,4 @@ alias settings-daemon="env XDG_CURRENT_DESKTOP=GNOME gnome-settings-daemon"
 
 alias ls="ls --color"
 alias less="less -R"
-alias exa="exa -la"
+alias exa="exa --git --extended --header --time-style=long-iso"
