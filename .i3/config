@@ -21,8 +21,6 @@ set $GREEN #a9dc76
 set $BLUE #78dce8
 set $PURPLE #ab9df2
 
-font -*-tamzen-medium-*-*-*-12-*-*-*-*-*-*-* 
-
 floating_modifier $modAlt
 
 # i3 startup things:
@@ -31,6 +29,8 @@ exec --no-startup-id /usr/bin/gnome-settings-daemon
 exec --no-startup-id feh --bg-fill ~/.i3/wallpaper.*
 exec --no-startup-id zsh ~/.xinitrc
 exec --no-startup-id ~/.i3/statusBar.sh
+
+font -*-tamzen-medium-*-*-*-12-*-*-*-*-*-*-* 
 
 # lock
 bindsym Mod4+l exec ~/.i3/lock.sh
