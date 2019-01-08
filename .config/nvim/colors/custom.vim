@@ -19,16 +19,16 @@
 "15:     DARK_WHITE
 
 hi  clear
-hi  Boolean             ctermfg=2        ctermbg=0      cterm=none
+hi  Boolean             ctermfg=5        ctermbg=0      cterm=none
 hi  Character           ctermfg=3        ctermbg=0      cterm=none
 hi  ColorColumn         ctermfg=15       ctermbg=0      cterm=none
 hi  Comment             ctermfg=15
 hi  Conditional         ctermfg=1        ctermbg=0      cterm=bold
 hi  Constant            ctermfg=5        ctermbg=0      cterm=bold
 hi  Cursor              cterm=inverse
-hi  Cursorcolumn        ctermfg=0        ctermbg=0      cterm=none
-hi  Cursorline          cterm=underline
-hi  Cursorlinenr        ctermfg=6        ctermbg=0      cterm=bold
+"hi  Cursorcolumn        ctermfg=0        ctermbg=0      cterm=none
+"hi  Cursorline          cterm=underline
+"hi  Cursorlinenr        ctermfg=6        ctermbg=0      cterm=bold
 hi  Debug               ctermfg=0        ctermbg=0      cterm=none
 hi  Define              ctermfg=6        ctermbg=0      cterm=none
 hi  Delimiter           ctermfg=7        ctermbg=0      cterm=none
@@ -44,7 +44,7 @@ hi  Float               ctermfg=6        ctermbg=0      cterm=none
 hi  Foldcolumn          ctermfg=4        ctermbg=8      cterm=none
 hi  Folded              ctermfg=12        ctermbg=0      cterm=none
 hi  Function            ctermfg=2        cterm=bold
-hi  Icursor             ctermfg=0        ctermbg=0      cterm=none
+"hi  Icursor             ctermfg=0        ctermbg=0      cterm=none
 hi  Identifier          ctermfg=6        ctermbg=0      cterm=bold
 hi  Ignore              ctermfg=15       ctermbg=0      cterm=none
 hi  Incsearch           cterm=bold       cterm=reverse
