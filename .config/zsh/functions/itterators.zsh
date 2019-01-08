@@ -13,10 +13,6 @@ function openXinY {
 	ag -l "$1" "$2" | xargs -n 1 nvim -c "silent! /$1"
 }
 
-function findReplaceIn {
-  ag -l $1 $3 | xargs -n 1 -I '{}' sed --in-place '{}' -e "s/$1/$2/g" 
-}
-
 function vimFileAndTest {
   file="$1"
   testDir="$(dirname "$1")/__tests__"

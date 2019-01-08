@@ -1,7 +1,7 @@
 function cabalCabal { cabal --key cabal://7d99b453506b9743bf5e71fe749f66c814d7cd9388a5d394a27eed4c5640302b --nick freddieRidell } 
 function cabalDUCSGS { cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddieRidell } 
 function chpwd { title "$( getFolder )" } 
-function findAndReplaceInFolder { ag $1 --files-with-matches | xargs -I {} sed -i -e "s/$1/$2/g" {} }
+function findAndReplaceInFolder { ag -l $1 | xargs sd -i $1 $2 }
 function getFolder () { echo ${\PWD##*/} } 
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
