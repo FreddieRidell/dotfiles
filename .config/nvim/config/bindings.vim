@@ -62,3 +62,7 @@ map <Leader>hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 
 " search for visual mode selection
 vnoremap // y/<C-R>"<CR>
+
+" nvim inline terminal shortcuts
+nmap <Leader>te :tabnew zsh <bar> terminal<CR>
+tnoremap <Leader><Esc> <C-\><C-n>
