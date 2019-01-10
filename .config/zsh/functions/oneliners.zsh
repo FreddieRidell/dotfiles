@@ -17,6 +17,7 @@ function lesss { cats $1 | less -r }
 function lock { ~/.i3/lock.sh } 
 function openXinY { ag -l "$1" "$2" ; ag -l "$1" "$2" | xargs -n 1 nvim -c "silent! /$1" } 
 function printAndEval() { scriptMsg $@ ; $@ } 
+function randomHex { echo $RANDOM | xargs printf "%x\n" }
 function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
 function s3rmb { aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1" }
 function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" } 
