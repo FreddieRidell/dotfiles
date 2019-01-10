@@ -82,3 +82,8 @@ I should make an example react component/system, instead of a redux store that s
 
 Dont't do it, it offers no advantage over just passing in a config object.
 If done properly ( immutably returns a new object ), its much harder to test that calling many methods on the same object.
+
+## 2019-01-10
+
+It's far better to have frontend code try to do the same thing in all cases when dealing with a feature flag.
+Have the un-enabled path === the happy sad path of the enabled path. This reduces code and complexity
