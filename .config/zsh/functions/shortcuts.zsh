@@ -129,7 +129,7 @@ function setupMyNPM {
 	jqModify '.prettier.trailingComma = "all"' package.json 
 	jqModify '.prettier.useTabs = true' package.json 
 	jqModify '.scripts.test = "NODE_ENV=test jest --coverage true src test"' package.json 
-	jqModify '.scripts.test-watch = "NODE_ENV=test jest src test --watch --bail --runInBand"' package.json 
+	jqModify '.scripts.test_watch = "NODE_ENV=test jest src test --watch --bail --runInBand"' package.json 
 	jqModify '.scripts.build = "NODE_ENV=production babel src --out-dir lib"' package.json 
 	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
 	jqModify '.scripts.watch = "NODE_ENV=staging babel src --out-dir lib --watch"' package.json 
