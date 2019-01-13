@@ -6,3 +6,4 @@ xset fp rehash
 xset -dpms
 xset s noblank
 xset s off 
+source $HOME/.config/zsh/path.zsh
