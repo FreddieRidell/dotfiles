@@ -77,3 +77,5 @@
 2018-11-18 12:55:36 (fedtop)	  wrote some stuff about a non grid wave function collapse algorithm
 
 2019-01-10 15:19:27 (moblies-M)	  solved a difficult phantom redirect bug that was caused by using a native <form> element, which auto-redirects on submit
+
+2019-01-14 10:26:31 (moblies-M)	  published updated version of hypertask, it still doens't have automatic background sync, but it does have nice formatting and uses the new hypercortex-object system
