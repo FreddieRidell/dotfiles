@@ -17,3 +17,12 @@
 ## 2019-01-07
 
 - I should find out about what happens when you access a rust enum without passing it any parameters, it seems to resolve to a function?
+
+## 2019-01-14
+
+- a set of hooks and components that handles form input the way I like
+  - `const form = useForm(); const paginationProps = usePagination(form); const usernameProps = useTextInput(form);`
+  - `<Form form = { form }><Pagination {...paginationProps} ><Fragment><Username { ...usernameProps }/></Fragment></Pagination></Form>`
+  - an object that stores all data about the form, additional hooks create props to pass to individual form elements, but they each point back to the core object
+  - possibly configure the whole form in one object, with an array of fields for each page
+  - anything's got to be be better than the current librarys -\_-
