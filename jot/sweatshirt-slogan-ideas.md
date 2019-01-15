@@ -3,5 +3,6 @@
 - Byg Boi
 - Do Big Hacks
 - Consumate Professional
-- WuTang for the foreseeable future
 - Mr. CoolGuy
+- Transformative Work
+- Dyslexics of the world unite
