@@ -26,3 +26,7 @@
   - an object that stores all data about the form, additional hooks create props to pass to individual form elements, but they each point back to the core object
   - possibly configure the whole form in one object, with an array of fields for each page
   - anything's got to be be better than the current librarys -\_-
+
+## 2019-01-16
+
+- it would be pretty easy and nice to build a Dat podcasting client, even though there's currently really only one show on the datverse
