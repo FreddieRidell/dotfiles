@@ -4,9 +4,6 @@
 [submodule "Packages/i3-gaps"]
 	path = Packages/i3-gaps
 	url = https://www.github.com/Airblader/i3
-[submodule "Packages/bat"]
-	path = Packages/bat
-	url = https://github.com/sharkdp/bat
 [submodule "Packages/watchman"]
 	path = Packages/watchman
 	url = https://github.com/facebook/watchman.git

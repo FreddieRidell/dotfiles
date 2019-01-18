@@ -83,5 +83,13 @@ function get_right_prompt(){
 PROMPT='$(rusty-zsh-prompt --left)'
 RPROMPT='$(rusty-zsh-prompt --right)'
 
+#re-enable this when populating the prompt is less resource intensive
+#TMOUT=1
+#TRAPALRM() {
+	#PROMPT='$(get_left_prompt)'
+	#RPROMPT='$(get_right_prompt)'
+    #zle reset-prompt
+#}
+
 setopt promptsubst
 
