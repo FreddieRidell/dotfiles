@@ -11,6 +11,9 @@ export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="./node_modules/.bin:$PATH" 
+export PATH="../node_modules/.bin:$PATH" 
+export PATH="../../node_modules/.bin:$PATH" 
+export PATH="../../../node_modules/.bin:$PATH" 
 
 #rustup
 export PATH="$HOME/.cargo/bin:$PATH"
