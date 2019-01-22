@@ -8,7 +8,7 @@ autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, set filetype=markdown
 autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, setlocal spell wrap linebreak
 
 "gql
-autocmd BufNewFile,BufRead *.graphcool set filetype=graphql
+autocmd BufNewFile,BufRead *.graphcool,*.prisma set filetype=graphql
 
 "prettier
 let g:prettier#quickfix_enabled = 0
