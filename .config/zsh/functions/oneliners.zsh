@@ -22,6 +22,7 @@ function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
 function s3rmb { aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1" }
 function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" } 
 function sleepo { systemctl suspend } 
+function snippetSave { tail -n 2 ~/.zsh_history | head -n 1 | cut -d ';' -f 2- >> ~/.snippets }
 function title { echo -ne "\033]0;${1}\007" } 
 function tmuxCheatSheet { curl https://gist.githubusercontent.com/MohamedAlaa/2961058/raw/ddf157a0d7b1674a2190a80e126f2e6aec54f369/tmux-cheatsheet.markdown | $CATTER --language markdown }
 function unixTime { date +%s ; } 
