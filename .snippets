@@ -1,0 +1,3 @@
+scriptMsg "master to core" && git fetch && git checkout origin/core && git branch -D merge/master-into-core ; git checkout -b merge/master-into-core && git merge origin/master
+scriptMsg "core to master" && git fetch && git checkout origin/master && git branch -D merge/core-into-master ; git checkout -b merge/core-into-master && git merge origin/core
+vim ~/.config/zsh/functions/oneliners.zsh && source ~/.zshrc && snippetLoad
