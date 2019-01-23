@@ -2,6 +2,7 @@
 let g:jsx_ext_required = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
+let g:javascript_plugin_flow = 1
 
 "texty
 autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, set filetype=markdown
