@@ -79,3 +79,5 @@
 2019-01-10 15:19:27 (moblies-M)	  solved a difficult phantom redirect bug that was caused by using a native <form> element, which auto-redirects on submit
 
 2019-01-14 10:26:31 (moblies-M)	  published updated version of hypertask, it still doens't have automatic background sync, but it does have nice formatting and uses the new hypercortex-object system
+
+2019-01-23 10:44:14 (moblies-M)	  created snippets file
