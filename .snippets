@@ -1,3 +1,4 @@
 scriptMsg "master to core" && git fetch && git checkout origin/core && git branch -D merge/master-into-core ; git checkout -b merge/master-into-core && git merge origin/master
 scriptMsg "core to master" && git fetch && git checkout origin/master && git branch -D merge/core-into-master ; git checkout -b merge/core-into-master && git merge origin/core
 scriptMsg "code quality checks" && printAndEval tslint --fix --project . && printAndEval tsc --noEmit --project tsconfig.json && jest --config jest.client.json -u --coverage=false && printAndEval webstorm .
+source ~/.zshrc
