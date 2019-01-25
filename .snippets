@@ -3,3 +3,4 @@ scriptMsg "core to master" && git fetch && git checkout origin/master && git bra
 scriptMsg "code quality checks" && printAndEval tslint --fix --project . && printAndEval tsc --noEmit --project tsconfig.json && jest --config jest.client.json -u --coverage=false && printAndEval webstorm .
 source ~/.zshrc
 find src/client/components -name '*.tsx' | xargs -n 1 grep 'StyleSheet.create({' -l
+rm -rf __snapshots__ ; find . -type f -name '*.tsx' | sed 's/.tsx//' | while read NAME ; do ; mkdir $NAME ; touch $NAME/styles.ts ; mv $NAME.tsx $NAME/index.tsx ; done ; mv index/* . ; mv index.spec/index.tsx index.spec.tsx ; rm -rf index index.spec 
