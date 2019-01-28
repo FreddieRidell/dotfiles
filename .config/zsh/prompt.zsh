@@ -80,8 +80,8 @@ function get_right_prompt(){
 	fi
 }
 
-PROMPT='$(get_left_prompt)'
-RPROMPT='$(get_right_prompt)'
+PROMPT='$(rusty-zsh-prompt --left)'
+RPROMPT='$(rusty-zsh-prompt --right)'
 
 setopt promptsubst
 
