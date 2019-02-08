@@ -1,8 +1,128 @@
 # Sweatshirt Slogan Ideas
 
 - Byg Boi
-- Do Big Hacks
 - Consumate Professional
 - Mr. CoolGuy
 - Transformative Work
 - Dyslexics of the world unite
+
+## Stolen from 30 Rock
+
+- 1 Card Monte
+- 1,000,000 Points
+- Alabama Legsweep
+- Alien Abductee
+- Alien Knight Force
+- Ammnesia
+- Arcade Champ
+- Atlantis Lifeguard
+- Atomic Super Kick
+- Average Voltage
+- Bad Ranch
+- Bahama Trapezoid
+- Be Cool Liz
+- Bigfoot Expert
+- Bronx Golf Club
+- Busy Signal
+- Casual Flosser
+- Closet Amish
+- Code Breaker
+- Coin-Operated
+- Coool As Ice
+- Cryptid
+- Cured
+- Defcon 50
+- Delete
+- Dial-up Access
+- Disco Fries
+- Done Deal
+- Dot Matrix
+- Dream Reader
+- E.S.P. Tutor
+- Emotional Friend
+- Exactly
+- Feelin' It
+- Field Hockey Coach
+- First Class
+- First Time Flosser
+- Foley Artist
+- Former Cyclops
+- Free Parking
+- Freshly Bathed
+- Full Tank
+- Game Changer
+- Going Stron
+- Good Pieces
+- Got It
+- Half Centaur
+- Handy Man
+- Harvard
+- High Score
+- I Did It
+- I Give Up
+- In Training
+- Inapropriate
+- Intestinal Fortitude
+- Joystick Master
+- Karate Hockey
+- Karate Prom
+- Kayfabe
+- Kill Screen
+- Kung Fu Beech
+- Laser Disc
+- Liz Rocks
+- Low Oil
+- Macro Fiche
+- Maintenance Required
+- Mind the Gap
+- Monster Truck Wrestling
+- Mute Button
+- Mystery Solver
+- Ninja Expert
+- Not Guilty
+- PG-25
+- Partial Foods
+- Peaked
+- Phase 3
+- Pinball Mechanic
+- Plumber College
+- Promotional Consideration
+- Punch Ball
+- Regional Dishonor Society
+- Rescue Team
+- Reverse Pendulum
+- Role Model
+- Scanner
+- Semi-Legal
+- Shark Cop
+- Sitting Ovation
+- Slo-bot
+- Snake Biter
+- Snow Ninja
+- Soccer
+- Sort of Loaded
+- Space Karate
+- Spaceship Owner
+- Speed Glue
+- Speling Expirt
+- Straining Order
+- Sumo Dog
+- Suplex
+- TBD
+- Taco Robot
+- Tandem Alert
+- Teenage Grandpa
+- The 1st Star Fighter
+- Time Travel Agent
+- Touch Down
+- Tow Away Zone
+- Trap Door
+- Two Fare Zone
+- UFO Cop
+- VHS Repairer
+- Vacant
+- Van With Man
+- Volunteer Pilot
+- Voted Twice
+- Your Ad Here
+- Incompl te
