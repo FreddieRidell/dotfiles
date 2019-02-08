@@ -6,3 +6,4 @@
 - reading
 - regex-generator-expander
 - glot-react
+- dat-indexer
