@@ -155,10 +155,6 @@ mode "resize" {
 	bindsym Escape mode "default"
 }
 
-bar {
-	i3bar_command ~/.i3/statusBar.sh
-}
-
 # switching between workspace
 bindsym $modAlt+period workspace next
 bindsym $modAlt+comma workspace prev
