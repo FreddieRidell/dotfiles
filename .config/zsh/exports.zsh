@@ -20,6 +20,9 @@ case "$HOST" in
 	freddie-sync-and-jec)
 		export PROMPT_COLOR=2
 		;;
+	freddie-ThinkPad-X220)
+		export PROMPT_COLOR=4
+		;;
     *)
         echo "Need to set PROMPT_COLOR for host $HOST"
         ;;
