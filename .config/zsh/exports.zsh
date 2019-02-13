@@ -17,7 +17,10 @@ case "$HOST" in
     moblies-Mac-mini.local)
 		export PROMPT_COLOR=1
         ;;
+	freddie-sync-and-jec)
+		export PROMPT_COLOR=2
+		;;
     *)
-        echo "Need to set $PROMPT color for host $HOST"
+        echo "Need to set PROMPT_COLOR for host $HOST"
         ;;
 esac
