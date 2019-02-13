@@ -4,7 +4,9 @@ function chpwd { title "$( getFolder )" }
 function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${\PWD##*/} } 
+function gitBranchify { echo "$@" | sed -e "s/ /-/g" | tr '[:upper:]' '[:lower:]' | xargs git checkout -b }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
+function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
 function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
 function gitResetToOrigin { git reset --hard "origin/$( gitCurrentBranch )" } 
 function gitRid { git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done } 
@@ -22,10 +24,9 @@ function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
 function s3rmb { aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1" }
 function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" } 
 function sleepo { systemctl suspend } 
-function snippetSave { tail -n 2 ~/.zsh_history | head -n 1 | cut -d ';' -f 2- >> ~/.snippets && config add ~/.snippets && config commit -m "added snippet" }
 function snippetLoad { SNIPPET=`cat ~/.snippets | fzf` ; print -z $SNIPPET }
+function snippetSave { tail -n 2 ~/.zsh_history | head -n 1 | cut -d ';' -f 2- >> ~/.snippets && config add ~/.snippets && config commit -m "added snippet" }
 function title { echo -ne "\033]0;${1}\007" } 
 function tmuxCheatSheet { curl https://gist.githubusercontent.com/MohamedAlaa/2961058/raw/ddf157a0d7b1674a2190a80e126f2e6aec54f369/tmux-cheatsheet.markdown | $CATTER --language markdown }
 function unixTime { date +%s ; } 
 function yarnClearLink { yarn unlink $1 && rm -rf node_modules && yarn install }
-function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }

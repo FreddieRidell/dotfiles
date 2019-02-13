@@ -12,3 +12,12 @@ if ! type "bat" > /dev/null; then
 else 
 	export CATTER=bat
 fi
+
+case "$HOST" in
+    moblies-Mac-mini.local)
+		export PROMPT_COLOR=1
+        ;;
+    *)
+        echo "Need to set $PROMPT color for host $HOST"
+        ;;
+esac
