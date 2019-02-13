@@ -4,7 +4,7 @@ function chpwd { title "$( getFolder )" }
 function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${\PWD##*/} } 
-function gitBranchify { echo "$@" | sed -e "s/ /-/g" | tr '[:upper:]' '[:lower:]' | xargs git checkout -b }
+function gitBranchify { git checkout -b "$1-$( echo "${@:2}" | sed -e "s/ /-/g" | tr '[:upper:]' '[:lower:]' )" }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
 function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
