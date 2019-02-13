@@ -87,3 +87,5 @@
 2019-01-28 09:27:06 (moblies-M)	  created zsh prompt using rust
 
 2019-01-31 10:58:18 (moblies-M)	  OSX file system is case-insensitive, which means it will resolve files that linux can't
+
+2019-02-13 09:34:48 (moblies-M)	  added custom prompt colors to rusty-zsh-prompt
