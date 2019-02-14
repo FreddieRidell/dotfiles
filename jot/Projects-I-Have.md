@@ -8,3 +8,4 @@
 - glot-react
 - dat-indexer
 - JSONVM
+- fpp in rust
