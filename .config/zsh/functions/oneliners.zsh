@@ -5,9 +5,10 @@ function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${\PWD##*/} } 
 function gitBranchify { git checkout -b "$1-$( echo "${@:2}" | sed -e "s/ /-/g" | tr '[:upper:]' '[:lower:]' )" }
-function gitCurrentBranch { git symbolic-ref -q --short HEAD }
-function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
 function gitCheckoutSearch { git branch | ag "$@" | strip-ansi | xargs -n 1 git checkout }
+function gitCurrentBranch { git symbolic-ref -q --short HEAD }
+function gitCurrentHash { git rev-parse HEAD }
+function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
 function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
 function gitResetToOrigin { git reset --hard "origin/$( gitCurrentBranch )" } 
 function gitRid { git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done } 
