@@ -8,11 +8,12 @@
 
 ## Stolen from 30 Rock
 
-- 1 Card Monte
 - 1,000,000 Points
+- 1 Card Monte
 - Alabama Legsweep
 - Alien Abductee
 - Alien Knight Force
+- "Allegedly"
 - Ammnesia
 - Arcade Champ
 - Atlantis Lifeguard
@@ -38,8 +39,8 @@
 - Done Deal
 - Dot Matrix
 - Dream Reader
-- E.S.P. Tutor
 - Emotional Friend
+- E.S.P. Tutor
 - Exactly
 - Feelin' It
 - Field Hockey Coach
@@ -60,9 +61,10 @@
 - High Score
 - I Did It
 - I Give Up
-- In Training
 - Inapropriate
+- Incompl te
 - Intestinal Fortitude
+- In Training
 - Joystick Master
 - Karate Hockey
 - Karate Prom
@@ -80,9 +82,9 @@
 - Mystery Solver
 - Ninja Expert
 - Not Guilty
-- PG-25
 - Partial Foods
 - Peaked
+- PG-25
 - Phase 3
 - Pinball Mechanic
 - Plumber College
@@ -108,9 +110,9 @@
 - Straining Order
 - Sumo Dog
 - Suplex
-- TBD
 - Taco Robot
 - Tandem Alert
+- TBD
 - Teenage Grandpa
 - The 1st Star Fighter
 - Time Travel Agent
@@ -119,10 +121,9 @@
 - Trap Door
 - Two Fare Zone
 - UFO Cop
-- VHS Repairer
 - Vacant
 - Van With Man
+- VHS Repairer
 - Volunteer Pilot
 - Voted Twice
 - Your Ad Here
-- Incompl te
