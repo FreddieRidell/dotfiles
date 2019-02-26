@@ -7,7 +7,5 @@
 - regex-generator-expander
 - glot-react
 - dat-indexer
-- JSONVM
 - fpp in rust
-
-## 2019-02-15
+- beeline
