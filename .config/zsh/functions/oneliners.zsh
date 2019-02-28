@@ -32,3 +32,4 @@ function title { echo -ne "\033]0;${1}\007" }
 function tmuxCheatSheet { curl https://gist.githubusercontent.com/MohamedAlaa/2961058/raw/ddf157a0d7b1674a2190a80e126f2e6aec54f369/tmux-cheatsheet.markdown | $CATTER --language markdown }
 function unixTime { date +%s ; } 
 function yarnClearLink { yarn unlink $1 && rm -rf node_modules && yarn install }
+function coresCount { getconf _NPROCESSORS_ONLN }
