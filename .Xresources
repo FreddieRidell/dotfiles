@@ -30,6 +30,10 @@ URxvt.chdir: /home/freddie
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 
+URxvt.scrollTtyOutput:      false
+URxvt.scrollWithBuffer:     false
+URxvt.scrollTtyKeypress:    true
+
 URxvt.keysym.Control-Up:     \033[1;5A
 URxvt.keysym.Control-Down:   \033[1;5B
 URxvt.keysym.Control-Left:   \033[1;5D
