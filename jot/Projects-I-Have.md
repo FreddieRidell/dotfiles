@@ -1,10 +1,11 @@
 # Projects I Have
 
-- [ ]hypercortex
-- [ ]my blog
-- [ ]knitting
-- [ ]reading
-- [ ]regex-generator-expander
-- [x]glot-react
-- [ ]dat-indexer
-- [ ]fpp in rust
+- [ ] hypercortex
+- [ ] my blog
+- [ ] knitting
+- [ ] reading
+- [ ] regex-generator-expander
+- [ ] dat-indexer
+- [ ] fpp in rust
+- [ ] turtleneck cuttoffs
+- [x] glot-react
