@@ -103,5 +103,6 @@ hi  tsxCloseTag         ctermfg=6
 hi  tsxEqual            ctermfg=2
 hi  tsxTagName          ctermfg=2
 
-" Must be at the end, because of ctermbg=234 bug.
-" https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
+" change the highlighting when we're in insert mode
+au InsertEnter * hi StatusLine ctermfg=2 ctermbg=0
+au InsertLeave * hi StatusLine ctermfg=7 ctermbg=0
