@@ -34,20 +34,20 @@
 * Defcon 50
 * Delete
 * Done Deal
-* Dot Matrix
-* Dream Reader
+* Dot Matrix +
+* Dream Reader +
 * Dyslexics of the world unite
 * Emotional Friend
 * E.S.P. Tutor
 * Exactly
-* Feelin' It
+* Feelin' It +
 * Field Hockey Coach
 * First Class
 * First Time Flosser
 * Foley Artist
 * Former Cyclops
 * Free Parking
-* Freshly Bathed
+* Freshly Bathed +
 * Full Tank
 * Game Changer
 * Going Stron
@@ -67,7 +67,7 @@
 * Karate Prom
 * Kayfabe
 * Kill Screen
-* Kung Fu Beech
+* Kung Fu Beech +
 * Laser Disc
 * Liz Rocks
 * Low Oil
@@ -78,7 +78,7 @@
 * Mr. CoolGuy
 * Mute Button
 * Mystery Solver
-* Ninja Expert
+* Ninja Expert +
 * Not Guilty
 * Partial Foods
 * Peaked
@@ -93,7 +93,7 @@
 * Reverse Pendulum
 * Scanner
 * Semi-Legal
-* Sitting Ovation
+* Sitting Ovation +
 * Slo-bot
 * Snake Biter
 * Snow Ninja
@@ -114,7 +114,7 @@
 * Time Travel Agent
 * Touch Down
 * Tow Away Zone
-* Transformative Work
+* Transformative Work +
 * Trap Door
 * Two Fare Zone
 * UFO Cop
