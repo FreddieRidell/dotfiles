@@ -10,4 +10,6 @@
 - [ ] turtleneck cuttoffs
 - [ ] DnD character sheet web app
 - [ ] in-repo issue tracker
+- [ ] hyper-pijul
+- [ ] non-grid WFC
 - [x] glot-react
