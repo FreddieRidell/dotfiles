@@ -8,4 +8,5 @@
 - [ ] dat-indexer
 - [ ] fpp in rust
 - [ ] turtleneck cuttoffs
+- [ ] DnD character sheet
 - [x] glot-react
