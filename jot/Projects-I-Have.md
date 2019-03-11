@@ -1,12 +1,13 @@
 # Projects I Have
 
+- [ ] reading
 - [ ] hypercortex
 - [ ] my blog
 - [ ] knitting
-- [ ] reading
 - [ ] regex-generator-expander
 - [ ] dat-indexer
 - [ ] fpp in rust
 - [ ] turtleneck cuttoffs
-- [ ] DnD character sheet
+- [ ] DnD character sheet web app
+- [ ] in-repo issue tracker
 - [x] glot-react
