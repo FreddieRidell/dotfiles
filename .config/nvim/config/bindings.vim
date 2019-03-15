@@ -23,7 +23,7 @@ autocmd BufWinEnter * Neomake
 autocmd VimEnter * wincmd p
 "
 "reset a bit
-nmap <silent> <C-o> :noh<CR>:set nopaste<CR>:redraw!<CR>
+nmap <silent> <C-o> :noh<CR>:set ai<CR>:set nopaste<CR>:redraw!<CR>
 " JSON PrettyPrint
 nmap <Leader>j :'<,'>!python -m json.tool <CR>
 

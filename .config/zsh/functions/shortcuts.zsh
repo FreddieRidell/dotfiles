@@ -115,12 +115,12 @@ function updateAll {
 
 function setupMyNPM { 
 	npm init
-	npm add --save-dev babel-cli prettier eslint babel-preset-freddie-ridell eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
+	npm add --save-dev @babel/cli @babel/core @freddieridell/babel-preset prettier eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
 
 	NAME="$( jq '.name' package.json )"
 
 	# setup package.json
-	jqModify '.babel.presets[0] = "freddie-ridell"' package.json 
+	jqModify '.babel.presets[0] = "@freddieridell/babel-preset"' package.json 
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
 	jqModify '.files[0] = "/index.js"' package.json 
 	jqModify '.files[1] = "/lib"' package.json 
@@ -133,6 +133,7 @@ function setupMyNPM {
 	jqModify '.scripts.build = "NODE_ENV=production babel src --out-dir lib"' package.json 
 	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
 	jqModify '.scripts.watch = "NODE_ENV=staging babel src --out-dir lib --watch"' package.json 
+	jqModify '.scripts.prepushOnly = "npm run build' package.json 
 
 	# setup .gitignore
 	echo "/lib" >> .gitignore
