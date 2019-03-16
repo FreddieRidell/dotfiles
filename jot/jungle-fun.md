@@ -15,7 +15,9 @@ There are 4 stats used in the game:
 - **Guile** Measures your street smarts and ability to read others
 - **Artifice** Measures your book smarts and knowledge
 
-Each stat starts at `+1`, when creating your character you can move points between each stat, up to a max of `+3`, and a minimum of `-2`. All checks are done with a d6, if you roll a 6 you roll again and add the next value onto your total; only add your modifier once.
+Each stat starts at `0`, when creating your character you can move points between each stat, up to a max of `+3`, and a minimum of `-2`. All checks are done with a d6, if you roll a 6 you roll again and add the next value onto your total; only add your modifier once.
+
+Your max health is `10 + ( Brawn * 3 ) + Litheness`
 
 ### Narrative
 
@@ -37,9 +39,10 @@ Once you've decided on most of the characterisation of your character, the DM wi
 
 You also have:
 
-- 1 Weapon
+- 1 Weapon (aligned with on of the 4 stats, eg: club === brawn)
 - 2 Minor items (first aid kit, rope, flint and tinder, etc...)
 - 1 Special Skill
+- 100 of her Majesties Great British Pounds
 
 Although you have to pre-define these before you begin playing, they can have quite ephemeral uses. E.G: your special skill could be `"Dance"`, which you could use to:
 
