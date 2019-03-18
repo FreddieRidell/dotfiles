@@ -6,7 +6,6 @@
 - [ ] knitting
 - [ ] regex-generator-expander
 - [ ] dat-indexer
-- [ ] fpp in rust
 - [ ] turtleneck cuttoffs
 - [ ] DnD character sheet web app
 - [ ] in-repo issue tracker
