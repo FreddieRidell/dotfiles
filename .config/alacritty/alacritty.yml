@@ -3,14 +3,8 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
-  #TERM: xterm-256color
+env:
+  TERM: xterm-color
 
 window:
   # Window dimensions (changes require restart)
@@ -21,24 +15,16 @@ window:
     columns: 0
     lines: 0
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
-
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -49,7 +35,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # When true, alacritty starts maximized.
   start_maximized: false
@@ -82,22 +68,22 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-tabspaces: 8
+tabspaces: 4
 
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    #family: Tamzen6x12
+    style: Regular
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
 
   # Bold font face
   #bold:
@@ -166,8 +152,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
+    background: '0x2c292d'
+    foreground: '0xfdf9f3'
 
     # Bright and dim foreground colors
     #
@@ -184,37 +170,29 @@ colors:
   #cursor:
   #  text: '0x000000'
   #  cursor: '0xffffff'
-  
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection 
-  # background is unset, selection color will be the inverse of the cell colors. 
-  # If only text is unset the cell text color will remain the same.
-  #selection:
-  #  text: '0xeaeaea'
-  #  background: '0x404040'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
-    white:   '0xeaeaea'
+    black:        '0x2c292d'
+    red:          '0xff6188'
+    green:        '0xa9dc76'
+    yellow:       '0xffd866'
+    blue:         '0x78dce8'
+    magenta:       '0xab9df2'
+    cyan:       '0xfc9867'
+    white:        '0xfdf9f3'
+
 
   # Bright colors
   bright:
-    black:   '0x666666'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
-    white:   '0xffffff'
+    black:   '0x160d16'
+    red:     '0xff2e62'
+    green:   '0x90ee31'
+    yellow:  '0xffcb33'
+    blue:    '0x32e6fb'
+    magenta:  '0x775dff'
+    cyan:  '0xff7531'
+    white:   '0x959190'
 
   # Dim colors
   #
@@ -355,10 +333,10 @@ live_config_reload: true
 # Default:
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: zsh
+  args:
+    - --login
 
 # Windows 10 ConPTY backend (Windows only)
 #
@@ -466,14 +444,11 @@ key_bindings:
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
   #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  #- { key: Add,      mods: Control,       action: IncreaseFontSize }
   #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
   # (macOS only)
   #- { key: Key0,   mods: Command, action: ResetFontSize    }
   #- { key: Equals, mods: Command, action: IncreaseFontSize }
-  #- { key: Add,    mods: Command, action: IncreaseFontSize }
   #- { key: Minus,  mods: Command, action: DecreaseFontSize }
   #- { key: K,      mods: Command, action: ClearHistory     }
   #- { key: K,      mods: Command, chars: "\x0c"            }
@@ -487,21 +462,17 @@ key_bindings:
   - { key: Copy,                    action: Copy                             }
   - { key: L,        mods: Control, action: ClearLogNotice                   }
   - { key: L,        mods: Control, chars: "\x0c"                            }
-  - { key: Home,     mods: Alt,     chars: "\x1b[1;3H"                       }
   - { key: Home,                    chars: "\x1bOH",        mode: AppCursor  }
   - { key: Home,                    chars: "\x1b[H",        mode: ~AppCursor }
-  - { key: End,      mods: Alt,     chars: "\x1b[1;3F"                       }
   - { key: End,                     chars: "\x1bOF",        mode: AppCursor  }
   - { key: End,                     chars: "\x1b[F",        mode: ~AppCursor }
   - { key: PageUp,   mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
   - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~",     mode: Alt        }
   - { key: PageUp,   mods: Control, chars: "\x1b[5;5~"                       }
-  - { key: PageUp,   mods: Alt,     chars: "\x1b[5;3~"                       }
   - { key: PageUp,                  chars: "\x1b[5~"                         }
   - { key: PageDown, mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   - { key: PageDown, mods: Shift,   chars: "\x1b[6;2~",     mode: Alt        }
   - { key: PageDown, mods: Control, chars: "\x1b[6;5~"                       }
-  - { key: PageDown, mods: Alt,     chars: "\x1b[6;3~"                       }
   - { key: PageDown,                chars: "\x1b[6~"                         }
   - { key: Tab,      mods: Shift,   chars: "\x1b[Z"                          }
   - { key: Back,                    chars: "\x7f"                            }
