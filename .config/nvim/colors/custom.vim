@@ -63,7 +63,7 @@ hi  Pmenusbar           ctermfg=1        ctermbg=0      cterm=none
 hi  Pmenusel            ctermfg=2        ctermbg=0      cterm=bold
 hi  Pmenuthumb          ctermfg=3        ctermbg=0      cterm=none
 hi  PreProc             ctermfg=2
-hi  Precondit           ctermfg=0        ctermbg=0      cterm=none
+hi  Precondit           ctermfg=4        ctermbg=0      cterm=none
 hi  Question            ctermfg=7        ctermbg=0      cterm=none
 hi  Repeat              ctermfg=1        cterm=bold
 hi  Search              ctermfg=0        ctermbg=7      cterm=none
