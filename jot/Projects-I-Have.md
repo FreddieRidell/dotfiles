@@ -8,7 +8,6 @@
 - [ ] regex-generator-expander
 - [ ] dat-indexer
 - [ ] turtleneck cuttoffs
-- [ ] DnD character sheet web app
 - [ ] hyper-pijul
 - [ ] non-grid WFC
 - [x] glot-react
