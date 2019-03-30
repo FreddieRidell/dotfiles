@@ -10,4 +10,5 @@
 - [ ] turtleneck cuttoffs
 - [ ] hyper-pijul
 - [ ] non-grid WFC
+- [ ] dat CI auto builder
 - [x] glot-react
