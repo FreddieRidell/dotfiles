@@ -1,53 +1,54 @@
 [user]
-  name = Freddie Ridell
-  email = contact@freddieridell.com
+	name = Freddie Ridell
+	email = contact@freddieridell.com
 
 [alias]
-  bb = "bisect bad"
-  bg = "bisect good"
-  chore = "!f() { git commit -am \"chore($1): $2\"; }; f"
-  clean-branches = !git remote prune origin && git branch --merged >/tmp/merged-branches && $EDITOR /tmp/merged-branches && xargs git branch -d </tmp/merged-branches
-  d = difftool
-  difff = diff -w
-  diffff = diff --word-diff
-  feat = "!f() { git commit -am \"feat($1): $2\"; }; f"
-  fix = "!f() { git commit -am \"fix($1): $2\"; }; f"
-  graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-  jira = "! gitJira"
-  logg = log --decorate --stat
-  perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
-  rc = "rebase --continue"
-  refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
-  style = "!f() { git commit -am \"style($1): $2\"; }; f"
-  temp = "!f() { git commit -am \"temp($1): $2\"; }; f"
-  whoops = !git add --all && git commit --amend
+	bb = "bisect bad"
+	bg = "bisect good"
+	chore = "!f() { git commit -am \"chore($1): $2\"; }; f"
+	clean-branches = !git remote prune origin && git branch --merged >/tmp/merged-branches && $EDITOR /tmp/merged-branches && xargs git branch -d </tmp/merged-branches
+	d = difftool
+	difff = diff -w
+	diffff = diff -w --word-diff
+	feat = "!f() { git commit -am \"feat($1): $2\"; }; f"
+	fix = "!f() { git commit -am \"fix($1): $2\"; }; f"
+	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	jira = "! gitJira"
+	logg = log --decorate --stat
+	perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
+	rc = "rebase --continue"
+	refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
+	style = "!f() { git commit -am \"style($1): $2\"; }; f"
+	temp = "!f() { git commit -am \"temp($1): $2\"; }; f"
+	whoops = !git add --all && git commit --amend
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [diff]
-  tool = nvimdiff
+	tool = nvimdiff
+	algorithm = minimal
 
 [difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
-  tool = vimdiff
+	tool = vimdiff
 [mergetool]
-  prompt = true
+	prompt = true
 [mergetool "vimdiff"]
-  cmd = nvim -d $REMOTE $BASE $LOCAL $MERGED -c '$wincmd w' -c 'wincmd J'
+	cmd = nvim -d $REMOTE $BASE $LOCAL $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [core]
-  editor = nvim -d 
-  shell = /usr/bin/zsh
+	editor = nvim -d 
+	shell = /usr/bin/zsh
 
 [push]
-  default = simple
-  followTags = true
+	default = simple
+	followTags = true
 
 [status]
-  showUntrackedFiles = all
+	showUntrackedFiles = all
 [color]
 	ui = always
 [receive]
@@ -55,4 +56,4 @@
 [pull]
 	rebase = true
 [rebase]
-	autoStash = true
+	utoStash = true
