@@ -33,9 +33,9 @@ hi  Debug               ctermfg=0        ctermbg=0      cterm=none
 hi  Define              ctermfg=6        ctermbg=0      cterm=none
 hi  Delimiter           ctermfg=7        ctermbg=0      cterm=none
 hi  Diffadd             ctermfg=2        ctermbg=0      cterm=none
-hi  Diffchange          ctermfg=4        ctermbg=0      cterm=none
-hi  Diffdelete          ctermfg=1        ctermbg=0      cterm=none
-hi  Difftext            ctermfg=7        ctermbg=0      cterm=none
+hi  Diffchange          ctermfg=7        ctermbg=0      cterm=none
+hi  Diffdelete          ctermfg=4        ctermbg=0      cterm=bold
+hi  Difftext            ctermfg=4        ctermbg=0      cterm=none
 hi  Directory           ctermfg=4        ctermbg=0      cterm=bold
 hi  Error               ctermbg=1        cterm=bold
 hi  Errormsg            ctermbg=1        cterm=bold
