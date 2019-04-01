@@ -133,7 +133,7 @@ function setupMyNPM {
 	jqModify '.scripts.build = "NODE_ENV=production babel src --out-dir lib"' package.json 
 	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
 	jqModify '.scripts.watch = "NODE_ENV=staging babel src --out-dir lib --watch"' package.json 
-	jqModify '.scripts.prepushOnly = "npm run build' package.json 
+	jqModify '.scripts.prepushOnly = "npm run format && && npm run test && npm run build"' package.json 
 
 	# setup .gitignore
 	echo "/lib" >> .gitignore
