@@ -9,12 +9,12 @@ $ %f"
 
 RPROMPT='$(rusty-zsh-prompt --right)'
 
-TMOUT=1
-TRAPALRM() {
-	#echo $WIDGET
-	if [ "$WIDGET" != "fzf-completion" ]; then
-		zle reset-prompt
-	fi
-}
+#TMOUT=1
+#TRAPALRM() {
+	##echo $WIDGET
+	#if [ "$WIDGET" != "fzf-completion" ]; then
+		#zle reset-prompt
+	#fi
+#}
 
 setopt promptsubst
