@@ -1,6 +1,8 @@
 # Projects I Have
 
 - [ ] diesel_punk
+- [ ] dat.rs
+  - [ ] propose an intermediate crate between hypercore and hyperdb that handles the authorization and multi-feed functionality
 - [ ] reading
 - [ ] hypercortex
 - [ ] my blog
