@@ -13,6 +13,4 @@
 - [ ] non-grid WFC
 - [ ] dat CI auto builder
 - [x] glot-react
-- [ ] react translater where the english text is the key, warns if key is not in store, might hash key?
-
-## 2019-04-05
+- [ ] react translater where the english text is the key, warns if key is not in store, might hash key? adds `data-` or something to span to make it testable
