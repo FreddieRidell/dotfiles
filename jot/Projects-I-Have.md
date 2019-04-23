@@ -1,6 +1,7 @@
 # Projects I Have
 
 - [ ] diesel_punk
+- [ ] rust RAII frontend framework
 - [ ] dat.rs
   - [ ] propose an intermediate crate between hypercore and hyperdb that handles the authorization and multi-feed functionality
 - [ ] my blog
@@ -14,5 +15,3 @@
 - [ ] dat CI auto builder
 - [x] glot-react
 - [ ] react translater where the english text is the key, warns if key is not in store, might hash key? adds `data-` or something to span to make it testable
-
-## 2019-04-11
