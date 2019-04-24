@@ -22,6 +22,7 @@ let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'JulesWang/css.vim'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'adimit/prolog.vim'
 Plug 'airblade/vim-gitgutter'
@@ -31,6 +32,7 @@ Plug 'bogado/file-line'
 Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'hail2u/vim-css3-syntax'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
