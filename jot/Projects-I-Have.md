@@ -1,7 +1,5 @@
 # Projects I Have
 
-- [ ] diesel_punk
-- [ ] rust RAII frontend framework
 - [ ] dat.rs
   - [ ] propose an intermediate crate between hypercore and hyperdb that handles the authorization and multi-feed functionality
 - [ ] my blog
