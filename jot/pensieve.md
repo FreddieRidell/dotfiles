@@ -33,4 +33,5 @@
 
 ## 2019-04-28
 
-A breakup fix, where the couple starts together and we just follow their breakup
+- A breakup fix, where the couple starts together and we just follow their breakup
+- formalise democracy sort, a chess-ranking like system for sorting a non strictly ordered set where pairs of elements are compared one after the other
