@@ -30,3 +30,7 @@
 ## 2019-01-16
 
 - it would be pretty easy and nice to build a Dat podcasting client, even though there's currently really only one show on the datverse
+
+## 2019-04-28
+
+A breakup fix, where the couple starts together and we just follow their breakup
