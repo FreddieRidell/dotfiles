@@ -56,4 +56,4 @@
 [pull]
 	rebase = true
 [rebase]
-	utoStash = true
+	autoStash = true
