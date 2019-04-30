@@ -42,7 +42,7 @@ hi  Errormsg            ctermbg=1        cterm=bold
 hi  Exception           ctermfg=1        ctermbg=0      cterm=bold
 hi  Float               ctermfg=6        ctermbg=0      cterm=none
 hi  Foldcolumn          ctermfg=4        ctermbg=8      cterm=none
-hi  Folded              ctermfg=12        ctermbg=0      cterm=none
+hi  Folded              ctermfg=12       ctermbg=0      cterm=none
 hi  Function            ctermfg=2        cterm=bold
 "hi  Icursor             ctermfg=0        ctermbg=0      cterm=none
 hi  Identifier          ctermfg=6        ctermbg=0      cterm=bold
@@ -52,9 +52,9 @@ hi  Label               ctermfg=4        ctermbg=0      cterm=none
 hi  Linenr              ctermfg=15       ctermbg=0      cterm=bold
 hi  Macro               ctermfg=3        ctermbg=0      cterm=none
 hi  Matchparen          ctermfg=7        ctermbg=7      cterm=bold
-hi  Modemsg             ctermfg=0        ctermbg=0      cterm=none
-hi  Moremsg             ctermfg=0        ctermbg=0      cterm=none
-hi  Nontext             ctermfg=0        ctermbg=0      cterm=none
+hi  Modemsg             ctermfg=7        ctermbg=0      cterm=none
+hi  Moremsg             ctermfg=7        ctermbg=0      cterm=none
+hi  Nontext             ctermfg=7        ctermbg=0      cterm=none
 hi  Normal              ctermfg=7        ctermbg=0      cterm=none
 hi  Number              ctermfg=5        ctermbg=0      cterm=none
 hi  Operator            ctermfg=1
@@ -67,11 +67,11 @@ hi  Precondit           ctermfg=4        ctermbg=0      cterm=none
 hi  Question            ctermfg=7        ctermbg=0      cterm=none
 hi  Repeat              ctermfg=1        cterm=bold
 hi  Search              ctermfg=0        ctermbg=7      cterm=none
-hi  Signcolumn          ctermfg=0        ctermbg=0      cterm=none
+hi  Signcolumn          ctermfg=7        ctermbg=0      cterm=none
 hi  Special             ctermfg=4
 hi  Specialchar         ctermfg=4        ctermbg=0      cterm=none
 hi  Specialcomment      ctermfg=3        ctermbg=0      cterm=none
-hi  Specialkey          ctermfg=0        ctermbg=0      cterm=none
+hi  Specialkey          ctermfg=7        ctermbg=0      cterm=none
 hi  Spellbad            ctermbg=1        cterm=none
 hi  Spellcap            ctermbg=2        cterm=none
 hi  Spelllocal          ctermbg=3        cterm=none
@@ -81,9 +81,9 @@ hi  Statuslinenc        cterm=reverse
 hi  Storageclass        ctermfg=6
 hi  String              ctermfg=3        ctermbg=0      cterm=none
 hi  Structure           ctermfg=5        ctermbg=0      cterm=none
-hi  Tabline             ctermfg=0        ctermbg=15     cterm=none
-hi  Tablinefill         ctermfg=0        ctermbg=15     cterm=none
-hi  Tag                 ctermfg=0        ctermbg=0      cterm=none
+hi  Tabline             ctermfg=0        ctermbg=7      cterm=none
+hi  Tablinefill         ctermfg=0        ctermbg=7      cterm=none
+hi  Tag                 ctermfg=7        ctermbg=0      cterm=none
 hi  Title               ctermfg=6        ctermbg=0      cterm=none
 hi  Todo                ctermfg=0        ctermbg=7
 hi  Type                ctermfg=4        ctermbg=0      cterm=none
@@ -91,8 +91,8 @@ hi  Typedef             ctermfg=5        ctermbg=0      cterm=none
 hi  Underlined          cterm=underline
 hi  Vertsplit           ctermbg=8
 hi  Visual              cterm=reverse
-hi  Visualnos           ctermfg=0        ctermbg=0      cterm=none
-hi  Warningmsg          ctermfg=0        ctermbg=0      cterm=none
+hi  Visualnos           ctermfg=7        ctermbg=0      cterm=none
+hi  Warningmsg          ctermfg=1        ctermbg=0      cterm=none
 hi  Wildmenu            ctermfg=7        ctermbg=0      cterm=none
 hi  keyword             ctermfg=9        ctermbg=0      cterm=bold
 hi  markdownCode        cterm=bold
