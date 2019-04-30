@@ -3,7 +3,7 @@ function cabalDUCSGS { cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0
 function chpwd { title "$( getFolder )" } 
 function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
-function getFolder () { echo ${\PWD##*/} } 
+function getFolder () { echo ${PWD:t} } 
 function gitBranchify { git checkout -b "$1-$( echo "${@:2}" | sed -e "s/[^a-zA-Z0-9]/-/g" -e "s/--*/-/g" -e "s/-$//g" | tr '[:upper:]' '[:lower:]' )" }
 function gitCheckoutSearch { git branch | ag "$@" | strip-ansi | xargs -n 1 git checkout }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
