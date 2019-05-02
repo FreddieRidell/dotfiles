@@ -1,0 +1,9 @@
+{
+    "title": "Mocking in Rust with conditional compilation | rustnish",
+    "url": "https://klausi.github.io/rustnish/2019/03/31/mocking-in-rust-with-conditional-compilation.html",
+    "createdAt": "2019-05-02T14:01:56.491Z",
+    "description": "When writing automated unit tests for your application you will probably need to use mocks at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.",
+    "siteName": "rustnish",
+    "keywords": [],
+    "canonical": "https://klausi.github.io/rustnish/2019/03/31/mocking-in-rust-with-conditional-compilation.html"
+}
