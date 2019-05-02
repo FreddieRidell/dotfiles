@@ -1,0 +1,9 @@
+{
+    "title": "Blog | Yggdrasil",
+    "url": "https://yggdrasil-network.github.io/blog.html",
+    "createdAt": "2019-05-02T14:02:11.790Z",
+    "description": "A proof-of-concept IPv6 meshnet, featuring end-to-end encryption, a unique spanning tree routing algorithm and aiming to implement novel backpressure routing metrics. It is lightweight, self-arranging and should scale well beyond the limits of existing mesh networks.",
+    "siteName": "Yggdrasil",
+    "keywords": [],
+    "canonical": "https://yggdrasil-network.github.io/blog.html"
+}
