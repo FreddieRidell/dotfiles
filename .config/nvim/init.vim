@@ -55,6 +55,7 @@ Plug 'tomasr/molokai'
 Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/vim-coffee-script'
 
 call plug#end()
