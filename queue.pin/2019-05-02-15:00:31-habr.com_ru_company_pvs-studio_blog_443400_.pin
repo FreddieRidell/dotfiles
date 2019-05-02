@@ -1,0 +1,14 @@
+{
+    "title": "Counting Bugs in Windows Calculator / Блог компании PVS-Studio / Хабр",
+    "url": "https://habr.com/ru/company/pvs-studio/blog/443400/",
+    "createdAt": "2019-05-02T14:00:33.009Z",
+    "description": "\nA few days ago, Microsoft made the source code of their Windows Calculator publicly available. Calculator is an application that has traditionally shipped with every Windows version. A number of...",
+    "keywords": [
+        "calculator",
+        " windows",
+        " os",
+        " static analysis",
+        " pvs-studio"
+    ],
+    "canonical": "https://habr.com/en/company/pvs-studio/blog/443400/"
+}
