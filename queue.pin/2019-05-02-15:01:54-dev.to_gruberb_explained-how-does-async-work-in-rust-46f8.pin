@@ -1,0 +1,15 @@
+{
+    "title": "Explained: How does async work in Rust? - DEV Community 👩‍💻👨‍💻",
+    "url": "https://dev.to/gruberb/explained-how-does-async-work-in-rust-46f8",
+    "createdAt": "2019-05-02T14:01:55.053Z",
+    "description": "Rust decided to not include an async runtime. Therefore the developer is left with the choice of an appropriate crate to make async work. ",
+    "siteName": "The Practical Dev",
+    "keywords": [
+        "software development",
+        " inclusive",
+        " community",
+        "engineering",
+        "rust"
+    ],
+    "canonical": "https://dev.to/gruberb/explained-how-does-async-work-in-rust-46f8"
+}
