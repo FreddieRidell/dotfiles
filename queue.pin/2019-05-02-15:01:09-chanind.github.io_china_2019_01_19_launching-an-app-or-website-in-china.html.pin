@@ -1,0 +1,9 @@
+{
+    "title": "So you want your app/website to work in China… | chanind.github.io",
+    "url": "https://chanind.github.io/china/2019/01/19/launching-an-app-or-website-in-china.html",
+    "createdAt": "2019-05-02T14:01:09.494Z",
+    "description": "Wait, what do you mean make my app/site work in China? I don’t have to do anything to make my app work in the US or Singapore or Kenya or anywhere else, and I didn’t make the Chinese government angry, so it should just work in China, right? Sadly, it’s not so simple. If your app/website servers aren’t hosted from within China, then, for all intents and purposes, it’s blocked. I mean, it will probably technically load, but will be excruciatingly, unusably slow. And sometimes it will just not load at all for hours at a time. This is true for all services hosted outside of the firewall, even in Hong Kong.",
+    "siteName": "chanind.github.io",
+    "keywords": [],
+    "canonical": "https://chanind.github.io/china/2019/01/19/launching-an-app-or-website-in-china.html"
+}
