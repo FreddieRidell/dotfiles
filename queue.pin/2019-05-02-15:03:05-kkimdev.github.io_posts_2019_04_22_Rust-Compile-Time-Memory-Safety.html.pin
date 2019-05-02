@@ -1,0 +1,9 @@
+{
+    "title": "Rust - Compile Time Memory Safety | Kibeom Kim",
+    "url": "https://kkimdev.github.io/posts/2019/04/22/Rust-Compile-Time-Memory-Safety.html",
+    "createdAt": "2019-05-02T14:03:05.779Z",
+    "description": "In this post, I will explain why Rust is interesting by making an analogy between “dynamic vs static typing” and “C++ vs Rust’s static memory safety” without going into too much detail.",
+    "siteName": "Kibeom Kim",
+    "keywords": [],
+    "canonical": "https://kkimdev.github.io/posts/2019/04/22/Rust-Compile-Time-Memory-Safety.html"
+}
