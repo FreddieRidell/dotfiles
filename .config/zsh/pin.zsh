@@ -7,7 +7,7 @@ function pin() {
 
 	case $1 in
 		"add")
-			NEW_FILE_NAME="$PIN_FOLDER_QUEUE/$(isoTime | sed -e "s/ /-/g")-$( echo $2 | sed -e "s/https*:\/\///g").pin";
+			NEW_FILE_NAME="$PIN_FOLDER_QUEUE/$(isoTime | sed -e "s/ /-/g")-$( echo $2 | sed -e "s/https*:\/\///g" -e "s/\//_/g" ).pin";
 			hedification $2 > $NEW_FILE_NAME;
 			config add $NEW_FILE_NAME;
 			config commit -m "added pin for $2";
@@ -37,6 +37,10 @@ function pin() {
 
 			config add $PIN_FOLDER_ARCHIVE $PIN_FOLDER_QUEUE
 			config commit -m "deleted pin for $URL";
+			;;
+
+		*)
+			echo "pin add|read|archive|delete";
 			;;
 	esac
 
