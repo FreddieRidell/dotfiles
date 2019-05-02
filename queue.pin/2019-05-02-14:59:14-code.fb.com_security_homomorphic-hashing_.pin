@@ -1,0 +1,9 @@
+{
+    "title": "Homomorphic hashing for secure update propagation - Facebook Code",
+    "url": "https://code.fb.com/security/homomorphic-hashing/",
+    "createdAt": "2019-05-02T13:59:15.714Z",
+    "description": "We are releasing the implementation of a specific homomorphic hashing algorithm, LtHash, in Folly, our open source library.",
+    "siteName": "Facebook Code",
+    "keywords": [],
+    "canonical": "https://code.fb.com/security/homomorphic-hashing/"
+}
