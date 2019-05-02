@@ -1,0 +1,9 @@
+{
+    "title": "Ruby’s Creed | Meta Redux",
+    "url": "https://metaredux.com/posts/2019/04/02/ruby-s-creed.html",
+    "createdAt": "2019-05-02T14:01:45.798Z",
+    "description": "Every programming language has some fundamental idea(s) that drives its design and evolution. For Haskell that’s functional purity and state-of-the-art static typing, for Erlang that’s distributed programming and fault tolerance, for Clojure that’s simplicity and stability. What all these examples have in common is that they are relatively easy to understand and map to design decisions in the languages. This, in turn, makes it possible to determine down the road whether a language sticks to its core values or deviates from them. Ruby, however, is very different. It’s world famous for its unique creed - “optimizing for programming happiness”. But what does this really mean? How does one optimize for happiness? Unfortunately I’ve never heard Matz speak about this, so I’ll offer you my perspective instead - happiness is simplicity, readability, consistency, expressiveness and flexibility. If I have to describe happiness via Ruby code I’d probably do it like this: 3.times do puts \"Ruby Rocks!\" end",
+    "siteName": "Meta Redux",
+    "keywords": [],
+    "canonical": "http://metaredux.com/posts/2019/04/02/ruby-s-creed.html"
+}
