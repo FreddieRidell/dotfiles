@@ -1,9 +1,0 @@
-{
-    "title": "for await loops (Part I)",
-    "url": "https://boats.gitlab.io/blog/post/for-await-i/",
-    "createdAt": "2019-05-02T14:02:53.226Z",
-    "description": "The biggest unresolved question regarding the async/await syntax is the final syntax for the await operator. There’s been an enormous amount of discussion on this question so far; a summary of the present status of that discussion and the positions within the language team is coming soon. Right now I want to separately focus on one question which impacts that decision but hasn’t been considered very much yet: for loops which process streams.",
-    "siteName": "withoutblogs",
-    "keywords": [],
-    "canonical": "https://boats.gitlab.io/blog/post/for-await-i/"
-}

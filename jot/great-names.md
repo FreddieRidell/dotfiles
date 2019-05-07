@@ -1,3 +1,0 @@
-# Great Names
-
-- Jasper Kichs

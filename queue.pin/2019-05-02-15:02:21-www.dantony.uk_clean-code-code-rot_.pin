@@ -1,7 +1,0 @@
-{
-    "title": "Clean Code: Preventing Code Rot | Dave Elliott's blog",
-    "url": "https://www.dantony.uk/clean-code-code-rot/",
-    "createdAt": "2019-05-02T14:02:22.250Z",
-    "description": "tldr; Leave the codebase better than you found it. Improve existing code, however minor, when appropriate to prevent our codebase going…",
-    "keywords": []
-}

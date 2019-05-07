@@ -65,8 +65,8 @@ function jotNew {
 	vim + -- $FILE_NAME
 	prettier --write $FILE_NAME
 
-	config add $FILE_NAME > /dev/null
-	config commit -m "jot" > /dev/null
+	cortex add $FILE_NAME > /dev/null
+	cortex commit -m "jot" > /dev/null
 }
 
 function jotFind {
@@ -84,8 +84,8 @@ function jotFind {
 	vim + -- $FILE_NAME
 	prettier --write $FILE_NAME
 
-	config add $FILE_NAME > /dev/null
-	config commit -m "jot" > /dev/null
+	cortex add $FILE_NAME > /dev/null
+	cortex commit -m "jot" > /dev/null
 }
 
 function syncRepos {
@@ -95,9 +95,9 @@ function syncRepos {
 	pass git pull && pass git push ;
 
 	echo "------------------------------"
-	echo "            config            "
+	echo "            cortex            "
 	echo "------------------------------"
-	config status && config pull --all && config push --all ;
+	cortex status && cortex pull --all && cortex push --all ;
 
 	echo "------------------------------"
 	echo "             done            "
@@ -177,8 +177,8 @@ function did {
 		echo $ENTRY >> $DID_FILE
 
 		tail -10 $DID_FILE
-		config add $DID_FILE > /dev/null
-		config commit -m "did" > /dev/null
+		cortex add $DID_FILE > /dev/null
+		cortex commit -m "did" > /dev/null
 	else 
 		less ~/did
 	fi

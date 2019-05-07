@@ -9,8 +9,8 @@ function pin() {
 		"add")
 			NEW_FILE_NAME="$PIN_FOLDER_QUEUE/$(isoTime | sed -e "s/ /-/g")-$( echo $2 | sed -e "s/https*:\/\///g" -e "s/\//_/g" ).pin";
 			hedification $2 > $NEW_FILE_NAME;
-			config add $NEW_FILE_NAME;
-			config commit -m "added pin for $2";
+			cortex add $NEW_FILE_NAME;
+			cortex commit -m "added pin for $2";
 			;;
 
 		"read")
@@ -26,8 +26,8 @@ function pin() {
 
 			mv $FILE_NAME $PIN_FOLDER_ARCHIVE
 
-			config add $PIN_FOLDER_ARCHIVE $PIN_FOLDER_QUEUE
-			config commit -m "archived pin for $URL";
+			cortex add $PIN_FOLDER_ARCHIVE $PIN_FOLDER_QUEUE
+			cortex commit -m "archived pin for $URL";
 			;;
 		"delete")
 			FILE_NAME=$( find -L $PIN_FOLDER_QUEUE -type f | sort | fzf --reverse --preview="$CATTER {} --color always --style header" )
@@ -35,8 +35,8 @@ function pin() {
 
 			rm $FILE_NAME
 
-			config add $PIN_FOLDER_ARCHIVE $PIN_FOLDER_QUEUE
-			config commit -m "deleted pin for $URL";
+			cortex add $PIN_FOLDER_ARCHIVE $PIN_FOLDER_QUEUE
+			cortex commit -m "deleted pin for $URL";
 			;;
 
 		*)

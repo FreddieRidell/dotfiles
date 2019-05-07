@@ -1,9 +1,0 @@
-{
-    "title": "Await Syntax Discussion Summary - language design - Rust Internals",
-    "url": "https://internals.rust-lang.org/t/await-syntax-discussion-summary/9914",
-    "createdAt": "2019-05-02T14:03:30.936Z",
-    "description": "Quite a while ago, Niko promised that we would write a summary of the discussion in the language team and the community about the final syntax for the await operator. Our apologies for the long wait. A write up of the st&hellip;",
-    "siteName": "Rust Internals",
-    "keywords": [],
-    "canonical": "https://internals.rust-lang.org/t/await-syntax-discussion-summary/9914"
-}
