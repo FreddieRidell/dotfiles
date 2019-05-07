@@ -55,53 +55,10 @@ function blogFind {
 	popd
 }
 
-function jotNew {
-	FILE_NAME="$HOME/jot/$( echo $* | sed -e "s/ /-/g" ).md"
-
-	echo "# $( echo $* | sed 's/.*/\L&/; s/[a-z]*/\u&/g' )" > $FILE_NAME
-	echo "" >> $FILE_NAME
-	echo "## $(isoDate)" >> $FILE_NAME
-
-	vim + -- $FILE_NAME
-	prettier --write $FILE_NAME
-
-	cortex add $FILE_NAME > /dev/null
-	cortex commit -m "jot" > /dev/null
-}
-
-function jotFind {
-	FILE_NAME=$( find -L $HOME/jot -type f | sort | fzf --reverse --preview="$CATTER {} --color always --style header" )
-
-	TODAYS_DATE="$(isoDate)"
-
-	if grep -q $TODAYS_DATE $FILE_NAME ;
-	then
-		echo "ye" ;
-	else ;
-		echo "\n## $TODAYS_DATE" >> $FILE_NAME
-	fi
-
-	vim + -- $FILE_NAME
-	prettier --write $FILE_NAME
-
-	cortex add $FILE_NAME > /dev/null
-	cortex commit -m "jot" > /dev/null
-}
-
 function syncRepos {
-	echo "------------------------------"
-	echo "             pass             "
-	echo "------------------------------"
-	pass git pull && pass git push ;
-
-	echo "------------------------------"
-	echo "            cortex            "
-	echo "------------------------------"
-	cortex status && cortex pull --all && cortex push --all ;
-
-	echo "------------------------------"
-	echo "             done            "
-	echo "------------------------------"
+	printAndEval pass git pull && pass git push ;
+	printAndEval cortex status && cortex pull --all && cortex push --all ;
+	printAndEval config status && config pull --all && config push --all ;
 }
 
 function updateAll {
@@ -159,29 +116,6 @@ function touchh {
 	for x in $@ ; do ;
 		mkdir -p $( dirname $x ) && touch $x ;
 	done ;
-}
-
-function did {
-	DID_FILE=~/did
-
-	if [ "$#" -ne 0 ] ; then
-		ENTRY="$(isoTime) ($(echo $HOST | cut -c -9 ))\t  $*"
-
-		MOST_RECENT_DATE=$( tail -1 $DID_FILE | cut -c1,-10 - )
-		THIS_DATE=$( echo $ENTRY | cut -c1,-10 - )
-
-		if [ $MOST_RECENT_DATE != $THIS_DATE ] ; then
-			echo "" >> $DID_FILE
-		fi
-
-		echo $ENTRY >> $DID_FILE
-
-		tail -10 $DID_FILE
-		cortex add $DID_FILE > /dev/null
-		cortex commit -m "did" > /dev/null
-	else 
-		less ~/did
-	fi
 }
 
 function swatch {
