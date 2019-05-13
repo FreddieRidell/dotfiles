@@ -56,9 +56,16 @@ function blogFind {
 }
 
 function syncRepos {
-	printAndEval pass git pull && pass git push ;
-	printAndEval cortex status && cortex pull --all && cortex push --all ;
-	printAndEval config status && config pull --all && config push --all ;
+	printAndEval pass git pull &&
+		printAndEval pass git push ;
+
+	printAndEval cortex status &&
+		printAndEval cortex pull --all &&
+		printAndEval cortex push --all ;
+
+	printAndEval config status &&
+		printAndEval config pull --all &&
+		printAndEval config push --all ;
 }
 
 function updateAll {
