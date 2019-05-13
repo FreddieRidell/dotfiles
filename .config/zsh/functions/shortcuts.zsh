@@ -70,7 +70,7 @@ function syncRepos {
 
 function updateAll {
 	sudo ls
-	syncRepos ;
+	syncRepos;
 	sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
 	sudo dnf upgrade -y ;
 

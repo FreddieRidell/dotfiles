@@ -16,8 +16,7 @@ function pin() {
 		"read")
 			FILE_NAME=$( find -L $PIN_FOLDER_QUEUE -type f | sort | fzf --reverse --preview="$CATTER {} --color always --style header" )
 
-			echo opn $( jq -r ".url" < $FILE_NAME);
-			opn $( jq -r ".url" < $FILE_NAME);
+			printAndEval open-cli $( jq -r ".url" < $FILE_NAME);
 
 			;;
 		"archive")
