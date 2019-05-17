@@ -8,8 +8,8 @@ function pin() {
 	case $1 in
 		"add")
 			NEW_FILE_NAME="$PIN_FOLDER_QUEUE/$(isoTime | sed -e "s/ /-/g")-$( echo $2 | sed -e "s/https*:\/\///g" -e "s/\//_/g" ).pin";
-			hedification $2 > $NEW_FILE_NAME;
-			cortex add $NEW_FILE_NAME;
+			hedification $2 > $NEW_FILE_NAME &&
+			cortex add $NEW_FILE_NAME &&
 			cortex commit -m "added pin for $2";
 			;;
 
