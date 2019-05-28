@@ -18,9 +18,11 @@
 	perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
 	rc = "rebase --continue"
 	refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
+	rebase = "rebase --autosquash"
 	style = "!f() { git commit -am \"style($1): $2\"; }; f"
 	temp = "!f() { git commit -am \"temp($1): $2\"; }; f"
 	whoops = !git add --all && git commit --amend
+	wip = "commit --all --fixup HEAD --no-verify"
 
 [difftool]
 	prompt = false
