@@ -4,7 +4,7 @@ autoload -Uz vcs_info
 
 promptinit
 
-PROMPT="%F{1}%n@%m%f %F{7}%D{%a %Y-%m-%d %T}%f %F{2}%~%f %F{7}
+PROMPT="%F{$PROMPT_COLOR}%n@%m%f %F{7}%D{%a %Y-%m-%d %T}%f %F{2}%~%f %F{7}
 $ %f"
 
 RPROMPT='$(rusty-zsh-prompt --right)'
