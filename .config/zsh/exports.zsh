@@ -1,9 +1,10 @@
 export EDITOR=nvim
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH=~/.ssh/dsa_id
 export TERMINAL=urxvt
 export SHELL=$(which zsh)
 export RUST_BACKTRACE=1
-export HYPERTASK_DIR="~/.hypertask"
+export HYPERTASK_DIR=~/.hypertask
+export HYPERTASK_AFTER=hypertaskAfter
 
 #Android Studio Path
 export ANDROID_HOME="/home/freddie/Android/"
