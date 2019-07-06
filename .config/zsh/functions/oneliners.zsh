@@ -14,7 +14,6 @@ function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git r
 function gitResetToOrigin { git reset --hard "origin/$( gitCurrentBranch )" } 
 function gitRid { git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done } 
 function gitStatusSorted { git status | sort | ag --nocolor .\+ --no-color } 
-function hypertaskAfter { cortex add $HYPERTASK_DIR && cortex commit -am "hypertask" } 
 function isoDate { date +"%Y-%m-%d" } 
 function isoTime { date +"%Y-%m-%d %H:%M:%S" }
 function jqModify { TMP_FILE_NAME="/tmp/$RANDOM.json" && jq $1 $2 > $TMP_FILE_NAME && mv $TMP_FILE_NAME $2 } 
