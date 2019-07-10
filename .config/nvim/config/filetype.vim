@@ -11,9 +11,5 @@ autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, setlocal spell wrap linebreak
 "gql
 autocmd BufNewFile,BufRead *.graphcool,*.prisma set filetype=graphql
 
-"prettier
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat = 0
-let g:prettier#exec_cmd_async = 1
-let g:prettier#config#parser = 'babylon'
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.mjs*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierCli
+autocmd BufWritePre, *.js,*.jsx,*.ts,*.tsx,*.mjs*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Neoformat
+let g:neoformat_enabled_liqud = ['prettier']
