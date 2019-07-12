@@ -11,5 +11,5 @@ autocmd BufRead,BufNewFile *.md,*.txt,*.markdown, setlocal spell wrap linebreak
 "gql
 autocmd BufNewFile,BufRead *.graphcool,*.prisma set filetype=graphql
 
-autocmd BufWritePre, *.js,*.jsx,*.ts,*.tsx,*.mjs*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Neoformat
+autocmd BufWritePre, *.js,*.jsx,*.ts,*.tsx,*.mjs*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.rs Neoformat
 let g:neoformat_enabled_liqud = ['prettier']
