@@ -10,6 +10,7 @@ function gitCheckoutSearch { git branch | ag "$@" | strip-ansi | xargs -n 1 git 
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitCurrentHash { git rev-parse HEAD }
 function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
+function gitGetConflicts() { git diff --name-only --diff-filter=U }
 function gitPoke { git commit --amend --date="now" --no-edit > /dev/null ; git rev-parse HEAD } 
 function gitResetToOrigin { git reset --hard "origin/$( gitCurrentBranch )" } 
 function gitRid { git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done } 
