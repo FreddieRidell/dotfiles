@@ -1,7 +1,13 @@
 data_dir = '~/.hypertask'
 
-[client]
-post_run_hook='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
+[client.hooks]
+on_edit='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
+after='git --git-dir=$HOME/cortex/ --work-tree=$HOME push'
 
 [server]
 port=4523
+address="10.10.37.113"
+
+[server.hooks]
+before='git --git-dir=$HOME/cortex/ --work-tree=$HOME pull'
+after='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask" && git --git-dir=$HOME/cortex/ --work-tree=$HOME push'
