@@ -12,17 +12,18 @@
 	diffff = diff -w --word-diff
 	feat = "!f() { git commit -am \"feat($1): $2\"; }; f"
 	fix = "!f() { git commit -am \"fix($1): $2\"; }; f"
+	fix = "commit --all --fixup HEAD --no-verify"
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	jira = "! gitJira"
 	logg = log --decorate --stat
 	perf = "!f() { git commit -am \"perf($1): $2\"; }; f"
 	rc = "rebase --continue"
-	refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
 	rebase = "rebase --autosquash"
+	refactor = "!f() { git commit -am \"refactor($1): $2\"; }; f"
 	style = "!f() { git commit -am \"style($1): $2\"; }; f"
 	temp = "!f() { git commit -am \"temp($1): $2\"; }; f"
 	whoops = !git add --all && git commit --amend
-	wip = "commit --all --fixup HEAD --no-verify"
+	wip = "commit --all -m wip"
 
 [difftool]
 	prompt = false
