@@ -29,13 +29,14 @@
 
 [diff]
 	tool = nvimdiff
-	algorithm = minimal
+	algorithm = histogram
 
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
 	tool = vimdiff
+	algorithm = histogram
 [mergetool]
 	prompt = true
 [mergetool "vimdiff"]
@@ -60,4 +61,4 @@
 [rebase]
 	autoStash = true
 	autoSquash = true
-
+	algorithm = histogram
