@@ -20,7 +20,7 @@ case "$HOST" in
     moblies-Mac-mini.local)
 		export PROMPT_COLOR=1
         ;;
-	freddie-sync-and-jec)
+	freddie-server)
 		export PROMPT_COLOR=2
 		;;
 	freddie-ThinkPad-X220)
