@@ -29,10 +29,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
 Plug 'bogado/file-line'
+Plug 'cespare/vim-toml'
 Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'hail2u/vim-css3-syntax'
+Plug 'hauleth/vim-ketos'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
