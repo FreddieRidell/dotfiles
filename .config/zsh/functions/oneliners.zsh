@@ -2,6 +2,7 @@ function cabalCabal { cabal --key cabal://7d99b453506b9743bf5e71fe749f66c814d7cd
 function cabalDUCSGS { cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddieRidell } 
 function chpwd { title "$( getFolder )" } 
 function coresCount { getconf _NPROCESSORS_ONLN }
+function cortexRepair { for x in $( cortex diff --name-only --diff-filter=U ) ; do ; vim $x ; cortex add $x ; cortex rebase --continue; done }
 function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${PWD:t} } 
