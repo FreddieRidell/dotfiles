@@ -23,6 +23,7 @@ function largestFile { wc -l "$@" | sort -nr -t":" -k1 | head -2 | tail -1 | sed
 function lesss { cats $1 | less -r } 
 function lock { ~/.i3/lock.sh } 
 function openXinY { ag -l "$1" "$2" ; ag -l --nocolor "$1" "$2" | xargs -n 1 nvim -c "silent! /$1" } 
+function osxNotification { osascript -e "display notification \"$2\" with title \"$1\"" }
 function printAndEval() { scriptMsg $@ ; $@ } 
 function randomHex { echo $RANDOM | xargs printf "%x\n" }
 function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
