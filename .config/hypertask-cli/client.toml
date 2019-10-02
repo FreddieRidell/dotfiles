@@ -1,0 +1,24 @@
+data_dir = '~/.hypertask'
+
+score_calculator = [
+	"0",
+
+	# due date calculation
+		"due : now $ -", #get due delta in seconds
+		"604800 @ / 2 ^ 10 *", #exponential, based on due date: 10 if due RIGHT NOW, doubles with every week overdue
+		"0 @ & ?", #set to 0 if it's inf or NaN
+		"+", #add to score
+
+	# +atHome vs +atWork
+		"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
+		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
+		"* &", #I am at work
+		"atHome @ atWork @ ? # 5 *", #give the active tag +5
+		"@ atWork @ atHome @ ? # -7 *", #give the inactive tag -7
+		"+ +", #add bonuses
+
+	"& 2 * timely # due : now $ > * ?", #if the task is +timely and overdue then double the score
+	"& 2 * urgent # ?", #if the task is +urgent then double the score
+
+	"done : 0 = *", #if the task is done then multiply by 0
+]
