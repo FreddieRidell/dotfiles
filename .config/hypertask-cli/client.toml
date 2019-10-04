@@ -17,8 +17,14 @@ score_calculator = [
 		"@ atWork @ atHome @ ? # -7 *", #give the inactive tag -7
 		"+ +", #add bonuses
 
+	"0 updated_at : now $ - 3.1415e+7 @ / due : 0 = ? +", #if there's no due date, add a tiny score based on updated_At
+
 	"& 2 * timely # due : now $ > * ?", #if the task is +timely and overdue then double the score
 	"& 2 * urgent # ?", #if the task is +urgent then double the score
 
 	"done : 0 = *", #if the task is done then multiply by 0
 ]
+
+[hooks]
+on_edit='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
+after='git --git-dir=$HOME/cortex/ --work-tree=$HOME push server'
