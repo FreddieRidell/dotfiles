@@ -9,8 +9,8 @@ score_calculator = [
 		"0 @ & ?", #set to 0 if it's inf or NaN
 		"+", #add to score
 
-	# +atHome vs +atWork
-		"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
+    # +atHome vs +atWork
+		"hour $ 8 <", "hour $ 17 >", "*", #is it within work hours
 		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
 		"* &", #I am at work
 		"atHome @ atWork @ ? # 5 *", #give the active tag +5
@@ -19,11 +19,20 @@ score_calculator = [
 
 	"0 updated_at : now $ - 3.1415e+7 @ / due : 0 = ? +", #if there's no due date, add a tiny score based on updated_At
 
+	"health # 3 * +", #add a boost for +health
+	"money # 5 * +", #add a boost for +money
+
 	"& 2 * timely # due : now $ > * ?", #if the task is +timely and overdue then double the score
 	"& 2 * urgent # ?", #if the task is +urgent then double the score
 
 	"done : 0 = *", #if the task is done then multiply by 0
+	"now $ wait : - 0 > *", #hide if their wait: is later than now
+	"now $ snooze : - 0 > *", #hide if their snooze: is later than now
 ]
+
+[render]
+score_precision = 2
+columns = [ "id", "score", "description", "tags", "due", "recur", ]
 
 [hooks]
 on_edit='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
