@@ -24,6 +24,7 @@
 [diff]
 	tool = nvimdiff
 	algorithm = histogram
+	noprefix = true
 
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
