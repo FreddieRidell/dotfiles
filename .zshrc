@@ -20,3 +20,12 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+case $( uname ) in
+	Darwin)
+		source $HOME/.config/zsh/config.darwin.zsh
+		;;
+	Linux)
+		source $HOME/.config/zsh/config.linux.zsh
+		;;
+esac
