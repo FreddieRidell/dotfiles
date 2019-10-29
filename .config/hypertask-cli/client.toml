@@ -28,8 +28,6 @@ score_calculator = [
 	"done : 0 = *", #if the task is done then multiply by 0
 	"now $ wait : - 0 > *", #hide if their wait: is later than now
 	"now $ snooze : - 0 > *", #hide if their snooze: is later than now
-
-	"& 0 @ 0.01 > ?", #if the score's lower than 0.01, make it 0
 ]
 
 [render]
