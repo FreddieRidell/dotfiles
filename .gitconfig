@@ -10,13 +10,13 @@
 	difff = diff -w
 	diffff = diff -w --word-diff
 	fix = "commit --all --fixup HEAD --no-verify"
-	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
 	jira = "! gitJira"
 	logg = log --decorate --stat
 	rc = "rebase --continue"
 	rebase = "rebase --autosquash"
 	whoops = !git add --all && git commit --amend
-	wip = "commit --all -m wip"
+	wip = "!f(){ git commit --all -m \"wip $(date +%Y-%m-%d_%H:%M:%S)\"; }; f;"
 
 [difftool]
 	prompt = false
@@ -57,3 +57,8 @@
 	autoStash = true
 	autoSquash = true
 	algorithm = histogram
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
