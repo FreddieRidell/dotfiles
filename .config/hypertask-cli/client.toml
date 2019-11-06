@@ -9,14 +9,6 @@ score_calculator = [
 		"0 @ & ?", #set to 0 if it's inf or NaN
 		"+", #add to score
 
-    # +atHome vs +atWork
-		"hour $ 8 <", "hour $ 17 >", "*", #is it within work hours
-		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
-		"* &", #I am at work
-		"atHome @ atWork @ ? # 5 *", #give the active tag +5
-		"@ atWork @ atHome @ ? # -7 *", #give the inactive tag -7
-		"+ +", #add bonuses
-
 	"0 updated_at : now $ - 3.1415e+7 @ / due : 0 = ? +", #if there's no due date, add a tiny score based on updated_At
 
 	"health # 3 * +", #add a boost for +health
@@ -24,6 +16,12 @@ score_calculator = [
 
 	"& 2 * timely # due : now $ > * ?", #if the task is +timely and overdue then double the score
 	"& 2 * urgent # ?", #if the task is +urgent then double the score
+
+	# +atHome vs +atWork
+		"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
+		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
+		"*", #I am at work
+		"atWork @ atHome @ ? # 1 - *", #hide anything tagged with the wrong tag
 
 	"done : 0 = *", #if the task is done then multiply by 0
 	"now $ wait : - 0 > *", #hide if their wait: is later than now
