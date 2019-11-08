@@ -1,1 +1,1 @@
-echo "Darwin"
+alias ls="ls -G"
