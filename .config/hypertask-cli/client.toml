@@ -1,5 +1,14 @@
 data_dir = '~/.hypertask'
 
+filter_calculator = [
+	"1",
+	# +atHome vs +atWork
+		"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
+		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
+		"*", #I am at work
+		"atWork @ atHome @ ? # 1 - *", #hide anything tagged with the wrong tag
+]
+
 score_calculator = [
 	"0",
 
@@ -16,12 +25,6 @@ score_calculator = [
 
 	"& 2 * timely # due : now $ > * ?", #if the task is +timely and overdue then double the score
 	"& 2 * urgent # ?", #if the task is +urgent then double the score
-
-	# +atHome vs +atWork
-		"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
-		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
-		"*", #I am at work
-		"atWork @ atHome @ ? # 1 - *", #hide anything tagged with the wrong tag
 
 	"done : 0 = *", #if the task is done then multiply by 0
 	"now $ wait : - 0 > *", #hide if their wait: is later than now
