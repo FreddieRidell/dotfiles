@@ -15,6 +15,8 @@
 #define  DARK_ORANGE  #ff7531
 #define  DARK_WHITE   #959190
 
+!slack: #2C292D,#160D16,#A9DC76,#FDF9F3,#160D16,#FDF9F3,#78DCE8,#FF6188
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !           urxvt            !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
