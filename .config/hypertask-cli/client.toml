@@ -23,7 +23,9 @@ score_calculator = [
 	"health # 3 * +", #add a boost for +health
 	"money # 5 * +", #add a boost for +money
 
-	"& 2 * timely # due : now $ > * ?", #if the task is +timely and overdue then double the score
+	"notioned # due : now $ < * 1 - *", #hide +notioned tasks until they're due
+
+	"1 2 0.5 due : now $ < ? timely # ? *", #if the task is +timely then double the score for overdue tasks, and half it for underdue tasks
 	"& 2 * urgent # ?", #if the task is +urgent then double the score
 
 	"done : 0 = *", #if the task is done then multiply by 0
