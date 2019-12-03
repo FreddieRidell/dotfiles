@@ -31,6 +31,7 @@ function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
 function rpn { dc <<< "$* f" }
 function s3rmb { aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1" }
 function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" } 
+function sendNotification { curl -X POST "https://patchbay.pub/$PATCH_BAY_SECRET_TOKEN?pubsub=true" -d "$*" }
 function sleepo { systemctl suspend } 
 function snippetLoad { SNIPPET=`cat ~/.snippets | fzf` ; print -z $SNIPPET }
 function snippetSave { tail -n 2 ~/.zsh_history | head -n 1 | cut -d ';' -f 2- >> ~/.snippets && config add ~/.snippets && config commit -m "added snippet" }
