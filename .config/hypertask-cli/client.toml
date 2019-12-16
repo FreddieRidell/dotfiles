@@ -2,11 +2,11 @@ data_dir = '~/.hypertask'
 
 filter_calculator = [
 	"1 1 1 1",
-	## +atHome vs +atWork
-		#"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
-		#"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
-		#"*", #I am at work
-		#"atWork @ atHome @ ? # 1 - *", #hide anything tagged with the wrong tag
+	# +atHome vs +atWork
+		"hour $ 8.5 <", "hour $ 17.5 >", "*", #is it within work hours
+		"day_of_week $ 6 = 1 -", "day_of_week $ 7 = 1 -", "*", #is it a weekday
+		"*", #I am at work
+		"atWork @ atHome @ ? # 1 - *", #hide anything tagged with the wrong tag
 ]
 
 score_calculator = [
@@ -40,4 +40,4 @@ columns = [ "Id", "Score", "Description", "Blocked", "Tags", "Due", "Recur", ]
 
 [hooks]
 on_edit='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
-after='git --git-dir=$HOME/cortex/ --work-tree=$HOME push server'
+after='git --git-dir=$HOME/cortex/ --work-tree=$HOME push server ; hypertask_sync_cli_daemon ;'
