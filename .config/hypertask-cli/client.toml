@@ -40,4 +40,4 @@ columns = [ "Id", "Score", "Description", "Blocked", "Tags", "Due", "Recur", ]
 
 [hooks]
 on_edit='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
-after='git --git-dir=$HOME/cortex/ --work-tree=$HOME push server ; hypertask-sync-daemon ;'
+after='hypertask-sync-daemon ;'
