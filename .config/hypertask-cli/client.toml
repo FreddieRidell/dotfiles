@@ -36,7 +36,7 @@ score_calculator = [
 
 [render]
 score_precision = 2
-columns = [ "Id", "Score", "Description", "Blocked", "Tags", "Due", "Recur", ]
+columns = [ "Id", "Score", "Description", "Tags", "Due", "Recur", ]
 
 [hooks]
 on_edit='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'

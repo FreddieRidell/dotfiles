@@ -16,7 +16,7 @@
 	rc = "rebase --continue"
 	rebase = "rebase --autosquash"
 	whoops = !git add --all && git commit --amend
-	wip = "!f(){ git commit --all -m \"wip $(date +%Y-%m-%d_%H:%M:%S)\"; }; f;"
+	wip = "!f(){ git commit --all --no-verify -m \"wip $(date +%Y-%m-%d_%H:%M:%S)\"; }; f;"
 
 [difftool]
 	prompt = false
