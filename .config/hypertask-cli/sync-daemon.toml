@@ -1,7 +1,6 @@
 task_state_dir = '~/.hypertask'
 
 server_url = 'http://server.freddieridell.com:6346'
-#server_url = 'http://localhost:1235'
 
 [sync_secret]
 type = "EnvVar"
