@@ -66,3 +66,6 @@ vnoremap // y/<C-R>"<CR>
 " nvim inline terminal shortcuts
 nmap <Leader>te :tabnew zsh <bar> terminal<CR>
 tnoremap <Leader><Esc> <C-\><C-n>
+
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
