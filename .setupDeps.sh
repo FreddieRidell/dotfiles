@@ -2,8 +2,11 @@
 
 echo 
 echo adding new package sources
+echo yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+echo neovim
+sudo add-apt-repository ppa:neovim-ppa/stable
 
 echo 
 echo apt update
