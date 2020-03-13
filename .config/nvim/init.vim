@@ -38,6 +38,7 @@ Plug 'hauleth/vim-ketos'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'text'] }
+Plug 'junegunn/gv.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'leafgarland/typescript-vim'
