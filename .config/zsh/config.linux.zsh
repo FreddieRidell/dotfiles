@@ -1,4 +1,6 @@
 alias ls="ls --color"
 
 #Force US keyboard layout
-setxkbmap us
+if ! type "setxkbmap" > /dev/null; then
+	setxkbmap us
+fi

@@ -26,6 +26,9 @@ case "$HOST" in
 	freddie-ThinkPad-X220)
 		export PROMPT_COLOR=4
 		;;
+	remote-work-station)
+		export PROMPT_COLOR=5
+		;;
     *)
         echo "Need to set PROMPT_COLOR for host $HOST"
         ;;
