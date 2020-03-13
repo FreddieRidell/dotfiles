@@ -21,7 +21,7 @@ sudo apt install \
   nodejs \
   npm \
   yarn \
-  zsh \
+  zsh
 
 echo
 echo enabaling zsh as default shell
