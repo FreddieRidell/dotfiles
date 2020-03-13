@@ -20,6 +20,7 @@ echo
 echo apt install packages
 sudo apt install \
   git \
+  pkg-config \
   neovim \
   nodejs \
   npm \
@@ -33,3 +34,12 @@ chsh -s $( which zsh ) $USER
 echo
 echo installing rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo
+echo installing rusty-zsh-prompt
+cargo install --git https://github.com/FreddieRidell/rusty-zsh-prompt.git
+
+echo
+echo installing vim plugins
+vim -c :PlugInstall
+
