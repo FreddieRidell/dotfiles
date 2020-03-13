@@ -14,7 +14,5 @@ cortex reset --hard master
 cortex reset --hard HEAD
 cortex status
 
-chsh -s $( which zsh ) $USER
-
 # this is needed, but not checked in
 touch ~/.config/zsh/env.zsh

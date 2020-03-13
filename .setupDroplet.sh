@@ -15,7 +15,8 @@ su freddie -c ssh-keygen
 echo
 echo now paste the following ssh key into github
 cat /home/freddie/.ssh/id_rsa.pub
-echo and the run the following command to setup config:
+echo and the run the following commands to setup config:
 echo 'sh -c "$(wget https://raw.githubusercontent.com/CodogoFreddie/dotfiles/master/.setupDotfiles.sh -O -)"'
+echo 'sh -c "$(wget https://raw.githubusercontent.com/CodogoFreddie/dotfiles/master/.setupDeps.sh -O -)"'
 
 su - freddie 
