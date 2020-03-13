@@ -20,6 +20,7 @@ echo
 echo apt install packages
 sudo apt install \
   git \
+  silversearcher-ag \
   pkg-config \
   neovim \
   nodejs \
