@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 git clone --recurse-submodules --bare git@github.com:FreddieRidell/dotfiles.git $HOME/dotfiles
