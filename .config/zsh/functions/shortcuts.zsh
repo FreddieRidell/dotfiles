@@ -146,3 +146,9 @@ function getLocalDevices {
 	arp -a | column -t | sort
 }
 
+function displayQRCode {
+	read DATA;
+	qrencode $DATA -o /tmp/qr.png;
+	feh /tmp/qr.png;
+	rm /tmp/qr.png;
+}
