@@ -96,8 +96,8 @@ set $WS3 3 results
 set $WS4 4 research
 set $WS5 5 testbed
 set $WS6 6 comms
-set $WS7 7
-set $WS8 8
+set $WS7 7 spotify
+set $WS8 8 forked
 set $WS9 9
 set $WS0 0
 
