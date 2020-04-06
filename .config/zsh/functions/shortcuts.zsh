@@ -146,9 +146,17 @@ function getLocalDevices {
 	arp -a | column -t | sort
 }
 
+function resizeImageCommon {
+	for SIZE in 8 16 32 64 128 256 512 1204 2048 4096 100 200 300 500 1000 2000 3000 5000 ; do
+		echo convert "$1" -resize $SIZEx$SIZE "$SIZE@$1" ;
+		convert "$1" -resize $SIZEx$SIZE "$SIZE@$1" ;
+	done
+}
+
 function displayQRCode {
 	read DATA;
 	qrencode $DATA -o /tmp/qr.png;
 	feh /tmp/qr.png;
 	rm /tmp/qr.png;
 }
+
