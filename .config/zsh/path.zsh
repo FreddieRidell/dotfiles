@@ -20,3 +20,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 #App images etc
 export PATH="$HOME/Binaries:$PATH"
+
+#snap
+export PATH="$PATH:/snap/bin"

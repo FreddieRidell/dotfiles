@@ -1,4 +1,4 @@
-task_state_dir = '~/.hypertask'
+task_state_dir = '~/.hypertaskSync'
 
 filter_calculator = [
 	"1 1 1 1",

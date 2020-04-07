@@ -1,4 +1,4 @@
-task_state_dir = '~/.hypertask'
+task_state_dir = '~/.hypertaskSync'
 
 server_url = 'http://server.freddieridell.com:6346'
 
