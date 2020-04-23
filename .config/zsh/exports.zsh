@@ -17,7 +17,7 @@ else
 fi
 
 case "$HOST" in
-    moblies-Mac-mini.local)
+    tower)
 		export PROMPT_COLOR=1
         ;;
 	freddie-server)
