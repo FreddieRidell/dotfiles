@@ -78,9 +78,6 @@ function updateAll {
 }
 
 function setupMyNPM { 
-	npm init
-	npm add --save-dev @babel/cli @babel/core @freddieridell/babel-preset prettier eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
-
 	# setup package.json
 	jqModify '.babel.presets[0] = "@freddieridell/babel-preset"' package.json 
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
@@ -110,6 +107,9 @@ function setupMyNPM {
 	echo 'module.exports = require("./lib");' > index.js
 
 	chmod +x main.js
+
+	npm init
+	npm add --save-dev @babel/cli @babel/core @freddieridell/babel-preset prettier eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
 }
 
 function pingMeDaddy {
