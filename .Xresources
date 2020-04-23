@@ -21,7 +21,7 @@
 !           urxvt            !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard,font-size
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
@@ -73,5 +73,5 @@ rofi.color-normal: BLACK,  WHITE,  BLACK,  GREEN,   BLACK
 rofi.color-urgent: BLACK,  WHITE,  BLACK,  ORANGE,  BLACK
 rofi.color-active: BLACK,  WHITE,  BLACK,  GREEN,   BLACK
 
-rofi.font: Tamzen 12px
-rofi.terminal: alacritty
+rofi.font: Tamsyn 12px
+rofi.terminal: urxvt
