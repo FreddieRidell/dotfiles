@@ -36,7 +36,7 @@ font -*-tamzen-medium-*-*-*-12-*-*-*-*-*-*-*
 bindsym Mod4+l exec ~/.i3/lock.sh
 
 # start a terminal
-bindsym $modAlt+Return exec alacritty
+bindsym $modAlt+Return exec urxvt
 
 # kill focused window
 bindsym $modAlt+q kill
