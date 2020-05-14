@@ -78,6 +78,8 @@ function updateAll {
 }
 
 function setupMyNPM { 
+	npm init
+	
 	# setup package.json
 	jqModify '.babel.presets[0] = "@freddieridell/babel-preset"' package.json 
 	jqModify '.eslintConfig.extends = "react-app"' package.json 
@@ -108,7 +110,6 @@ function setupMyNPM {
 
 	chmod +x main.js
 
-	npm init
 	npm add --save-dev @babel/cli @babel/core @freddieridell/babel-preset prettier eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
 }
 
