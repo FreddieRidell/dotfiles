@@ -31,6 +31,8 @@ Plug 'cespare/vim-toml'
 Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'hauleth/vim-ketos'
 Plug 'jparise/vim-graphql'
