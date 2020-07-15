@@ -22,7 +22,6 @@ let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'adimit/prolog.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
@@ -34,13 +33,11 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'hauleth/vim-ketos'
 Plug 'jparise/vim-graphql'
 Plug 'JulesWang/css.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kovisoft/slimv', { 'for': [ 'lisp' ] }
 Plug 'kshenoy/vim-signature'
 Plug 'leafgarland/typescript-vim'
@@ -52,17 +49,13 @@ Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'prettier/vim-prettier'
-Plug 'reasonml-editor/vim-reason-plus'
 Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/neocomplete.vim'
-Plug 'tikhomirov/vim-glsl'
 Plug 'tomasr/molokai'
-Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-scripts/vim-coffee-script'
 
 call plug#end()
