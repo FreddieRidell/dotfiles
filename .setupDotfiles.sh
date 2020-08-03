@@ -8,7 +8,7 @@ config reset --hard HEAD
 config status
 
 alias cortex='/usr/bin/git --git-dir=$HOME/cortex/ --work-tree=$HOME'
-git clone --recurse-submodules --bare git@github.com:FreddieRidell/cortex.git $HOME/cortex
+git clone --recurse-submodules --bare server:~/repos/cortex $HOME/cortex
 cortex config --local status.showUntrackedFiles no
 cortex reset --hard master
 cortex reset --hard HEAD

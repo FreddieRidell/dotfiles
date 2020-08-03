@@ -5,6 +5,7 @@ export SHELL=$(which zsh)
 export RUST_BACKTRACE=1
 export HYPERTASK_DIR=~/.hypertask
 export HYPERTASK_AFTER='git --git-dir=$HOME/cortex/ --work-tree=$HOME add $HYPERTASK_DIR && git --git-dir=$HOME/cortex/ --work-tree=$HOME commit -am "hypertask"'
+export FILTER_BRANCH_SQUELCH_WARNING=1.
 
 #Android Studio Path
 export ANDROID_HOME="/home/freddie/Android/"

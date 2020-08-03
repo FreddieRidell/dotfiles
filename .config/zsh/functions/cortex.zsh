@@ -17,6 +17,12 @@ function pin() {
 			FILE_NAME=$( find -L $PIN_FOLDER_QUEUE -type f | sort | fzf --reverse --preview="$CATTER {} --color always --style header" )
 
 			printAndEval open-cli $( jq -r ".url" < $FILE_NAME);
+			echo "Moving $FILE_NAME to archive"
+
+			mv $FILE_NAME $PIN_FOLDER_ARCHIVE
+
+			cortex add $PIN_FOLDER_ARCHIVE $PIN_FOLDER_QUEUE
+			cortex commit -m "archived pin for $URL";
 
 			;;
 		"archive")
@@ -97,6 +103,6 @@ function did {
 		cortex add $DID_FILE > /dev/null
 		cortex commit -m "did $*" > /dev/null
 	else 
-		less ~/did
+		less +G ~/did
 	fi
 }

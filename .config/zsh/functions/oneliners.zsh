@@ -1,5 +1,6 @@
 function cabalCabal { cabal --key cabal://7d99b453506b9743bf5e71fe749f66c814d7cd9388a5d394a27eed4c5640302b --nick freddieRidell } 
 function cabalDUCSGS { cabal --key dat://88a978f3ce3bd7c7e9aecfc4bf19d34b2ae44b0e2356c295a995163cd3aa2e9e --nick freddieRidell } 
+function cdtmux { cd $1 ; tmux new -s $1 } 
 function chpwd { title "$( getFolder )" } 
 function coresCount { getconf _NPROCESSORS_ONLN }
 function cortexRepair { for x in $( cortex diff --name-only --diff-filter=U ) ; do ; vim $x ; cortex add $x ; cortex rebase --continue; done }
@@ -7,8 +8,8 @@ function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${PWD:t} } 
 function gitBranchify { git checkout -b "$1-$( echo "${@:2}" | sed -e "s/[^a-zA-Z0-9]/-/g" -e "s/--*/-/g" -e "s/-$//g" | tr '[:upper:]' '[:lower:]' )" }
-function gitCommitRedmine() { git commit -m "[RM-$(gitCurrentBranch | sed -e "s/[^0-9]*\([0-9]\+\).*/\1/")] $*" }
 function gitCheckoutSearch { git branch | ag "$@" | strip-ansi | xargs -n 1 git checkout }
+function gitCommitRedmine() { git commit -m "[RM-$(gitCurrentBranch | sed -e "s/[^0-9]*\([0-9]\+\).*/\1/")] $*" }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitCurrentHash { git rev-parse HEAD }
 function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
