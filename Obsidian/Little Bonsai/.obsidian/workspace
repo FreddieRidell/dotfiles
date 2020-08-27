@@ -1,0 +1,101 @@
+{
+  "main": {
+    "id": "093e4c441f2f1c13",
+    "type": "split",
+    "children": [
+      {
+        "id": "d51eee4d1f2b5c6a",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Admin/Roles.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0f7c4a70efda724c",
+    "type": "split",
+    "children": [
+      {
+        "id": "71518e6063d91fd6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09c7de3ad5311e16",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b06cafa47272b0ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8319d20c3bd507c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fe937a639c75520",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35e35cbee7d124a3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Admin/Roles.md"
+              }
+            }
+          },
+          {
+            "id": "c042dc1cdba8b813",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          },
+          {
+            "id": "7e3cc555b4ae03ad",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Admin/Roles.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Admin/Roles.md",
+    "Admin/Problems/2020-08-27-Marketer.md",
+    "2020-08-27.md",
+    "202008272317.md",
+    "202008272316.md"
+  ]
+}

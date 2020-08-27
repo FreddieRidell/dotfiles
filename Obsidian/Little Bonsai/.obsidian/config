@@ -1,0 +1,25 @@
+{
+  "theme": "obsidian",
+  "pluginEnabledStatus": {
+    "file-explorer": true,
+    "global-search": true,
+    "switcher": true,
+    "graph": true,
+    "backlink": true,
+    "command-palette": true,
+    "markdown-importer": true,
+    "word-count": true,
+    "tag-pane": true,
+    "outline": true,
+    "daily-notes": true,
+    "zk-prefixer": true,
+    "slides": true,
+    "audio-recorder": true
+  },
+  "promptDelete": false,
+  "spellcheck": true,
+  "vimMode": true,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current"
+}

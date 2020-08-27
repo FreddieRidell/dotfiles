@@ -1,0 +1,1 @@
+The varience between the quietest parts of the signal and the loudest parts of the signal
