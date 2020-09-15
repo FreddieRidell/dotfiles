@@ -9,6 +9,8 @@ function current_started_task {
 	LENGTH="$(echo $TASKS | jq 'length')"
 	if [ $LENGTH -ne "0" ] ; then
 		echo $TASKS | jq -r  '.[0] | "[%F{2}\(.id)%f] %F{5}\(.project)%f %F{3}\( .tags | map( "+\(.)") | join(" ") )%f %F{6}\( .description )%f"'
+	else 
+		echo "%K{1}%F{8} NO ACTIVE TASK %f%k"
 	fi
 }
 
