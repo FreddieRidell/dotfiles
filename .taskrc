@@ -44,3 +44,4 @@ uda.company.label=Company
 uda.company.type=string
 uda.url.label=Url
 uda.url.type=string
+context.lbz=project:lbz
