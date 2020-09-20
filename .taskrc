@@ -18,8 +18,9 @@ report.next.columns=urgency,id,description,name,email,phone,company,tags,due.rel
 report.next.labels=Urg,ID,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
 
 # Urgency
-urgency.age.coefficient=100.0
+urgency.age.coefficient=20
 urgency.due.coefficient=20
+urgency.tags.coefficient=0
 urgency.user.tag.fuck.coefficient=100
 urgency.user.tag.health.coefficient=2
 urgency.user.tag.money.coefficient=3
@@ -46,3 +47,9 @@ uda.company.type=string
 uda.url.label=Url
 uda.url.type=string
 context.lbz=project:lbz
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
