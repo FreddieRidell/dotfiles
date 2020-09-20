@@ -18,10 +18,11 @@ report.next.columns=urgency,id,description,name,email,phone,company,tags,due.rel
 report.next.labels=Urg,ID,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
 
 # Urgency
+urgency.age.coefficient=100.0
+urgency.due.coefficient=20
 urgency.user.tag.fuck.coefficient=100
 urgency.user.tag.health.coefficient=2
 urgency.user.tag.money.coefficient=3
-urgency.age.coefficient=100.0
 
 include ~/.config/taskwarrior/theme
 
