@@ -16,10 +16,10 @@ data.location=~/.task
 # Next Formatting
 default.command=default
 
-report.default.columns=urgency,id,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
+report.default.columns=urgency,id,jira,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
 report.default.description=Most urgent tasks
 report.default.filter=status:pending limit:page urgency.over:0
-report.default.labels=Urg,ID,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
+report.default.labels=Urg,ID,Jira,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
 report.default.sort=urgency-
 
 report.next.columns=urgency,id,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
@@ -43,10 +43,15 @@ urgency.user.tag.mediaList.coefficient=-5
 
 include ~/.config/taskwarrior/theme
 
-context.dazzlebyte=project:dzb
 context.couple=+drewer
+context.dazzlebyte=project:dzb
+context.lbz=project:lbz
 context.solo=-drewer project:
 
+uda.host.label=Host
+uda.host.type=string
+uda.jira.label=Jira
+uda.jira.type=string
 uda.email.label=Email
 uda.email.type=string
 uda.name.label=Name
@@ -57,7 +62,6 @@ uda.company.label=Company
 uda.company.type=string
 uda.url.label=Url
 uda.url.type=string
-context.lbz=project:lbz
 uda.reviewed.type=date
 uda.reviewed.label=Reviewed
 
