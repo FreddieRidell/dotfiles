@@ -12,6 +12,7 @@
 
 # Files
 data.location=~/.task
+include ~/.config/taskwarrior/theme
 
 # Next Formatting
 default.command=default
@@ -41,7 +42,6 @@ urgency.user.tag.treat.coefficient=-5
 urgency.user.tag.shopping.coefficient=-5
 urgency.user.tag.mediaList.coefficient=-5
 
-include ~/.config/taskwarrior/theme
 
 context.couple=+drewer
 context.dazzlebyte=project:dzb
