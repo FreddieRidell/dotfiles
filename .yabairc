@@ -2,15 +2,15 @@
 
 # global settings
 yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+yabai -m config focus_follows_mouse          on
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                on
-yabai -m config window_opacity               off
+yabai -m config window_opacity               on
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                off
+yabai -m config window_border                on
 yabai -m config window_border_width          6
 yabai -m config active_window_border_color   0xff775759
 yabai -m config normal_window_border_color   0xff555555
@@ -28,7 +28,7 @@ yabai -m config top_padding                  12
 yabai -m config bottom_padding               12
 yabai -m config left_padding                 12
 yabai -m config right_padding                12
-yabai -m config window_gap                   06
+yabai -m config window_gap                   08
 
 yabai -m rule --add app="^System Preferences$" manage=off
 
