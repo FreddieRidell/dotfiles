@@ -1,20 +1,12 @@
-# [Created by task 2.5.1 9/13/2020 13:37:09]
-# Taskwarrior program configuration file.
-# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
-# 'man task-sync' or 'man taskrc'
-
-# Here is an example of entries that use the default, override and blank values
-#   variable=foo   -- By specifying a value, this overrides the default
-#   variable=      -- By specifying no value, this means no default
-#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
-
-# Use the command 'task show' to see all defaults and overrides
-
-# Files
-data.location=~/.task
+include ~/.config/taskwarrior/theme
 include ~/.config/taskwarrior/theme
 
-# Next Formatting
+context.couple=+drewer
+context.dazzlebyte=project:dzb
+context.lbz=project:lbz
+context.solo=-drewer project:
+
+data.location=~/.task
 default.command=default
 
 report.default.columns=urgency,id,jira,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
@@ -29,43 +21,39 @@ report.next.filter=status:pending limit:page
 report.next.labels=Urg,ID,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
 report.next.sort=urgency-
 
-# Urgency
-urgency.age.coefficient=10
-urgency.due.coefficient=10
-urgency.tags.coefficient=0
+report._reviewed.columns=uuid
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
+report._reviewed.sort=reviewed+,modified+
 
-urgency.user.tag.fuck.coefficient=100
-urgency.user.tag.health.coefficient=2
-urgency.user.tag.money.coefficient=3
+report.simple.columns=uuid
+report.simple.description=Simple list of open tasks by project
+report.simple.filter=status:pending limit:1
+report.simple.sort=project+\/,entry+
 
-urgency.user.tag.treat.coefficient=-5
-urgency.user.tag.shopping.coefficient=-5
-urgency.user.tag.mediaList.coefficient=-5
-
-
-context.couple=+drewer
-context.dazzlebyte=project:dzb
-context.lbz=project:lbz
-context.solo=-drewer project:
-
+uda.company.label=Company
+uda.company.type=string
+uda.email.label=Email
+uda.email.type=string
 uda.host.label=Host
 uda.host.type=string
 uda.jira.label=Jira
 uda.jira.type=string
-uda.email.label=Email
-uda.email.type=string
 uda.name.label=Name
 uda.name.type=string
 uda.phone.label=Phone
 uda.phone.type=string
-uda.company.label=Company
-uda.company.type=string
+uda.reviewed.label=Reviewed
+uda.reviewed.type=date
 uda.url.label=Url
 uda.url.type=string
-uda.reviewed.type=date
-uda.reviewed.label=Reviewed
 
-report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
-report._reviewed.columns=uuid
-report._reviewed.sort=reviewed+,modified+
-report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
+urgency.age.coefficient=10
+urgency.due.coefficient=10
+urgency.tags.coefficient=0
+urgency.user.tag.fuck.coefficient=100
+urgency.user.tag.health.coefficient=2
+urgency.user.tag.mediaList.coefficient=-5
+urgency.user.tag.money.coefficient=3
+urgency.user.tag.shopping.coefficient=-5
+urgency.user.tag.treat.coefficient=-5

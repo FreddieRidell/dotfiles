@@ -1,6 +1,7 @@
 [user]
 	name = Freddie Ridell
 	email = contact@freddieridell.com
+	useConfigOnly = true
 
 [alias]
 	bb = "bisect bad"
