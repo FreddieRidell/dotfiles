@@ -1,5 +1,5 @@
 function loadIAMCredentials {
-	export AWS_ACCESS_KEY_ID="$( echo "$1" | sed -e "s/.\+\///" )"
+	export AWS_ACCESS_KEY_ID="$( echo "$1" | sed -e "s/\(.*\/\)*//"  )"
 
 	echo "Loading secret for $AWS_ACCESS_KEY_ID"
 	export AWS_SECRET_ACCESS_KEY="$(pass $1)"
