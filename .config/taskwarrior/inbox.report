@@ -1,0 +1,5 @@
+report.inbox.columns = urgency,id,jira,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
+report.inbox.description = Most urgent tasks
+report.inbox.filter = limit:page +inbox
+report.inbox.labels = Urg,ID,Jira,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
+report.inbox.sort = urgency-

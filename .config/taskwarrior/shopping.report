@@ -1,0 +1,5 @@
+report.shopping.columns = description
+report.shopping.description = My Shopping List
+report.shopping.filter = status:pending +shopping
+report.shopping.sort = start+
+

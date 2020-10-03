@@ -1,0 +1,5 @@
+report.next.columns = urgency,id,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
+report.next.description = Most urgent tasks
+report.next.filter = status:pending limit:page
+report.next.labels = Urg,ID,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
+report.next.sort = urgency-

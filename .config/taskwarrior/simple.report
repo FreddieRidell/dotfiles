@@ -1,0 +1,4 @@
+report.simple.columns = uuid
+report.simple.description = Simple list of open tasks by project
+report.simple.filter = status:pending limit:1
+report.simple.sort = project+\/,entry+
