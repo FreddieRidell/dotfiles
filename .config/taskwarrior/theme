@@ -38,6 +38,7 @@ color.sync.rejected=color9
 color.tag.fuck=color6
 color.tagged=
 color.tag.next=color0 on color2
+color.tag.then=color0 on color6
 color.tag.none=
 color.uda.priority.H=color255
 color.uda.priority.L=color245
