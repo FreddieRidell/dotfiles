@@ -12,28 +12,30 @@ PROJECT_NAME=$(echo $SERIES | tr '[:upper:]' '[:lower:]' | sed -e "s/[^a-z]*//g"
 
 PROJECT="lbz.$PROJECT_NAME.S$SEASON.E$EPISODE"
 
-WRITE=$( taskAddScriptable priority:M project:$PROJECT +write write a recordable script )
-RECORD=$( taskAddScriptable priority:M project:$PROJECT depends:$WRITE +record record line readings )
-CUT=$( taskAddScriptable priority:M project:$PROJECT depends:$RECORD +cut select best cuts for each line reading )
-MIX=$( taskAddScriptable priority:M project:$PROJECT depends:$CUT +mix adjust timings, add SFX, put in basic filter chains )
-MASTER=$( taskAddScriptable priority:M project:$PROJECT depends:$MIX +master adjust levels, improve filter chains, make final tweaks )
-EXPORT=$( taskAddScriptable priority:M project:$PROJECT depends:$MASTER +publish create final exported file )
+WRITE=$( taskAddScriptable priority:M project:${PROJECT} +write write a recordable script )
+RECORD=$( taskAddScriptable priority:M project:${PROJECT} depends:$WRITE +record record line readings )
+CUT=$( taskAddScriptable priority:M project:${PROJECT} depends:$RECORD +cut select best cuts for each line reading )
+MIX=$( taskAddScriptable priority:M project:${PROJECT} depends:$CUT +mix adjust timings, add SFX, put in basic filter chains )
+MASTER=$( taskAddScriptable priority:M project:${PROJECT} depends:$MIX +master adjust levels, improve filter chains, make final tweaks )
+EXPORT=$( taskAddScriptable priority:M project:${PROJECT} depends:$MASTER +publish create final exported file )
 
-TITLE=$( taskAddScriptable project:$PROJECT +publish +copy write title for the episode )
-SUBTITLE=$( taskAddScriptable project:$PROJECT +publish +copy write subtitle for the episode )
-DESCRIPTION=$( taskAddScriptable project:$PROJECT +publish +copy write description for the episode )
-LINKS=$( taskAddScriptable project:$PROJECT +publish +copy collect any links required for the episode )
-TAGS=$( taskAddScriptable project:$PROJECT +publish +copy pick meta tags to use for the episode )
-META=$( taskAddScriptable project:$PROJECT depends:$TITLE depends:$SUBTITLE depends:$DESCRIPTION depends:$LINKS depends:$TAGS +publish +copy collate title, subtitle, description, links and tags on notion )
+TITLE=$( taskAddScriptable project:${PROJECT} +publish +copy write title for the episode )
+SUBTITLE=$( taskAddScriptable project:${PROJECT} +publish +copy write subtitle for the episode )
+DESCRIPTION=$( taskAddScriptable project:${PROJECT} +publish +copy write description for the episode )
+LINKS=$( taskAddScriptable project:${PROJECT} +publish +copy collect any links required for the episode )
+TAGS=$( taskAddScriptable project:${PROJECT} +publish +copy pick meta tags to use for the episode )
+META=$( taskAddScriptable project:${PROJECT} depends:$TITLE depends:$SUBTITLE depends:$DESCRIPTION depends:$LINKS depends:$TAGS +publish +copy collate title, subtitle, description, links and tags on notion )
 
-THUMBNAIL=$( taskAddScriptable project:$PROJECT depends:$TITLE +publish +art create thumbnail at various resolutions )
-WIDESCREEN=$( taskAddScriptable project:$PROJECT depends:$TITLE +publish +art create wide art at various resolutions )
+THUMBNAIL=$( taskAddScriptable project:${PROJECT} depends:$TITLE +publish +art create thumbnail at various resolutions )
+WIDESCREEN=$( taskAddScriptable project:${PROJECT} depends:$TITLE +publish +art create wide art at various resolutions )
 
-TWITTER=$( taskAddScriptable project:$PROJECT +publish +social +twitter prepare go-live tweet and save it in notion)
+TWITTER=$( taskAddScriptable project:${PROJECT} +publish +social +twitter prepare go-live tweet and save it in notion)
 
-PUBLISH_1=$( taskAddScriptable project:$PROJECT depends:$EXPORT +publish upload media )
-PUBLISH_2=$( taskAddScriptable project:$PROJECT depends:$PUBLISH_1 +publish depends:$META set meta infomation )
-PUBLISH_3=$( taskAddScriptable project:$PROJECT depends:$PUBLISH_2 +publish explicit rating )
-PUBLISH_4=$( taskAddScriptable project:$PROJECT depends:$PUBLISH_3 +publish depends:$THUMBNAIL depends:$WIDESCREEN upload thumbnail at 3000px resolution, and widescreen at 2800px resolution )
-PUBLISH_5=$( taskAddScriptable project:$PROJECT depends:$PUBLISH_4 +publish depends:$TWITTER set go live tweet )
-PUBLISH_6=$( taskAddScriptable project:$PROJECT depends:$PUBLISH_5 +publish PUBLISH!!! )
+PUBLISH_1=$( taskAddScriptable project:${PROJECT} depends:$EXPORT +publish upload media )
+PUBLISH_2=$( taskAddScriptable project:${PROJECT} depends:$PUBLISH_1 +publish depends:$META set meta infomation )
+PUBLISH_3=$( taskAddScriptable project:${PROJECT} depends:$PUBLISH_2 +publish explicit rating )
+PUBLISH_4=$( taskAddScriptable project:${PROJECT} depends:$PUBLISH_3 +publish depends:$THUMBNAIL depends:$WIDESCREEN upload thumbnail at 3000px resolution, and widescreen at 2800px resolution )
+PUBLISH_5=$( taskAddScriptable project:${PROJECT} depends:$PUBLISH_4 +publish depends:$TWITTER set go live tweet )
+PUBLISH_6=$( taskAddScriptable project:${PROJECT} depends:$PUBLISH_5 +publish PUBLISH!!! )
+
+task project:${PROJECT} mod depends:${PROJECT}
