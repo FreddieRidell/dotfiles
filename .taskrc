@@ -1,5 +1,6 @@
 include ~/.config/taskwarrior/default.report
 include ~/.config/taskwarrior/inbox.report
+include ~/.config/taskwarrior/journal.report
 include ~/.config/taskwarrior/next.report
 include ~/.config/taskwarrior/reviewed.report
 include ~/.config/taskwarrior/shopping.report

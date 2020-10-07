@@ -1,5 +1,5 @@
-report.shopping.columns = description
-report.shopping.description = My Shopping List
-report.shopping.filter = status:pending +shopping
-report.shopping.sort = start+
+report.journal.columns = id,description
+report.journal.description = My Journal Prompts List
+report.journal.filter = status:pending +journal due.before:now
+report.journal.sort = start+
 
