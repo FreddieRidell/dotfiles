@@ -1,10 +1,10 @@
-include ~/.config/taskwarrior/default.report
-include ~/.config/taskwarrior/inbox.report
-include ~/.config/taskwarrior/journal.report
-include ~/.config/taskwarrior/next.report
-include ~/.config/taskwarrior/reviewed.report
-include ~/.config/taskwarrior/shopping.report
-include ~/.config/taskwarrior/simple.report
+include ~/.config/taskwarrior/report/default
+include ~/.config/taskwarrior/report/inbox
+include ~/.config/taskwarrior/report/journal
+include ~/.config/taskwarrior/report/next
+include ~/.config/taskwarrior/report/reviewed
+include ~/.config/taskwarrior/report/shopping
+include ~/.config/taskwarrior/report/simple
 include ~/.config/taskwarrior/theme
 include ~/.config/taskwarrior/udas
 include ~/.config/taskwarrior/urgency
