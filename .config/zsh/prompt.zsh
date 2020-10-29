@@ -28,7 +28,13 @@ function current_started_task {
 	fi
 }
 
-PROMPT='%F{$PROMPT_COLOR}%n@%m%f %F{7}%D{%a %Y-%m-%d %T}%f %F{2}%~%f %F{7}$(current_started_task)
+function pwd_color {
+	HASH="0x$(echo $PWD | md5)"
+	HEX=${HASH[1,8]}
+	print $(( 1 + HEX % 6))
+}
+
+PROMPT='%F{$PROMPT_COLOR}%n@%m%f %F{7}%D{%a %Y-%m-%d %T}%f %F{$(pwd_color)}%~%f %F{7}$(current_started_task)
 $ %f'
 
 RPROMPT='$(rusty-zsh-prompt --right)'
