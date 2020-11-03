@@ -1,5 +1,5 @@
 report.journal.columns = id,description
 report.journal.description = My Journal Prompts List
 report.journal.filter = status:pending +journal due.before:now
-report.journal.sort = start+
+report.journal.sort = description
 

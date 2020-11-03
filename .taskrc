@@ -11,6 +11,7 @@ include ~/.config/taskwarrior/urgency
 
 alias.jot = add +inbox due:1d
 alias.snooze = modify snooze:1h
+alias.shelve = modify due: +inbox
 
 context.couple = +drewer
 context.dazzlebyte = project:dzb

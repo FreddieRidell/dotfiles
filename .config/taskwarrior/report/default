@@ -1,5 +1,5 @@
 report.default.columns = urgency,id,jira,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
 report.default.description = Most urgent tasks
-report.default.filter = status:pending limit:page urgency.over:0 ( snooze.before:now or snooze: ) -shopping -journal -mediaList
-report.default.labels = Urg,ID,Jira,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
+report.default.filter = status:pending limit:page urgency.over:0 ( scheduled.before:now or scheduled: ) ( snooze.before:now or snooze: ) -shopping -journal -mediaList -inbox
+report.default.labels = Urg,ID,Jira,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,Sched,Until,Age
 report.default.sort = urgency-
