@@ -1,7 +1,12 @@
 color=on
 
+color.active= green
+color.tag.fuck= white
+color.tagged= white
+color.tag.next= color6
+color.tag.none= white
+color.tag.then= white
 
-color.active= white on black
 color.blocked= white on black
 color.blocking= white on black
 color.burndown.done= white on black
@@ -36,11 +41,6 @@ color.summary.bar= white on black
 color.sync.added= white on black
 color.sync.changed= white on black
 color.sync.rejected= white on black
-color.tag.fuck= white on black
-color.tagged= white on black
-color.tag.next= white on black
-color.tag.then= white on black
-color.tag.none= white on black
 color.uda.priority.H= white on black
 color.uda.priority.L= white on black
 color.uda.priority.M= white on black
@@ -52,5 +52,5 @@ color.warning= white on black
 color.alternate=on gray2
 
 rule.color.merge=yes
-rule.precedence.color=alternate
+rule.precedence.color=alternate,active,tag.
 ;rule.precedence.color=active,deleted,completed,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
