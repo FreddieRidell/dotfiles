@@ -22,6 +22,8 @@ let g:plug_window = "vertical botright new"
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'JulesWang/css.vim'
+Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
 Plug 'blueyed/vim-diminactive'
@@ -30,11 +32,10 @@ Plug 'cespare/vim-toml'
 Plug 'ciaranm/googletest-syntax', { 'for': [ 'c', 'cpp' ] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
+Plug 'guns/vim-clojure-static'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'jparise/vim-graphql'
-Plug 'JulesWang/css.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
@@ -47,12 +48,12 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'prettier/vim-prettier'
 Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/neocomplete.vim'
+Plug 'stephenway/postcss.vim'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
