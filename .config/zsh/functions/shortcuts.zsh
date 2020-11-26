@@ -148,9 +148,12 @@ function getLocalDevices {
 }
 
 function resizeImageCommon {
+	FILE_PATH=$1:t:r
+	FILE_EXT=$1:t:e
+
 	for SIZE in 8 16 32 64 128 256 512 1204 2048 4096 100 200 300 500 1000 2000 3000 5000 ; do
-		echo convert "$1" -resize $SIZEx$SIZE "$SIZE@$1" ;
-		convert "$1" -resize $SIZEx$SIZE "$SIZE@$1" ;
+		echo convert "$1" -resize $SIZEx$SIZE "$FILE_PATH@$SIZE.$FILE_EXT" ;
+		convert "$1" -resize $SIZEx$SIZE "$FILE_PATH@$SIZE.$FILE_EXT" ;
 	done
 }
 
@@ -161,3 +164,13 @@ function displayQRCode {
 	rm /tmp/qr.png;
 }
 
+
+function generateScreenshots {
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Square.png --window-size=5000,5000 --default-background-color=0 $1;
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Widescreen.png --window-size=5000,2812 --default-background-color=0 $1;
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Banner.png --window-size=6000,2000 --default-background-color=0 $1;
+
+	resizeImageCommon Square.png
+	resizeImageCommon Widescreen.png
+	resizeImageCommon Banner.png
+}
