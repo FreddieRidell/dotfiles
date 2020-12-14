@@ -1,5 +1,5 @@
 urgency.age.coefficient = 10
-urgency.blocking.coefficient = 1
+urgency.blocking.coefficient = 5
 urgency.due.coefficient = 10
 urgency.tags.coefficient = 0
 urgency.user.tag.fuck.coefficient = 100
