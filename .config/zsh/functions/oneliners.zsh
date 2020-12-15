@@ -4,6 +4,7 @@ function cdtmux { cd $1 ; tmux new -s $1 }
 function chpwd { title "$( getFolder )" } 
 function coresCount { getconf _NPROCESSORS_ONLN }
 function cortexRepair { for x in $( cortex diff --name-only --diff-filter=U ) ; do ; vim $x ; cortex add $x ; cortex rebase --continue; done }
+function createSSHableUser { useradd $1 ; usermod -aG sudo $1 rsync --archive --chown=$1:$1 ~/.ssh /home/$1 }
 function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${PWD:t} } 
@@ -36,8 +37,9 @@ function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" }
 function sleepo { systemctl suspend } 
 function snippetLoad { SNIPPET=`cat ~/.snippets | fzf` ; print -z $SNIPPET }
 function snippetSave { tail -n 2 ~/.zsh_history | head -n 1 | cut -d ';' -f 2- >> ~/.snippets && config add ~/.snippets && config commit -m "added snippet" }
+function taskAddScriptable { echo $@ ; task add $@ &> /dev/null ; task +LATEST export | jq ".[0].uuid" -r }
+function taskAddScriptable { task add $@ &> /dev/null ; task +LATEST export | jq ".[0].uuid" -r }
 function title { echo -ne "\033]0;${1}\007" } 
 function tmuxCheatSheet { curl https://gist.githubusercontent.com/MohamedAlaa/2961058/raw/ddf157a0d7b1674a2190a80e126f2e6aec54f369/tmux-cheatsheet.markdown | $CATTER --language markdown }
 function unixTime { date +%s ; } 
 function yarnClearLink { yarn unlink $1 && rm -rf node_modules && yarn install }
-function taskAddScriptable { echo $@ ; task add $@ &> /dev/null ; task +LATEST export | jq ".[0].uuid" -r }
