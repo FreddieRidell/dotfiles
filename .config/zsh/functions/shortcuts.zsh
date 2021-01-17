@@ -174,3 +174,7 @@ function generateScreenshots {
 	resizeImageCommon Widescreen.png
 	resizeImageCommon Banner.png
 }
+
+function backupRemoteTasks {
+	ssh laptop task export | tar cvf ~/Sync/Files/Backups/TaskWarrior/$( date +"%Y-%m-%dT%H" ).tar.gz 
+}
