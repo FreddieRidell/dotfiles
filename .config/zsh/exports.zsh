@@ -24,7 +24,7 @@ case "$HOST" in
 	Freddies-Mac-mini.local)
 		export PROMPT_COLOR=1
         ;;
-	freddie-server)
+	tasker)
 		export PROMPT_COLOR=2
 		;;
 	freddie-ThinkPad-X220)
