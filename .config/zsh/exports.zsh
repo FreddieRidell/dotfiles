@@ -18,6 +18,9 @@ else
 fi
 
 case "$HOST" in
+	Freddies-Mini)
+		export PROMPT_COLOR=1
+        ;;
 	Freddies-Mac-mini.local)
 		export PROMPT_COLOR=1
         ;;

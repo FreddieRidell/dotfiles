@@ -51,19 +51,28 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   # Point size
+  #
+ #  # Point size
   size: 16.0
   normal:
-    family: "Tamzen"
+    family: "TamzenForPowerline"
     style: Medium
   bold:
-    family: "Tamzen"
-    style: Bold
-  #italic:
-    #family: monospace
-    #style: Italic
+    family: "TamzenForPowerline"
+    style: Medium
   offset:
+    x: 0
     x: 1
-    y: 0
+  #size: 13.0
+  #normal:
+    #family: "Cozette"
+    #style: Medium
+  #bold:
+    #family: "Cozette"
+    #style: Bold
+  #offset:
+    #x: 2
+    #y: 0
   glyph_offset:
     x: 0
     y: 0

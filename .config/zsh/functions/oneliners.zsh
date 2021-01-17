@@ -4,7 +4,7 @@ function cdtmux { cd $1 ; tmux new -s $1 }
 function chpwd { title "$( getFolder )" } 
 function coresCount { getconf _NPROCESSORS_ONLN }
 function cortexRepair { for x in $( cortex diff --name-only --diff-filter=U ) ; do ; vim $x ; cortex add $x ; cortex rebase --continue; done }
-function createSSHableUser { useradd $1 ; usermod -aG sudo $1 rsync --archive --chown=$1:$1 ~/.ssh /home/$1 }
+function createSSHableUser { useradd $1 ; usermod -aG sudo $1 ; rsync --archive --chown=$1:$1 ~/.ssh /home/$1 }
 function findAndReplaceInFolder { ag --nocolor -l $1 | xargs sd -i $1 $2 }
 function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMsg $FILE_NAME ; bat --color always --decorations always $FILE_NAME | ag --color $1 -C ${2:-2} ; done | less -R }
 function getFolder () { echo ${PWD:t} } 
