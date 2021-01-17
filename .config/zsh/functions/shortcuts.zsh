@@ -176,5 +176,5 @@ function generateScreenshots {
 }
 
 function backupRemoteTasks {
-	ssh laptop task export | tar cvf ~/Sync/Files/Backups/TaskWarrior/$( date +"%Y-%m-%dT%H" ).tar.gz 
+	ssh task task export > ~/Sync/Files/Backups/TaskWarrior/$( date +"%Y-%m-%dT%H" ).json
 }
