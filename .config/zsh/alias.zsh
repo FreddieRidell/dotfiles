@@ -1,5 +1,4 @@
 alias '..'='cd ..'
-alias md5=md5sum
 alias -g .....='../../../..'
 alias -g ....='../../..'
 alias -g ...='../..'

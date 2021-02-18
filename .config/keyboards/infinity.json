@@ -1,13 +1,12 @@
 {
   "header": {
-    "Name": "DVORWHACK",
-    "Variant": "standard",
-    "Layout": "Standard",
+    "Name": "MD1",
+    "Layout": "StandardBlank",
     "Base": "StandardBlank",
     "Version": "0.2",
-    "Author": "Freddie",
+    "Author": "HaaTa (Jacob Alexander) 2014",
     "KLL": "0.3",
-    "Date": "2020-10-21",
+    "Date": "2014-09-14",
     "Generator": "KIICONF 0.2"
   },
   "matrix": [
@@ -36,8 +35,8 @@
           "label": "1"
         },
         "1": {
-          "key": "F1",
-          "label": "F1"
+          "key": "NUMLOCK",
+          "label": "NMLK"
         }
       }
     },
@@ -53,8 +52,8 @@
           "label": "2"
         },
         "1": {
-          "key": "F2",
-          "label": "F2"
+          "key": "P-",
+          "label": "P-"
         }
       }
     },
@@ -70,8 +69,8 @@
           "label": "3"
         },
         "1": {
-          "key": "F3",
-          "label": "F3"
+          "key": "KEYPAD PLUS",
+          "label": "P+"
         }
       }
     },
@@ -85,10 +84,6 @@
         "0": {
           "key": "4",
           "label": "4"
-        },
-        "1": {
-          "key": "F4",
-          "label": "F4"
         }
       }
     },
@@ -102,10 +97,6 @@
         "0": {
           "key": "5",
           "label": "5"
-        },
-        "1": {
-          "key": "F5",
-          "label": "F5"
         }
       }
     },
@@ -119,10 +110,6 @@
         "0": {
           "key": "6",
           "label": "6"
-        },
-        "1": {
-          "key": "F6",
-          "label": "F6"
         }
       }
     },
@@ -136,10 +123,6 @@
         "0": {
           "key": "7",
           "label": "7"
-        },
-        "1": {
-          "key": "F7",
-          "label": "F7"
         }
       }
     },
@@ -153,10 +136,6 @@
         "0": {
           "key": "8",
           "label": "8"
-        },
-        "1": {
-          "key": "F8",
-          "label": "F8"
         }
       }
     },
@@ -170,10 +149,6 @@
         "0": {
           "key": "9",
           "label": "9"
-        },
-        "1": {
-          "key": "F9",
-          "label": "F9"
         }
       }
     },
@@ -187,10 +162,6 @@
         "0": {
           "key": "0",
           "label": "0"
-        },
-        "1": {
-          "key": "F10",
-          "label": "F10"
         }
       }
     },
@@ -204,10 +175,6 @@
         "0": {
           "key": "-",
           "label": "-"
-        },
-        "1": {
-          "key": "F11",
-          "label": "F11"
         }
       }
     },
@@ -221,10 +188,6 @@
         "0": {
           "key": "=",
           "label": "="
-        },
-        "1": {
-          "key": "F12",
-          "label": "F12"
         }
       }
     },
@@ -238,10 +201,6 @@
         "0": {
           "key": "`",
           "label": "`"
-        },
-        "1": {
-          "key": "INSERT",
-          "label": "INS"
         }
       }
     },
@@ -291,8 +250,8 @@
           "label": "HOME"
         },
         "2": {
-          "key": ";",
-          "label": ";"
+          "key": "'",
+          "label": "'"
         }
       }
     },
@@ -400,10 +359,6 @@
           "key": "U",
           "label": "U"
         },
-        "1": {
-          "key": "#:U\"Mute\" + CONS\"Mute\"",
-          "label": "MUT"
-        },
         "2": {
           "key": "G",
           "label": "G"
@@ -479,6 +434,10 @@
         "0": {
           "key": "[",
           "label": "["
+        },
+        "2": {
+          "key": "[",
+          "label": "["
         }
       }
     },
@@ -490,6 +449,10 @@
       "h": 4,
       "layers": {
         "0": {
+          "key": "]",
+          "label": "]"
+        },
+        "2": {
           "key": "]",
           "label": "]"
         }
@@ -668,8 +631,8 @@
           "label": "K"
         },
         "1": {
-          "key": "CONS:PLAY",
-          "label": "PLAY"
+          "key": "CONS:PAUSE PLAY",
+          "label": "PL/PS"
         },
         "2": {
           "key": "T",
@@ -725,6 +688,10 @@
         "0": {
           "key": "'",
           "label": "'"
+        },
+        "2": {
+          "key": "/",
+          "label": "/"
         }
       }
     },
@@ -770,8 +737,8 @@
           "label": "END"
         },
         "2": {
-          "key": "Q",
-          "label": "Q"
+          "key": ";",
+          "label": ";"
         }
       }
     },
@@ -791,8 +758,8 @@
           "label": "↓"
         },
         "2": {
-          "key": "J",
-          "label": "J"
+          "key": "Q",
+          "label": "Q"
         }
       }
     },
@@ -812,8 +779,8 @@
           "label": "PGDN"
         },
         "2": {
-          "key": "K",
-          "label": "K"
+          "key": "J",
+          "label": "J"
         }
       }
     },
@@ -829,8 +796,8 @@
           "label": "V"
         },
         "2": {
-          "key": "X",
-          "label": "X"
+          "key": "K",
+          "label": "K"
         }
       }
     },
@@ -846,8 +813,8 @@
           "label": "B"
         },
         "2": {
-          "key": "B",
-          "label": "B"
+          "key": "X",
+          "label": "X"
         }
       }
     },
@@ -863,8 +830,8 @@
           "label": "N"
         },
         "2": {
-          "key": "M",
-          "label": "M"
+          "key": "B",
+          "label": "B"
         }
       }
     },
@@ -880,8 +847,8 @@
           "label": "M"
         },
         "2": {
-          "key": "W",
-          "label": "W"
+          "key": "M",
+          "label": "M"
         }
       }
     },
@@ -897,8 +864,8 @@
           "label": ","
         },
         "2": {
-          "key": "V",
-          "label": "V"
+          "key": "W",
+          "label": "W"
         }
       }
     },
@@ -914,8 +881,8 @@
           "label": "."
         },
         "2": {
-          "key": "Z",
-          "label": "Z"
+          "key": "V",
+          "label": "V"
         }
       }
     },
@@ -929,6 +896,10 @@
         "0": {
           "key": "/",
           "label": "/"
+        },
+        "2": {
+          "key": "Z",
+          "label": "Z"
         }
       }
     },
