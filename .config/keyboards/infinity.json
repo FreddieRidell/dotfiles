@@ -1,12 +1,13 @@
 {
   "header": {
-    "Name": "MD1",
-    "Layout": "StandardBlank",
+    "Name": "DVORWACK",
+    "Variant": "standard",
+    "Layout": "Standard",
     "Base": "StandardBlank",
-    "Version": "0.2",
-    "Author": "HaaTa (Jacob Alexander) 2014",
+    "Version": "0.3",
+    "Author": "Freddie",
     "KLL": "0.3",
-    "Date": "2014-09-14",
+    "Date": "2021-02-18",
     "Generator": "KIICONF 0.2"
   },
   "matrix": [
@@ -35,8 +36,8 @@
           "label": "1"
         },
         "1": {
-          "key": "NUMLOCK",
-          "label": "NMLK"
+          "key": "F1",
+          "label": "F1"
         }
       }
     },
@@ -52,8 +53,8 @@
           "label": "2"
         },
         "1": {
-          "key": "P-",
-          "label": "P-"
+          "key": "F2",
+          "label": "F2"
         }
       }
     },
@@ -69,8 +70,8 @@
           "label": "3"
         },
         "1": {
-          "key": "KEYPAD PLUS",
-          "label": "P+"
+          "key": "F3",
+          "label": "F3"
         }
       }
     },
@@ -84,6 +85,10 @@
         "0": {
           "key": "4",
           "label": "4"
+        },
+        "1": {
+          "key": "F4",
+          "label": "F4"
         }
       }
     },
@@ -97,6 +102,10 @@
         "0": {
           "key": "5",
           "label": "5"
+        },
+        "1": {
+          "key": "F5",
+          "label": "F5"
         }
       }
     },
@@ -110,6 +119,10 @@
         "0": {
           "key": "6",
           "label": "6"
+        },
+        "1": {
+          "key": "F6",
+          "label": "F6"
         }
       }
     },
@@ -123,6 +136,10 @@
         "0": {
           "key": "7",
           "label": "7"
+        },
+        "1": {
+          "key": "F7",
+          "label": "F7"
         }
       }
     },
@@ -136,6 +153,10 @@
         "0": {
           "key": "8",
           "label": "8"
+        },
+        "1": {
+          "key": "F8",
+          "label": "F8"
         }
       }
     },
@@ -149,6 +170,10 @@
         "0": {
           "key": "9",
           "label": "9"
+        },
+        "1": {
+          "key": "F9",
+          "label": "F9"
         }
       }
     },
@@ -162,6 +187,10 @@
         "0": {
           "key": "0",
           "label": "0"
+        },
+        "1": {
+          "key": "F10",
+          "label": "F10"
         }
       }
     },
@@ -175,6 +204,10 @@
         "0": {
           "key": "-",
           "label": "-"
+        },
+        "1": {
+          "key": "F11",
+          "label": "F11"
         }
       }
     },
@@ -188,6 +221,10 @@
         "0": {
           "key": "=",
           "label": "="
+        },
+        "1": {
+          "key": "F12",
+          "label": "F12"
         }
       }
     },
@@ -201,6 +238,10 @@
         "0": {
           "key": "`",
           "label": "`"
+        },
+        "1": {
+          "key": "INSERT",
+          "label": "INS"
         }
       }
     },
@@ -250,8 +291,8 @@
           "label": "HOME"
         },
         "2": {
-          "key": "'",
-          "label": "'"
+          "key": ";",
+          "label": ";"
         }
       }
     },
@@ -359,6 +400,10 @@
           "key": "U",
           "label": "U"
         },
+        "1": {
+          "key": "#:U\"Mute\" + CONS\"Mute\"",
+          "label": "MUT"
+        },
         "2": {
           "key": "G",
           "label": "G"
@@ -434,10 +479,6 @@
         "0": {
           "key": "[",
           "label": "["
-        },
-        "2": {
-          "key": "[",
-          "label": "["
         }
       }
     },
@@ -449,10 +490,6 @@
       "h": 4,
       "layers": {
         "0": {
-          "key": "]",
-          "label": "]"
-        },
-        "2": {
           "key": "]",
           "label": "]"
         }
@@ -688,10 +725,6 @@
         "0": {
           "key": "'",
           "label": "'"
-        },
-        "2": {
-          "key": "/",
-          "label": "/"
         }
       }
     },
@@ -737,8 +770,8 @@
           "label": "END"
         },
         "2": {
-          "key": ";",
-          "label": ";"
+          "key": "RSHIFT",
+          "label": "R⇑"
         }
       }
     },
@@ -922,7 +955,12 @@
       "y": 12,
       "w": 4,
       "h": 4,
-      "layers": {}
+      "layers": {
+        "1": {
+          "key": "#:LayerLock[2]",
+          "label": "LOCK-2"
+        }
+      }
     },
     {
       "code": "0x37",
@@ -997,8 +1035,8 @@
       "h": 4,
       "layers": {
         "0": {
-          "key": "RGUI",
-          "label": "RGUI"
+          "key": "RCTRL",
+          "label": "RCTRL"
         }
       }
     },
@@ -1023,8 +1061,8 @@
       "h": 4,
       "layers": {
         "0": {
-          "key": "#:LayerLock[2]",
-          "label": "LOCK-2"
+          "key": "#:Layer[1]",
+          "label": "ƒ1"
         }
       }
     }
