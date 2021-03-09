@@ -77,42 +77,6 @@ function updateAll {
 	yarn global upgrade --latest;
 }
 
-function setupMyNPM { 
-	npm init
-	
-	# setup package.json
-	jqModify '.babel.presets[0] = "@freddieridell/babel-preset"' package.json 
-	jqModify '.eslintConfig.extends = "react-app"' package.json 
-	jqModify '.files[1] = "/lib"' package.json 
-	jqModify '.files[2] = "/main.js"' package.json 
-	jqModify '.main = "lib/index.js"' package.json 
-	jqModify '.prettier.tabWidth = 4' package.json 
-	jqModify '.prettier.trailingComma = "all"' package.json 
-	jqModify '.prettier.useTabs = true' package.json 
-	jqModify '.scripts.build = "NODE_ENV=production babel src --out-dir lib"' package.json 
-	jqModify '.scripts.format = "prettier --write src/**/*"' package.json 
-	jqModify '.scripts.prepushOnly = "npm run format && && npm run test && npm run build"' package.json 
-	jqModify '.scripts.test = "NODE_ENV=test jest --coverage true src test"' package.json 
-	jqModify '.scripts.test_watch = "NODE_ENV=test jest src test --watch --bail --runInBand"' package.json 
-	jqModify '.scripts.watch = "NODE_ENV=staging babel src --out-dir lib --watch"' package.json 
-
-	# setup .gitignore
-	echo "/lib" >> .gitignore
-	echo "node_modules" >> .gitignore
-
-	# setup files
-	mkdir -p src
-	touch src/index.js
-
-	echo '#!/usr/bin/env node' > main.js
-	echo 'require("./lib")' >> main.js
-	echo 'module.exports = require("./lib");' > index.js
-
-	chmod +x main.js
-
-	npm add --save-dev @babel/cli @babel/core @freddieridell/babel-preset prettier eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint jest-cli
-}
-
 function pingMeDaddy {
 	while true ; do
 		ping 1.1.1.1 ;

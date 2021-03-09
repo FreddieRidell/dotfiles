@@ -5,6 +5,7 @@ source $HOME/.config/zsh/config.zsh
 source $HOME/.config/zsh/env.zsh
 source $HOME/.config/zsh/exports.zsh
 source $HOME/.config/zsh/functions/cortex.zsh
+source $HOME/.config/zsh/functions/secret.zsh
 source $HOME/.config/zsh/functions/itterators.zsh
 source $HOME/.config/zsh/functions/oneliners.zsh
 source $HOME/.config/zsh/functions/pass.zsh
