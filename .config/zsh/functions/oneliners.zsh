@@ -10,7 +10,7 @@ function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMs
 function getFolder () { echo ${PWD:t} } 
 function gitBranchify { git checkout -b "$1-$( echo "${@:2}" | sed -e "s/[^a-zA-Z0-9]/-/g" -e "s/--*/-/g" -e "s/-$//g" | tr '[:upper:]' '[:lower:]' )" }
 function gitCheckoutSearch { git branch | ag "$@" | strip-ansi | xargs -n 1 git checkout }
-function gitCommitRedmine() { git commit -m "[RM-$(gitCurrentBranch | sed -e "s/[^0-9]*\([0-9]\+\).*/\1/")] $*" }
+function gitCommitRedmine() { git commit -m "[RM-$(gitCurrentBranch | sed -e "s/^[^0-9-]*-\([0-9]*\)\/.*/\1/")] $*" }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitCurrentHash { git rev-parse HEAD }
 function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }
@@ -26,6 +26,7 @@ function jqModify { TMP_FILE_NAME="/tmp/$RANDOM.json" && jq $1 $2 > $TMP_FILE_NA
 function largestFile { wc -l "$@" | sort -nr -t":" -k1 | head -2 | tail -1 | sed -e 's/[0-9]\+//' }
 function lesss { cats $1 | less -r } 
 function lock { ~/.i3/lock.sh } 
+function npmUpdate(){ npx npm-check-updates -u && npm install }
 function openXinY { ag -l "$1" "$2" ; ag -l --nocolor "$1" "$2" | xargs -n 1 nvim -c "silent! /$1" } 
 function osxNotification { osascript -e "display notification \"$2\" with title \"$1\"" }
 function printAndEval() { scriptMsg $@ ; $@ } 
