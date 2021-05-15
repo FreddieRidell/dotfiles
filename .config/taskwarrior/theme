@@ -7,12 +7,12 @@ color.tag.next = color6
 color.tag.none = white
 color.tag.health = color4
 color.tag.then = color3
+color.burndown.done = color2 on black
+color.burndown.pending = color1 on black
+color.burndown.started = color3 on black
 
 color.blocked = white on black
 color.blocking = white on black
-color.burndown.done = white on black
-color.burndown.pending = white on black
-color.burndown.started = white on black
 color.calendar.due = white on black
 color.calendar.due.today = white on black
 color.calendar.holiday = white on black

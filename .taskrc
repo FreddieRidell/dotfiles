@@ -1,4 +1,5 @@
 include ~/.config/taskwarrior/report/default
+include ~/.config/taskwarrior/report/media
 include ~/.config/taskwarrior/report/inbox
 include ~/.config/taskwarrior/report/journal
 include ~/.config/taskwarrior/report/next
@@ -9,7 +10,7 @@ include ~/.config/taskwarrior/theme
 include ~/.config/taskwarrior/udas
 include ~/.config/taskwarrior/urgency
 
-alias.jot = add +inbox due:1d
+alias.jot = add +inbox
 alias.snooze = modify snooze:1h
 alias.shelve = modify due: +inbox
 
