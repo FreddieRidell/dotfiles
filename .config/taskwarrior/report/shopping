@@ -1,4 +1,0 @@
-report.shopping.columns = id,description
-report.shopping.description = My Shopping List
-report.shopping.filter = status:pending +shopping -treat
-report.shopping.sort = start+

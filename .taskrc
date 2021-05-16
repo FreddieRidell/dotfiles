@@ -4,15 +4,17 @@ include ~/.config/taskwarrior/report/inbox
 include ~/.config/taskwarrior/report/journal
 include ~/.config/taskwarrior/report/next
 include ~/.config/taskwarrior/report/reviewed
-include ~/.config/taskwarrior/report/shopping
 include ~/.config/taskwarrior/report/simple
 include ~/.config/taskwarrior/theme
 include ~/.config/taskwarrior/udas
 include ~/.config/taskwarrior/urgency
 
 alias.jot = add +inbox
-alias.snooze = modify snooze:1h
 alias.shelve = modify due: +inbox
+alias.snooze = modify snooze:1h
+alias.tickle = modify +inbox schedule:1w
+
+context.clarify = +inbox
 
 context.couple = +drewer
 context.dazzlebyte = project:dzb
@@ -22,3 +24,4 @@ context.solo = -drewer project:
 data.location = ~/.task
 
 default.command = default
+context=clarify
