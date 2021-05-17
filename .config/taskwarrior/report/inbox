@@ -1,5 +1,7 @@
-report.inbox.columns = urgency,id,jira,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
 report.inbox.description = Tasks that have not yet been processed
-report.inbox.filter = status:pending limit:page +inbox
-report.inbox.labels = Urg,ID,Jira,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Project,Recur,S,Until,Age
-report.inbox.sort = urgency-
+
+report.inbox.filter = status:pending limit:page +inbox ( scheduled.before:now or scheduled: ) ( snooze.before:now or snooze: ) 
+report.inbox.sort = entry+
+
+report.inbox.labels = ID,Description,Due,Active,Deps,P,Project,Recur,S,Until,Age
+report.inbox.columns = id,description,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age

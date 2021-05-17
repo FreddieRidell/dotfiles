@@ -1,5 +1,0 @@
-report.media.columns = project,id,description,tags
-report.media.description = All the Media I want to consume
-report.media.filter = status:pending project:media
-report.media.sort = start+,project
-
