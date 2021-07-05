@@ -10,7 +10,7 @@ function findPretty() { for FILE_NAME in $( ag --nocolor -l $1 ) ; do ; scriptMs
 function getFolder () { echo ${PWD:t} } 
 function gitBranchify { git checkout -b "$1-$( echo "${@:2}" | sed -e "s/[^a-zA-Z0-9]/-/g" -e "s/--*/-/g" -e "s/-$//g" | tr '[:upper:]' '[:lower:]' )" }
 function gitCheckoutSearch { git branch | ag "$@" | strip-ansi | xargs -n 1 git checkout }
-function gitCommitRedmine() { git commit -m "[RM-$(gitCurrentBranch | sed -e "s/^[^0-9-]*-\([0-9]*\)\/.*/\1/")] $*" }
+function gitCommitRedmine() { git commit -m "[$(gitCurrentBranch | sed -e "s/^.*\/\([^0-9-]*-[0-9]*\).*/\1/")] $*" }
 function gitCurrentBranch { git symbolic-ref -q --short HEAD }
 function gitCurrentHash { git rev-parse HEAD }
 function gitDiffList { git rev-list --oneline $( git merge-base $1 HEAD )...HEAD | tail -r | while read LINE ; do echo "+ $LINE" ; done }

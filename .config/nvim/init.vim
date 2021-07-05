@@ -26,6 +26,7 @@ Plug 'JulesWang/css.vim'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }
+Plug 'arp242/auto_mkdir2.vim'
 Plug 'blueyed/vim-diminactive'
 Plug 'bogado/file-line'
 Plug 'cespare/vim-toml'

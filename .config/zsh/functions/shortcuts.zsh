@@ -130,9 +130,9 @@ function displayQRCode {
 
 
 function generateScreenshots {
-	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Square.png --window-size=5000,5000 --default-background-color=0 $1;
-	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Widescreen.png --window-size=5000,2812 --default-background-color=0 $1;
-	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Banner.png --window-size=6000,2000 --default-background-color=0 $1;
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Square.png --window-size=5000,5000 $1;
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Widescreen.png --window-size=5000,2812 $1;
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=Banner.png --window-size=6000,2000 $1;
 
 	resizeImageCommon Square.png
 	resizeImageCommon Widescreen.png
