@@ -32,7 +32,7 @@ function osxNotification { osascript -e "display notification \"$2\" with title 
 function printAndEval() { scriptMsg $@ ; $@ } 
 function randomHex { echo $RANDOM | xargs printf "%x\n" }
 function reactLifecycleCheatsheet { bat ~/.config/cheatsheets/react.md }
-function rpn { dc -f ~/.dcrc - <<< "$* f" }
+function rpn { read -t IN; CMD="$IN $* f"; dc -f ~/.dcrc - <<< "$CMD" ; unset IN; unset CMD; }
 function s3rmb { aws s3 rm --recursive "s3://$1"  && aws s3 rb "s3://$1" }
 function scriptMsg() { echo "\e[1;32;40m# $@ \e[0;37;40m" } 
 function sleepo { systemctl suspend } 

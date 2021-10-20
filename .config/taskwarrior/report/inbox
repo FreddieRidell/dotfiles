@@ -5,3 +5,5 @@ report.inbox.sort = entry+
 
 report.inbox.labels = ID,Description,Due,Active,Deps,P,Project,Recur,S,Until,Age
 report.inbox.columns = id,description,due.relative,start.age,depends,priority,project,recur,scheduled.countdown,until.remaining,entry.age
+
+report.inbox.context = 0;

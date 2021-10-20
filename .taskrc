@@ -1,20 +1,18 @@
 include ~/.config/taskwarrior/report/default
+include ~/.config/taskwarrior/report/next
 include ~/.config/taskwarrior/report/inbox
 include ~/.config/taskwarrior/report/reviewed
 include ~/.config/taskwarrior/theme
 include ~/.config/taskwarrior/udas
 include ~/.config/taskwarrior/urgency
+include ~/.config/taskwarrior/context
 
 alias.jot = add +inbox
 alias.shelve = modify due: +inbox
-alias.snooze = modify snooze:1h
+alias.snooze = modify schedule:1h
 alias.tickle = modify +inbox schedule:1w
-
-context.couple = +drewer
-context.dazzlebyte = project:dzb
-context.lbz = project:lbz
-context.solo = -drewer project:
 
 data.location = ~/.task
 
 default.command = default
+news.version=2.6.0

@@ -1,10 +1,18 @@
+urgency.active.coefficient = 30
 urgency.age.coefficient = 10
 urgency.blocking.coefficient = 5
 urgency.due.coefficient = 10
 urgency.tags.coefficient = 0
+urgency.uda.priority.L.coefficient = -5
+
+urgency.user.project.lbz.coefficient = -5 #temp
+
+urgency.user.tag.blocked.coefficient = 5
+urgency.user.tag.chores.coefficient = 10
 urgency.user.tag.fuck.coefficient = 100
 urgency.user.tag.health.coefficient = 2
 urgency.user.tag.homeAlone.coefficient = 2
 urgency.user.tag.money.coefficient = 3
 urgency.user.tag.next.coefficient = 25
+urgency.user.tag.oss.coefficient = -2
 urgency.user.tag.then.coefficient = 15

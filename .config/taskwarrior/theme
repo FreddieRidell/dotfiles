@@ -2,14 +2,15 @@ color = on
 
 color.active = green
 color.tag.fuck = color1
+color.tag.blocked = color1
 color.tagged = white
 color.tag.next = color6
 color.tag.none = white
 color.tag.health = color4
 color.tag.then = color3
-color.burndown.done = color2 on black
-color.burndown.pending = color1 on black
-color.burndown.started = color3 on black
+color.burndown.done = on color2
+color.burndown.pending = on color1
+color.burndown.started = on color3
 
 color.blocked = white on black
 color.blocking = white on black

@@ -23,6 +23,7 @@ let g:plug_window = "vertical botright new"
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'JulesWang/css.vim'
+Plug 'NoahTheDuke/vim-just'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': 'markdown' }
 Plug 'airblade/vim-gitgutter'
 Plug 'alepez/vim-gtest', { 'for': [ 'c', 'cpp' ] }

@@ -1,0 +1,7 @@
+report.next.description = Actionable tasks
+
+report.next.labels = Urg,Project,Jira,Id,Description,Name,Email,Phone,Company,Tags,Due,Active,Deps,P,Recur,Sched,Until,Age
+report.next.columns = urgency,project,jira,id,description,name,email,phone,company,tags,due.relative,start.age,depends,priority,recur,scheduled.countdown,until.remaining,entry.age
+
+report.next.filter = limit:page +READY -inbox project:
+report.next.sort = urgency-

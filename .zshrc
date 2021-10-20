@@ -21,8 +21,8 @@ export PATH="$HOME/.yarn/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.task.zsh ] && source ~/.task.zsh
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 case $( uname ) in
 	Darwin)
