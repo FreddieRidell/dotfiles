@@ -21,8 +21,11 @@ export PATH="$HOME/.yarn/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.task.zsh ] && source ~/.task.zsh
 
+# Add default node to path
+export PATH=$PATH:~/.nvm/versions/node/v16.12.0/bin/node
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 
 case $( uname ) in
 	Darwin)

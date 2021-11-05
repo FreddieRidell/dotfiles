@@ -2,6 +2,7 @@ context.dzb.read=project:dzb or project:pli
 context.dzb.write=project:dzb
 
 context.home.read=project.not:pli
+context.home.write=+home
 
 context.lbz.read=project:lbz
 context.lbz.write=project:lbz
