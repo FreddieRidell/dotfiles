@@ -47,7 +47,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'lluchs/vim-wren', { 'for': 'wren' }
 Plug 'mxw/vim-jsx'
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'neomake/neomake', { 'commit': 'bcf2a4a' }
+Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'prettier/vim-prettier'

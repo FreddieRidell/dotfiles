@@ -19,6 +19,8 @@
 "15:     DARK_WHITE
 
 hi  clear
+hi  typescriptReserved  ctermfg=1        ctermbg=0      cterm=none
+
 hi  Boolean             ctermfg=5        ctermbg=0      cterm=none
 hi  Character           ctermfg=3        ctermbg=0      cterm=none
 hi  ColorColumn         ctermfg=15       ctermbg=0      cterm=none
@@ -103,6 +105,12 @@ hi  tsxCloseTag         ctermfg=6
 hi  tsxEqual            ctermfg=2
 hi  tsxTagName          ctermfg=2
 
+
+
 " change the highlighting when we're in insert mode
 au InsertEnter * hi StatusLine ctermfg=2 ctermbg=0
 au InsertLeave * hi StatusLine ctermfg=7 ctermbg=0
+
+nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
