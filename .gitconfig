@@ -29,8 +29,11 @@
 [merge]
 	tool = vimdiff
 	algorithm = histogram
+	conflictStyle = diff3
+
 [mergetool]
 	prompt = true
+
 [mergetool "vimdiff"]
 	cmd = nvim -d $REMOTE $BASE $LOCAL $MERGED -c '$wincmd w' -c 'wincmd J'
 
@@ -41,23 +44,30 @@
 [push]
 	default = simple
 	followTags = true
+	autoSetupRemote = true
 
 [status]
 	showUntrackedFiles = all
+
 [color]
 	ui = always
+
 [receive]
 	denyCurrentBranch = ignore
+
 [pull]
 	rebase = true
+
 [rebase]
 	autoStash = true
 	autoSquash = true
 	algorithm = histogram
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [init]
 	defaultBranch = main

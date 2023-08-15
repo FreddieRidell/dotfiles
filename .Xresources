@@ -1,3 +1,20 @@
+!--black: #2c292d;
+!--red: #ff6188;
+!--green: #a9dc76;
+!--yellow: #ffd866;
+!--blue: #78dce8;
+!--purple: #ab9df2;
+!--orange: #fc9867;
+!--white: #fdf9f3;
+!--dark_black: #160d16;
+!--dark_red: #ff2e62;
+!--dark_green: #90ee31;
+!--dark_yellow: #ffcb33;
+!--dark_blue: #32e6fb;
+!--dark_purple: #775dff;
+!--dark_orange: #ff7531;
+!--dark_white: #959190;
+
 #define  BLACK        #2c292d
 #define  RED          #ff6188
 #define  GREEN        #a9dc76

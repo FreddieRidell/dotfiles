@@ -10,7 +10,7 @@ function pwd_color {
 	print $(( 1 + HEX % 6))
 }
 
-PROMPT='%F{$PROMPT_COLOR}%n@%m%f %F{7}%D{%a %Y-%m-%d %T}%f %F{$(pwd_color)}%~%f
+PROMPT='%F{$PROMPT_COLOR}%n@%m%f %F{$(pwd_color)}%~%f
 $ %f'
 
 RPROMPT='$(rusty-zsh-prompt --right)'

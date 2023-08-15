@@ -142,3 +142,30 @@ function generateScreenshots {
 function backupRemoteTasks {
 	ssh task task export > ~/Sync/Files/Backups/TaskWarrior/$( date +"%Y-%m-%dT%H" ).json
 }
+
+function taskTravelPacking {
+	PROJECT="packing.$(isoDate)"
+
+	task add project:$PROJECT toothbrush
+	task add project:$PROJECT toothpaste
+	task add project:$PROJECT pants
+	task add project:$PROJECT socks
+	task add project:$PROJECT tops
+	task add project:$PROJECT lightning cable
+	task add project:$PROJECT usc cable
+	task add project:$PROJECT micro usb cable
+	task add project:$PROJECT wallet
+	task add project:$PROJECT passport
+	task add project:$PROJECT suit
+	task add project:$PROJECT laptop
+	task add project:$PROJECT moistuiser
+	task add project:$PROJECT vitamins
+	task add project:$PROJECT aftershave
+	task add project:$PROJECT hair bonnet
+	task add project:$PROJECT eye mask
+	task add project:$PROJECT wrist braces
+
+	task context define packing project:$PROJECT
+	task context packing
+	task
+}

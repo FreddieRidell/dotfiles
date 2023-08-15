@@ -24,8 +24,6 @@ autocmd VimEnter * wincmd p
 "
 "reset a bit
 nmap <silent> <C-o> :noh<CR>:set ai<CR>:set nopaste<CR>:redraw!<CR>
-" JSON PrettyPrint
-nmap <Leader>j :'<,'>!python -m json.tool <CR>
 
 " mergetool
 nmap <Leader>re :diffg RE <CR>
@@ -51,7 +49,8 @@ nmap <Leader><Leader>h <C-w>h
 nmap <Leader><Leader>j <C-w>j
 nmap <Leader><Leader>k <C-w>k
 nmap <Leader><Leader>l <C-w>l
-nmap <Leader>gf :vertical wincmd f<CR>
+"nmap <Leader>gf :vertical wincmd f<CR>
+nmap gf :vertical wincmd f<CR>
 
 " Goyo
 nmap <Leader>gy :Goyo<CR>

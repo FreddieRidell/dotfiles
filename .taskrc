@@ -1,11 +1,11 @@
+include ~/.config/taskwarrior/context
 include ~/.config/taskwarrior/report/default
-include ~/.config/taskwarrior/report/next
 include ~/.config/taskwarrior/report/inbox
+include ~/.config/taskwarrior/report/next
 include ~/.config/taskwarrior/report/reviewed
 include ~/.config/taskwarrior/theme
 include ~/.config/taskwarrior/udas
 include ~/.config/taskwarrior/urgency
-include ~/.config/taskwarrior/context
 
 alias.jot = add +inbox
 alias.shelve = modify due: +inbox
@@ -16,3 +16,6 @@ data.location = ~/.task
 
 default.command = default
 news.version=2.6.0
+context.packing.read=project:packing.2022-08-12
+context.packing.write=project:packing.2022-08-12
+context=home

@@ -7,10 +7,6 @@ shift + alt - h : yabai -m window --warp west
 shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
-shift + ctrl - h : yabai -m window --swap west
-shift + ctrl - j : yabai -m window --swap south
-shift + ctrl - k : yabai -m window --swap north
-shift + ctrl - l : yabai -m window --swap east
 
 # balance size of windows
 # shift + alt - 0 : yabai -m space --balance

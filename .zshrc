@@ -15,17 +15,13 @@ source $HOME/.config/zsh/keybinding.zsh
 source $HOME/.config/zsh/path.zsh
 source $HOME/.config/zsh/prompt.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 
-export PATH="$HOME/.yarn/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.task.zsh ] && source ~/.task.zsh
 
-# Add default node to path
-export PATH=$PATH:~/.nvm/versions/node/v16.12.0/bin/node
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 
 case $( uname ) in
 	Darwin)
@@ -35,3 +31,16 @@ case $( uname ) in
 		source $HOME/.config/zsh/config.linux.zsh
 		;;
 esac
+
+zstyle ':completion:*:*:task:*' verbose yes
+zstyle ':completion:*:*:task:*:descriptions' format '%U%B%d%b%u'
+
+zstyle ':completion:*:*:task:*' group-name ''
+
+compdef task _task
+
+
+eval "$(zoxide init zsh --cmd cd)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

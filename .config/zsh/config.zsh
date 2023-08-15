@@ -1,8 +1,8 @@
 # history config:
 ## Command history configuration
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=10000000
+SAVEHIST=10000000
 case $HIST_STAMPS in
   "mm/dd/yyyy") alias history='fc -fl 1' ;;
   "dd.mm.yyyy") alias history='fc -El 1' ;;

@@ -5,11 +5,17 @@ urgency.due.coefficient = 10
 urgency.tags.coefficient = 0
 urgency.uda.priority.L.coefficient = -5
 
-urgency.user.project.lbz.coefficient = -5 #temp
+urgency.user.project.dzb.coefficient = 2 #temp
+urgency.user.project.dzb.tax.coefficient = 4 #temp
+
+urgency.uda.progress.contacted.coefficient = 3
+urgency.uda.progress.applied.coefficient = 5
+urgency.uda.progress.interview.coefficient = 7
 
 urgency.user.tag.blocked.coefficient = 5
 urgency.user.tag.chores.coefficient = 10
 urgency.user.tag.fuck.coefficient = 100
+urgency.user.tag.drewer.coefficient = 5
 urgency.user.tag.health.coefficient = 2
 urgency.user.tag.homeAlone.coefficient = 2
 urgency.user.tag.money.coefficient = 3

@@ -1,7 +1,7 @@
 context.dzb.read=project:dzb or project:pli
 context.dzb.write=project:dzb
 
-context.home.read=project.not:pli
+context.home.read=project.not:lbz and project.not:dzb
 context.home.write=+home
 
 context.lbz.read=project:lbz
@@ -14,3 +14,6 @@ context.solo.read=-drewer project.not:pli
 
 context.wedding.read=project:wedding
 context.wedding.write=project:wedding
+
+context.new role.read=project:dzb.newRole
+context.new role.write=project:dzb.newRole

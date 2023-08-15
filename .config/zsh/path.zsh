@@ -14,12 +14,20 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="../node_modules/.bin:$PATH" 
 export PATH="../../node_modules/.bin:$PATH" 
 export PATH="../../../node_modules/.bin:$PATH" 
+export PATH="../../../../node_modules/.bin:$PATH" 
 
 #rustup
 export PATH="$HOME/.cargo/bin:$PATH"
 
 #App images etc
 export PATH="$HOME/Binaries:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 #snap
 export PATH="$PATH:/snap/bin"
+
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
+export PATH="$PATH:/Users/freddie/.nvm/versions/node/v18.16.0/bin"
+export PATH="$PATH:/Users/freddie/.nvm/versions/node/v18.16.0/bin/npm"
+export PATH="$PATH:$(brew --prefix python)/libexec/bin"

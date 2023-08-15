@@ -12,3 +12,13 @@ uda.snooze.type = date
 
 uda.url.label = Url
 uda.url.type = string
+
+uda.contact.label = Contact
+uda.contact.type = string
+
+uda.rate.label = Rate
+uda.rate.type = numeric
+
+uda.progress.type = string
+uda.progress.label = Progress
+uda.progress.values = contacted,applied,interview
